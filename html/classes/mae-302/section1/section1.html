@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <link href="../../../../style/wolf-den.css" rel="stylesheet" type="text/css" />
+        <link href="../../../../style/course.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="../../../../assets/page-icon.jpg" type="image/icon type">
+        <title>Gas Power Cycles</title>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/scripts.js"></script>
+    </head>
+    <body style="background-color:#ffffff">
+      <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
+      <div style="height: 40px;"></div>
+        <div class="fixed"><div class="navbar">
+
+          <!-- The Home Button -->
+          <a href="../../../../index.html" style="margin-left: 10px;"><img src="../../../../assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
+
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="../../../../html/events/events.html">Events</a>
+
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="../../../../html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="../../../../html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="../../../../html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="../../../../html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="../../../../html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
+          </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="../../../../html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="../../../../html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="../../../../html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="../../../../html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="../../../../html/calendar/calendar.html" style="float: right;"><img src="../../../../assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="../../../../html/notifications/notifications.html" style="float: right;"><img src="../../../../assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="../../../../assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+      </div>
+
+      <div class="course-info-box">
+        <div style="float: left;"><strong>MAE 302 | Engineering Thermodynamics II: </strong></div>
+        <div style="float: right;"><strong>Dr. Eades</strong></div>
+        <br>
+        <br>
+        <em>Continuation of Engineering Thermodynamics I with emphasis on the analysis of power and refrigeration cycles and the application of basic
+        principles to engineering problems with systems involving mixtures of ideal gases, psychrometrics, nonideal gases, chemical reactions,
+        combustion, chemical equilibrium cycle analysis, and one-dimensional compressible flow.</em>
+      </div>
+
+      <!-- Header for the page -->
+      <div class="sticky">
+        <div id="head" class="class-navbar">
+
+          <!-- Class Name -->
+          <a href="../../../../html/classes/mae-302/mae-302.html"><strong><em>Engineering Thermodynamics II</em></strong></a>
+
+          <!-- Class Units (Drop down menu for all units) -->
+          <div class="class-dropdown" id="content">
+            <button class="class-dropbtn"><em>Units</em>
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="class-dropdown-content">
+              <a href="../section1/section1.html"><em>Gas power cycles</em></a>
+              <a href="../section2/section2.html"><em>Steam power cycles</em></a>
+              <a href="../section3/section3.html"><em>Refrigeration cycles</em></a>
+              <a href="../section4/section4.html"><em>Ideal gas mixtures and psychrometrics</em></a>
+              <a href="../section5/section5.html"><em>Combustion processes</em></a>
+              <a href="../section6/section6.html"><em>Chemical equilibrium</em></a>
+              <a href="../section7/section7.html"><em>Ideal compressible flow</em></a>
+              <a href="../section8/section8.html"><em>Review and tests</em></a>
+            </div>
+          </div>
+
+          <!-- Formulas -->
+          <a href="../formulas/formulas.html"><em>Formulas</em></a>
+
+          <!-- Tables -->
+          <a href="../tables/tables.html"><em>Tables</em></a>
+
+          <!-- Practice Exams -->
+          <a href="../practice-exams/practice-exams.html"><em>Practice Exams</em></a>
+
+          <!-- Grade Calculator -->
+          <a href="../grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
+
+        </div>
+      </div>
+      <br>
+
+      <div class="body">
+        <em></em>
+
+        <!-- Section 1 -->
+        <div class="sect-box">
+          <h2><center>Gas power cycles</center></h2>
+          <hr>
+
+          <!-- Thermodynamics 1 -->
+          <h3><em>Thermodynamics I Review</em></h3>
+          <span class="tab"></span><strong><em>Simple Compressible Substance</em></strong> are subject to compression/expansion as well as
+          heating/cooling.
+          <ul>
+            <li>Only <strong>two</strong> independent thermodynamic properties are needed to determine its state for a pure substance</li>
+          </ul>
+          <span class="tab"></span><strong><em>Pure substances</em></strong> are made up of a single type of molecule such as (H<sub>2</sub>O).
+          Air can be considered a pure substance.
+          <br><br>
+          <span class="tab"></span><strong><em>Systems</em></strong> are a substance with mass and volume and is defined by its boundaries.
+          <ul>
+            <li><strong>Closed Systems</strong> can exchange heat/work but not mass</li>
+            <li><strong>Open Systems</strong> can exchange heat/work as well as mass</li>
+          </ul>
+          <span class="tab"></span><strong><em>Energy</em></strong> is the ability to do work. It can be stored through <strong>internal energy</strong>,
+          <strong>kinetic energy</strong>, and <strong>potential energy</strong>
+          <br><br>
+          <span class="tab"></span><strong><em>Reversible Work</em></strong> is frictionless and restrained expansion and can be returned to its
+          original state.
+          <br><br>
+
+          <!-- Cycles -->
+          <h3><em>Cycles</em></h3>
+          <span class="tab"></span><strong><em>What are cycles?</em></strong> Cycles are a set of connected processes that return to the original state.
+          They allow for continous operation.
+          heating/cooling.
+          <br><br>
+          <span class="tab"></span><strong><em>Heat Engines</em></strong> produce work from heat input.
+          <ul>
+            <li><strong>Kelvin-Planck statement</strong> is the need reject heat to sustain a net work output. This means that heat input needs to be
+            greater than the desired work output.</li>
+            <li>Recieve heat from a high-temperature souce.</li>
+            <li>Convert part of the inputted heat to work</li>
+            <li>They reject remaining waste into a low-temperature sink</li>
+          </ul>
+          <span class="tab"></span><strong><em>Energy Analysis and Thermal Efficiency:</em></strong>
+          <ul>
+            <li>Assume the cycle can be considered closed</li>
+            <li>Assume no energy is stored (net input equals net output)</li>
+            <li>n<sub>th</sub> = <sup>Desired Output</sup>&frasl;<sub>Required Input</sub> =
+              <sup>W<sub>net, out</sub></sup>&frasl;<sub>Q<sub>H</sub></sub> = 1 - <sup>Q<sub>L</sub></sup>&frasl;<sub>Q<sub>H</sub></sub></li>
+          </ul>
+          <span class="tab"></span><strong><em>Carnot Cycle:</em></strong> an ideal cycle in which every process is reversible
+          <ul>
+            <li>Isothermal (constant temperature) expansion/heat addition</li>
+            <li>Reversible and adiabatic (no heat transfer) expansion (Isentropic Expansion)</li>
+            <li>Isothermal compression/heat rejection</li>
+            <li>Reversible and adiabatic compression (Isentropic Compression)</li>
+            <li>n<sub>th, carnot</sub> = <sup>Desired Output</sup>&frasl;<sub>Required Input</sub> =
+              1 - <sup>Q<sub>L</sub></sup>&frasl;<sub>Q<sub>H</sub></sub></li>
+            <li>0 ≤ n<sub>th</sub> ≤ n<sub>th, carnot</sub> ≤ 1</li>
+            <li>∆s = 0</li>
+          </ul>
+          <span class="tab"></span><strong><em>Reciprocating Engines</em></strong> are a single device (piston-cylinder)
+          <ul>
+            <li>Otto (internal combustion)</li>
+            <li>Diesal (internal combustion)</li>
+          </ul>
+          <span class="tab"></span><strong><em>Steady Flow Devices</em></strong> have multiple components in steady flow
+          <ul>
+            <li>Brayton – Gas turbine cycle (Internal Combustion)</li>
+            <li>Rankine – Steam or 2-phase (External Combustion)</li>
+          </ul>
+          <br>
+
+          <!-- Reciprocating Engines -->
+          <h3><em>Reciprocating Engines</em></h3>
+          <span class="tab"></span><strong><em>Compression Ratio:</em></strong>
+          <ul>
+            <li>r = <sup>V<sub>max</sub></sup> &frasl; <sub>V<sub>min</sub></sub> = <sup>V<sub>BDC</sub></sup> &frasl; <sub>V<sub>TDC</sub></sub></li>
+            <li>TDC is the top of the piston stroke while BDC is the bottom of the stroke</li>
+          </ul>
+          <span class="tab"></span><strong><em>Mean Effective Pressure:</em></strong>
+          <ul>
+            <li>MEP = <sup>W<sub>net</sub></sup> &frasl; <sub>V<sub>max</sub> - V<sub>min</sub></sub> (kpa)</li>
+          </ul>
+
+        </div>
+      </div>
+
+    <script type="text/javascript">
+    </script>
+</html>
