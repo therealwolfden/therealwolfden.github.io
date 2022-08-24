@@ -167,22 +167,17 @@ h3 {
     background: #d4d4d4;
 }
 
-.question-body {
-    font-family: helvetica;
+.question-box {
+    border: 2px outset #cbcbcb;
+    background-color: #ffffff;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
     margin: auto;
-    width: 90%;
-    border-style: solid;
-    border-radius: 1px;
-    background: white;
-    box-sizing: border-box;
-    border-color: #a3a3a3;
-    box-sizing: border-box;
-    padding: 15px;
-    text-align: left;
     overflow: hidden;
 }
 
-.answerBox {
+.answer-box {
     border: 2px outset #cbcbcb;
     background-color: #dadada;
     text-align: left;
@@ -193,7 +188,7 @@ h3 {
     overflow: hidden;
 }
 
-.answerChoice {
+.answer-choice {
     font-size: 16px;
     line-height: 20px;
     height: 24px;
@@ -209,7 +204,7 @@ h3 {
     overflow: hidden;
 }
 
-.answerChoice:hover {
+.answer-choice:hover {
     background: #d4d4d4;
     border-style: solid;
     border-radius: 1px;
@@ -218,7 +213,7 @@ h3 {
     overflow: hidden;
 }
 
-.answerChoiceSelected {
+.answer-choice-selected {
     font-size: 16px;
     line-height: 20px;
     height: 24px;
@@ -240,6 +235,7 @@ h3 {
     border-color: white;
     background: #67ff43;
 }
+
 .incorrect {
     border-style: solid;
     border-radius: 1px;
@@ -247,16 +243,6 @@ h3 {
     background: red;
 }
 
-.answerChoiceSelected:hover {
+.answer-choice-selected:hover {
     background: #d4d4d4;
-}
-
-.questionBox {
-    border: 2px outset #cbcbcb;
-    background-color: #ffffff;
-    width: 80%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: auto;
-    overflow: hidden;
 }
