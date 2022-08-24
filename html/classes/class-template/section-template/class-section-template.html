@@ -93,9 +93,6 @@
           <!-- Tables -->
           <a href="/html/classes/CLASS ID HERE/tables/tables.html"><em>Tables</em></a>
 
-          <!-- Practice Exams -->
-          <a href="/html/classes/CLASS ID HERE/practice-exams/practice-exams.html"><em>Practice Exams</em></a>
-
           <!-- Grade Calculator -->
           <a href="/html/classes/CLASS ID HERE/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -119,22 +116,22 @@
             <li>BULLETED POINTS HERE</li>
             <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
           </ul>
-            <div class="question-box">
-              This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id)" id="SampQ">Show answer</button>
-              <ul>
-                <div class="answer-choice"><li>Answer Choice A (Incorrect)</li></div>
-                <div class="answer-choice"><li>Answer Choice B (Incorrect)</li></div>
-                <div class="answer-choice"><li>Answer Choice C (Correct)</li></div>
-              </ul>
-            </div>
-          </p>
-          <div id="SampA" class="answerBox" style="display: none;">
+          <div class="question-box">
+            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
+              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
             The correct answers are <em><strong>what</strong></em> and <em><strong>why</strong></em>.
           </div>
           <br>
 
         </div>
       </div>
+    </body>
 
     <script type="text/javascript">
       function showAnswer(id, but, ans, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10) {
@@ -182,14 +179,15 @@
           varAns9.classList.add("correct")
           varAns10.classList.add("correct")
         }
+        varAns.classList.add("correct")
       }
       function selectMultAns(id) {
         var x = document.getElementById(id);
-        if (x.classList.contains("answerChoice")) {
-          x.classList.replace("answerChoice", "answerChoiceSelected")
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
         }
         else {
-          x.classList.replace("answerChoiceSelected", "answerChoice")
+          x.classList.replace("answer-choice-selected", "answer-choice")
         }
       }
 
@@ -204,20 +202,20 @@
         var x8 = document.getElementById(id8);
         var x9 = document.getElementById(id9);
         var x10 = document.getElementById(id10);
-        if (x.classList.contains("answerChoice")) {
-          x.classList.replace("answerChoice", "answerChoiceSelected")
-          x2.classList.replace("answerChoiceSelected", "answerChoice")
-          x3.classList.replace("answerChoiceSelected", "answerChoice")
-          x4.classList.replace("answerChoiceSelected", "answerChoice")
-          x5.classList.replace("answerChoiceSelected", "answerChoice")
-          x6.classList.replace("answerChoiceSelected", "answerChoice")
-          x7.classList.replace("answerChoiceSelected", "answerChoice")
-          x8.classList.replace("answerChoiceSelected", "answerChoice")
-          x9.classList.replace("answerChoiceSelected", "answerChoice")
-          x10.classList.replace("answerChoiceSelected", "answerChoice")
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+          x2.classList.replace("answer-choice-selected", "answer-choice")
+          x3.classList.replace("answer-choice-selected", "answer-choice")
+          x4.classList.replace("answer-choice-selected", "answer-choice")
+          x5.classList.replace("answer-choice-selected", "answer-choice")
+          x6.classList.replace("answer-choice-selected", "answer-choice")
+          x7.classList.replace("answer-choice-selected", "answer-choice")
+          x8.classList.replace("answer-choice-selected", "answer-choice")
+          x9.classList.replace("answer-choice-selected", "answer-choice")
+          x10.classList.replace("answer-choice-selected", "answer-choice")
         }
         else {
-          x.classList.replace("answerChoiceSelected", "answerChoice")
+          x.classList.replace("answer-choice-selected", "answer-choice")
         }
       }
     </script>

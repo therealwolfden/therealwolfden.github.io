@@ -205,11 +205,120 @@
               <li>Generally at 4ºC where ρ<sub>water</sub> = <sup>m<sup>3</sup></sup>&frasl;<sub>kg</sub></li>
             </ul>
           </ul>
+          <div class="question-box">
+            A liquid when poured into a graduated cylinder is found to weigh 8 N and occupies a volume of 500 ml. Determine its specific weight,
+            density, and specific gravity. <button onclick="showAnswer('SampA', this.id,)" id="SampQ">Show answer</button>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
+            <ul>
+              <li><strong>Specific Weight:</strong></li>
+              <ul>
+                <li>m = <sup>w</sup>&frasl;<sub>g</sub> | <sup>8 N</sup>&frasl;<sub>9.81 <sup>m</sup>&frasl;<sub>s<sup>2</sup></sub></sub> = .82 kg</li>
+              </ul>
+              <li><strong>Density: <em>1630 <sup>kg</sup>&frasl;<sub>m<sup>3</sup></sub></em></strong></li>
+              <ul>
+                <li>γ = </li>
+              </ul>
+              <li><strong>Specific Gravity:</strong></li>
+              <ul>
+                <li>γ = </li>
+              </ul>
+            </ul>
+          </div>
+          <br>
 
+          <!-- Viscosity -->
+          <h3><em>Viscosity</em></h3>
+          <span class="tab"></span><strong><em>Viscosity :</strong></em>
 
         </div>
       </div>
+    </body>
 
     <script type="text/javascript">
+      function showAnswer(id, but, ans, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10) {
+        var x = document.getElementById(id);
+        var y = document.getElementById(but);
+        var varAns = document.getElementById(ans);
+        var varAns2 = document.getElementById(ans2);
+        var varAns3 = document.getElementById(ans3);
+        var varAns4 = document.getElementById(ans4);
+        var varAns5 = document.getElementById(ans5);
+        var varAns6 = document.getElementById(ans6);
+        var varAns7 = document.getElementById(ans7);
+        var varAns8 = document.getElementById(ans8);
+        var varAns9 = document.getElementById(ans9);
+        var varAns10 = document.getElementById(ans10);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.innerHTML = 'Hide Answer';
+        }
+        else {
+          x.style.display = "none";
+          y.innerHTML = 'Show Answer';
+        }
+        if (varAns.classList.contains("correct")) {
+          varAns.classList.remove("correct")
+          varAns2.classList.remove("correct")
+          varAns3.classList.remove("correct")
+          varAns4.classList.remove("correct")
+          varAns5.classList.remove("correct")
+          varAns6.classList.remove("correct")
+          varAns7.classList.remove("correct")
+          varAns8.classList.remove("correct")
+          varAns9.classList.remove("correct")
+          varAns10.classList.remove("correct")
+        }
+        else {
+          varAns.classList.add("correct")
+          varAns2.classList.add("correct")
+          varAns3.classList.add("correct")
+          varAns4.classList.add("correct")
+          varAns5.classList.add("correct")
+          varAns6.classList.add("correct")
+          varAns7.classList.add("correct")
+          varAns8.classList.add("correct")
+          varAns9.classList.add("correct")
+          varAns10.classList.add("correct")
+        }
+        varAns.classList.add("correct")
+      }
+      function selectMultAns(id) {
+        var x = document.getElementById(id);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+
+      function selectAns(id, id2, id3, id4, id5, id6, id7, id8, id9, id10) {
+        var x = document.getElementById(id);
+        var x2 = document.getElementById(id2);
+        var x3 = document.getElementById(id3);
+        var x4 = document.getElementById(id4);
+        var x5 = document.getElementById(id5);
+        var x6 = document.getElementById(id6);
+        var x7 = document.getElementById(id7);
+        var x8 = document.getElementById(id8);
+        var x9 = document.getElementById(id9);
+        var x10 = document.getElementById(id10);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+          x2.classList.replace("answer-choice-selected", "answer-choice")
+          x3.classList.replace("answer-choice-selected", "answer-choice")
+          x4.classList.replace("answer-choice-selected", "answer-choice")
+          x5.classList.replace("answer-choice-selected", "answer-choice")
+          x6.classList.replace("answer-choice-selected", "answer-choice")
+          x7.classList.replace("answer-choice-selected", "answer-choice")
+          x8.classList.replace("answer-choice-selected", "answer-choice")
+          x9.classList.replace("answer-choice-selected", "answer-choice")
+          x10.classList.replace("answer-choice-selected", "answer-choice")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
     </script>
 </html>

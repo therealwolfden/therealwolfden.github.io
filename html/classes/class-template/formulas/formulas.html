@@ -93,9 +93,6 @@
           <!-- Tables -->
           <a href="/html/classes/CLASS ID HERE/tables/tables.html"><em>Tables</em></a>
 
-          <!-- Practice Exams -->
-          <a href="/html/classes/CLASS ID HERE/practice-exams/practice-exams.html"><em>Practice Exams</em></a>
-
           <!-- Grade Calculator -->
           <a href="/html/classes/CLASS ID HERE/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -141,56 +138,9 @@
           </div>
         </div>
         <br>
+      </div>
+    </body>
 
     <script type="text/javascript">
-      function calcTot() {
-        if (document.getElementById('Final-Grade').value === "") {
-          var HW = document.getElementById('Homework').value / 100;
-          var E1 = document.getElementById('Exam1').value / 100;
-          var E2 = document.getElementById('Exam2').value / 100;
-          var FE = document.getElementById('Final-Exam').value / 100;
-          document.getElementById('Final-Grade').value = Math.round((HW * 10 + E1 * 25 + E2 * 25 + FE * 40 + Number.EPSILON) * 100) / 100;
-        }
-        // Calculates what is needed on the final
-        else if (document.getElementById('Final-Exam').value === "") {
-          var HW = document.getElementById('Homework').value / 100;
-          var E1 = document.getElementById('Exam1').value / 100;
-          var E2 = document.getElementById('Exam2').value / 100;
-          var FG = document.getElementById('Final-Grade').value;
-          document.getElementById('Final-Exam').value = Math.round(((FG - (HW * 10 + E1 * 25 + E2 * 25)) / .4 + Number.EPSILON) * 100) / 100;
-        }
-        // Calculates what is needed on the second exam
-        else if (document.getElementById('Exam2').value === "") {
-          var HW = document.getElementById('Homework').value / 100;
-          var E1 = document.getElementById('Exam1').value / 100;
-          var FE = document.getElementById('Final-Exam').value / 100;
-          var FG = document.getElementById('Final-Grade').value;
-          document.getElementById('Exam2').value = Math.round(((FG - (HW * 10 + E1 * 25 + FE * 40)) / .25 + Number.EPSILON) * 100) / 100;
-        }
-        // Calculates what is needed on the first exam
-        else if (document.getElementById('Exam1').value === "") {
-          var HW = document.getElementById('Homework').value / 100;
-          var E2 = document.getElementById('Exam2').value / 100;
-          var FE = document.getElementById('Final-Exam').value / 100;
-          var FG = document.getElementById('Final-Grade').value;
-          document.getElementById('Exam1').value = Math.round(((FG - (HW * 10 + E2 * 25 + FE * 40)) / .25 + Number.EPSILON) * 100) / 100;
-        }
-        // Calculates what is needed on the Homework
-        else if (document.getElementById('Homework').value === "") {
-          var E1 = document.getElementById('Exam1').value / 100;
-          var E2 = document.getElementById('Exam2').value / 100;
-          var FE = document.getElementById('Final-Exam').value / 100;
-          var FG = document.getElementById('Final-Grade').value;
-          document.getElementById('Homework').value = Math.round(((FG - (E1 * 25 + E2 * 25 + FE * 40)) / .1 + Number.EPSILON) * 100) / 100;
-        }
-        // Calculates the final grade
-        else {
-          var HW = document.getElementById('Homework').value / 100;
-          var E1 = document.getElementById('Exam1').value / 100;
-          var E2 = document.getElementById('Exam2').value / 100;
-          var FE = document.getElementById('Final-Exam').value / 100;
-          document.getElementById('Final-Grade').value = Math.round((HW * 10 + E1 * 25 + E2 * 25 + FE * 40 + Number.EPSILON) * 100) / 100;
-        }
-      }
     </script>
 </html>
