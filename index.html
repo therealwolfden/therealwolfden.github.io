@@ -2,83 +2,62 @@
   <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
       <meta charset="UTF-8" />
-      <link href="style/wolf-den.css" rel="stylesheet" type="text/css" />
+      <base href="https://therealwolfden.github.io/">
+      <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
+      <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
       <title>The Wolf Den</title>
-      <script src="js/jquery-3.6.0.min.js"></script>
-      <script src="js/scripts.js"></script>
+      <script src="/js/jquery-3.6.0.min.js"></script>
+      <script src="/js/scripts.js"></script>
     </head>
     <body style="background-color:#ffffff">
       <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
       <div style="height: 40px;"></div>
-      <div class="fixed"><div class="navbar">
+        <div class="fixed"><div class="navbar">
 
-        <!-- The Home Button -->
-        <a href="index.html" style="margin-left: 10px;"><img src="assets/home-icon.jpg" alt="Home" class="icon"></a>
+          <!-- The Home Button -->
+          <a href="/index.html" style="margin-left: 10px;"><img src="/assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
 
-        <!-- The Events Button that takes the user to the events page -->
-        <a href="html/events/events.html">Events</a>
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="/html/events/events.html">Events</a>
 
-        <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
-        <div class="dropdown" id="guides">
-          <button class="dropbtn">Class Guides
-          </button>
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
 
-          <!-- The drop down menu for the Class Guides -->
-          <div class="dropdown-content">
-            <a href="html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
-            <a href="html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
-            <a href="html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
-            <a href="html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
-            <a href="html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="/html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="/html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="/html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="/html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="/html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
           </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="/html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="/html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="/html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="/html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="/html/calendar/calendar.html" style="float: right;"><img src="/assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="/html/notifications/notifications.html" style="float: right;"><img src="/assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="/assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
         </div>
-
-        <!-- The Organizations Button that takes the user to the organizations page -->
-        <a href="html/organizations/organizations.html">Organizations</a>
-
-        <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
-        <a href="html/brain_teasers/brain_teasers.html">Brain Teasers</a>
-
-        <!-- The Forums Button that takes the user to the forums page -->
-        <a href="html/forums/forums.html">Forums</a>
-
-        <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
-        <div class="dropdown" id="profile" style="float: right; margin-right: 10px;">
-          <button class="dropbtn">Profile
-          </button>
-
-          <!-- The drop down menu for the Profile options -->
-          <div class="profile-dropdown-content" style="right: 10px;">
-            <a href="html/ch223/ch223.html">Dashboard</a>
-            <a href="">Profile</a>
-            <a href="">Friends</a>
-            <a href="">Settings</a>
-            <a href="">Log out</a>
-          </div>
-        </div>
-
-        <!-- The Calendar Button that takes the user to their calendar -->
-        <a href="html/calendar/calendar.html" style="float: right;"><img src="assets/calendar-icon.jpg" alt="Calendar" class="icon"></a>
-
-        <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
-        <div class="dropdown" id="notifications" style="float: right;">
-          <button class="dropbtn"><img src="assets/notification-icon.jpg" alt="Notifications" class="icon">
-          </button>
-
-          <!-- The drop down menu for the notifications options -->
-          <div class="notification-dropdown-content" style="transform: translate(-315px, -3px);">
-            <a href="html/ch223/ch223.html">Dashboard</a>
-            <a href="">Profile</a>
-            <a href="">Friends</a>
-            <a href="">Settings</a>
-            <a href="">Log out</a>
-          </div>
-        </div>
-
-        <!-- The Search Button that opens a menu for searching through the website -->
-        <a onclick=revealonclick="showContent('search-box')" style="float: right;"><img src="assets/search-icon.jpg" alt="Search" class="icon"></a>
-
-      </div></div>
+      </div>
     </body>
     <script type="text/javascript">
       function showContent(id) {

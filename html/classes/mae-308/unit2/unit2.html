@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="https://therealwolfden.github.io/">
+        <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
+        <link href="/style/course.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
+        <title>Fluid Statics</title>
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/scripts.js"></script>
+    </head>
+    <body style="background-color:#ffffff">
+      <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
+      <div style="height: 40px;"></div>
+        <div class="fixed"><div class="navbar">
+
+          <!-- The Home Button -->
+          <a href="/index.html" style="margin-left: 10px;"><img src="/assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
+
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="/html/events/events.html">Events</a>
+
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="/html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="/html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="/html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="/html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="/html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
+          </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="/html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="/html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="/html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="/html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="/html/calendar/calendar.html" style="float: right;"><img src="/assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="/html/notifications/notifications.html" style="float: right;"><img src="/assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="/assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+      </div>
+
+      <div class="course-info-box">
+        <div style="float: left;"><strong>MAE 308 | Fluid Mechanics: </strong></div>
+        <div style="float: right;"><strong>M. Chen</strong></div>
+        <br>
+        <br>
+        <em>Development of the basic equations of fluid mechanics in general and specialized form. Application to a variety of topics including fluid
+          statics; inviscid, incompressible fluid flow; design of Fluid dynamic system.</em>
+      </div>
+
+      <!-- Header for the page -->
+      <div class="sticky">
+        <div id="head" class="class-navbar">
+
+          <!-- Class Name -->
+          <a href="/html/classes/mae-308/mae-308.html"><strong><em>Fluid Mechanics</em></strong></a>
+
+          <!-- Class Content (Lectures and Units) -->
+          <div class="class-dropdown" id="content">
+            <button class="class-dropbtn"><em>Units</em>
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="class-dropdown-content">
+              <a href="/html/classes/mae-308/unit1/unit1.html"><em>Introduction</em></a>
+              <a href="/html/classes/mae-308/unit2/unit2.html"><em>Fluid Statics</em></a>
+              <a href="/html/classes/mae-308/unit3/unit3.html"><em>Elementary Fluid Dynamics</em></a>
+              <a href="/html/classes/mae-308/unit4/unit4.html"><em>Fluid Kinematics</em></a>
+              <a href="/html/classes/mae-308/unit5/unit5.html"><em>Finite Control Volume Analysis</em></a>
+              <a href="/html/classes/mae-308/unit6/unit6.html"><em>Differential Analysis of Fluid Flow</em></a>
+              <a href="/html/classes/mae-308/unit7/unit7.html"><em>Dimensional Analysis</em></a>
+              <a href="/html/classes/mae-308/unit8/unit8.html"><em>Viscous Flow in Pipes</em></a>
+            </div>
+          </div>
+
+          <!-- Formulas -->
+          <a href="/html/classes/mae-308/formulas/formulas.html"><em>Formulas</em></a>
+
+          <!-- Tables -->
+          <a href="/html/classes/mae-308/tables/tables.html"><em>Tables</em></a>
+
+          <!-- Grade Calculator -->
+          <a href="/html/classes/mae-308/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
+        </div>
+      </div>
+      <br>
+
+      <div class="body">
+        <em></em>
+
+        <!-- Section 2 -->
+        <div class="sect-box">
+          <h2><center>Fluid Statics</center></h2>
+          <hr>
+
+          <!--  -->
+          <h3><em>SUB TOPIC</em></h3>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <br><br>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <ul>
+            <li>BULLETED POINTS HERE</li>
+            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+          </ul>
+          <div class="question-box">
+            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
+              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
+          <br>
+          <div class="question-box">
+            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
+              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA2" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
+          <br>
+
+        </div>
+      </div>
+    </body>
+
+    <script type="text/javascript">
+      function showAnswer(id, but, ans, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10) {
+        var x = document.getElementById(id);
+        var y = document.getElementById(but);
+        var varAns = document.getElementById(ans);
+        var varAns2 = document.getElementById(ans2);
+        var varAns3 = document.getElementById(ans3);
+        var varAns4 = document.getElementById(ans4);
+        var varAns5 = document.getElementById(ans5);
+        var varAns6 = document.getElementById(ans6);
+        var varAns7 = document.getElementById(ans7);
+        var varAns8 = document.getElementById(ans8);
+        var varAns9 = document.getElementById(ans9);
+        var varAns10 = document.getElementById(ans10);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.innerHTML = 'Hide Answer';
+        }
+        else {
+          x.style.display = "none";
+          y.innerHTML = 'Show Answer';
+        }
+        if (varAns.classList.contains("correct")) {
+          varAns.classList.remove("correct")
+          varAns2.classList.remove("correct")
+          varAns3.classList.remove("correct")
+          varAns4.classList.remove("correct")
+          varAns5.classList.remove("correct")
+          varAns6.classList.remove("correct")
+          varAns7.classList.remove("correct")
+          varAns8.classList.remove("correct")
+          varAns9.classList.remove("correct")
+          varAns10.classList.remove("correct")
+        }
+        else {
+          varAns.classList.add("correct")
+          varAns2.classList.add("correct")
+          varAns3.classList.add("correct")
+          varAns4.classList.add("correct")
+          varAns5.classList.add("correct")
+          varAns6.classList.add("correct")
+          varAns7.classList.add("correct")
+          varAns8.classList.add("correct")
+          varAns9.classList.add("correct")
+          varAns10.classList.add("correct")
+        }
+        varAns.classList.add("correct")
+      }
+      function selectMultAns(id) {
+        var x = document.getElementById(id);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+
+      function selectAns(id, id2, id3, id4, id5, id6, id7, id8, id9, id10) {
+        var x = document.getElementById(id);
+        var x2 = document.getElementById(id2);
+        var x3 = document.getElementById(id3);
+        var x4 = document.getElementById(id4);
+        var x5 = document.getElementById(id5);
+        var x6 = document.getElementById(id6);
+        var x7 = document.getElementById(id7);
+        var x8 = document.getElementById(id8);
+        var x9 = document.getElementById(id9);
+        var x10 = document.getElementById(id10);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+          x2.classList.replace("answer-choice-selected", "answer-choice")
+          x3.classList.replace("answer-choice-selected", "answer-choice")
+          x4.classList.replace("answer-choice-selected", "answer-choice")
+          x5.classList.replace("answer-choice-selected", "answer-choice")
+          x6.classList.replace("answer-choice-selected", "answer-choice")
+          x7.classList.replace("answer-choice-selected", "answer-choice")
+          x8.classList.replace("answer-choice-selected", "answer-choice")
+          x9.classList.replace("answer-choice-selected", "answer-choice")
+          x10.classList.replace("answer-choice-selected", "answer-choice")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+    </script>
+</html>

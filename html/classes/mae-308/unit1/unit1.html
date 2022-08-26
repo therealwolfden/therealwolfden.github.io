@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="https://therealwolfden.github.io/">
+        <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
+        <link href="/style/course.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
+        <title>Introduction</title>
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/scripts.js"></script>
+    </head>
+    <body style="background-color:#ffffff">
+      <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
+      <div style="height: 40px;"></div>
+        <div class="fixed"><div class="navbar">
+
+          <!-- The Home Button -->
+          <a href="/index.html" style="margin-left: 10px;"><img src="/assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
+
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="/html/events/events.html">Events</a>
+
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="/html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="/html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="/html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="/html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="/html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
+          </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="/html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="/html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="/html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="/html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="/html/calendar/calendar.html" style="float: right;"><img src="/assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="/html/notifications/notifications.html" style="float: right;"><img src="/assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="/assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+      </div>
+
+      <div class="course-info-box">
+        <div style="float: left;"><strong>MAE 308 | Fluid Mechanics: </strong></div>
+        <div style="float: right;"><strong>M. Chen</strong></div>
+        <br>
+        <br>
+        <em>Development of the basic equations of fluid mechanics in general and specialized form. Application to a variety of topics including fluid
+          statics; inviscid, incompressible fluid flow; design of Fluid dynamic system.</em>
+      </div>
+
+      <!-- Header for the page -->
+      <div class="sticky">
+        <div id="head" class="class-navbar">
+
+          <!-- Class Name -->
+          <a href="/html/classes/mae-308/mae-308.html"><strong><em>Fluid Mechanics</em></strong></a>
+
+          <!-- Class Content (Lectures and Units) -->
+          <div class="class-dropdown" id="content">
+            <button class="class-dropbtn"><em>Units</em>
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="class-dropdown-content">
+              <a href="/html/classes/mae-308/unit1/unit1.html"><em>Introduction</em></a>
+              <a href="/html/classes/mae-308/unit2/unit2.html"><em>Fluid Statics</em></a>
+              <a href="/html/classes/mae-308/unit3/unit3.html"><em>Elementary Fluid Dynamics</em></a>
+              <a href="/html/classes/mae-308/unit4/unit4.html"><em>Fluid Kinematics</em></a>
+              <a href="/html/classes/mae-308/unit5/unit5.html"><em>Finite Control Volume Analysis</em></a>
+              <a href="/html/classes/mae-308/unit6/unit6.html"><em>Differential Analysis of Fluid Flow</em></a>
+              <a href="/html/classes/mae-308/unit7/unit7.html"><em>Dimensional Analysis</em></a>
+              <a href="/html/classes/mae-308/unit8/unit8.html"><em>Viscous Flow in Pipes</em></a>
+            </div>
+          </div>
+
+          <!-- Formulas -->
+          <a href="/html/classes/mae-308/formulas/formulas.html"><em>Formulas</em></a>
+
+          <!-- Tables -->
+          <a href="/html/classes/mae-308/tables/tables.html"><em>Tables</em></a>
+
+          <!-- Grade Calculator -->
+          <a href="/html/classes/mae-308/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
+        </div>
+      </div>
+      <br>
+
+      <div class="body">
+        <em></em>
+
+        <!-- Section 1 -->
+        <div class="sect-box">
+          <h2><center>Introduction</center></h2>
+          <hr>
+          
+          <!-- Fluid Mechanics Intro -->
+          <h3><em>Fluid Mechanics</em></h3>
+          <span class="tab"></span><strong><em>What is a fluid?</em></strong> Fluids are substances with the ability to flow. If stress is applied to a
+          fluid it will modify its shape. Gases and liquids are considered to be be fluids while solids are not.
+          <br><br>
+          <span class="tab"></span><strong><em>What is fluid mechanics?</em></strong> Fluid mechanics is the study of fluids in motion (dynamics) as well
+          as fluids at rest (statics). Fluid mechanics allows for a better understanding of internal flow whether it be through liquid cooling or blood
+          pumping through the heart.
+          <ul>
+            <li><strong>Internal Flow:</strong> the flow of fluids within a system such as water being transported through tubes or pumps</li>
+            <li><strong>External Flow:</strong> the flow of fluids around a system such as a boat in water or a plane moving throuth the air</li>
+          </ul>
+          <br>
+          <!-- Units -->
+          <h3><em>Units</em></h3>
+          <span class="tab"></span><strong><em>Systems of units:</em></strong> Fluid mechanics employs both SI (Metric) and IU (Imperial) systems of
+          units. There are four primary units used
+          <ul>
+            <li><strong>Mass (m):</strong>
+              <ul>
+                <li>SI: kilogram (kg)</li>
+                <li>IU: slug</li>
+                <li><em>1 slug = 14.6 kg</em></li>
+              </ul>
+            </li>
+            <li><strong>Length (l):</strong>
+              <ul>
+                <li>SI: meter (m)</li>
+                <li>IU: feet (ft)</li>
+                <li><em>1 ft = .305 m</em></li>
+              </ul>
+            </li>
+            <li><strong>Time (t):</strong>
+              <ul>
+                <li>Both SI and IU use seconds (s)</li>
+              </ul>
+            </li>
+            <li><strong>Temperature (T):</strong>
+              <ul>
+                <li>SI: Kelvin (ºK)</li>
+                <li>IU: Rankine (ºR)</li>
+                <li><em>1 ºK = 1.8 ºR</em></li>
+              </ul>
+            </li>
+          </ul>
+          <br>
+          <!-- Dimensional Homogeneity -->
+          <h3><em>Dimensional Homogeneity</em></h3>
+          <span class="tab"></span>An equation is dimensionally homogenous if all the units are the same when adding two things together or cancel out when
+          multiplying and dividing. If an equation is not dimensionally homogenous, it is more than likely incorrect.
+          <br><br>
+          <span class="tab"></span><strong><em>Bernoulli's Equation:</em></strong>
+          <ul>
+            <li>P + ρv<sup>2</sup> + ρgz = Constant</li>
+            <li>This is dimensionally homogenous as all the parts of the equation can be expressed with the same unit ( <sup>kg</sup>&frasl;<sub>m*s<sup>2</sup></sub> ).</li>
+          </ul>
+          <br>
+
+          <!-- Density -->
+          <h3><em>Density</em></h3>
+          <span class="tab"></span><strong><em>Density (ρ)</strong></em> is defined as the fluid's mass per unit volume. The value of density varies between different fluids and
+          varies slightly for liquids at different pressures and temperatues. Most liquids however are considered incompressible meaning that their density
+          doesn't change. Gases are highly compressible meaning that they often change in density based on temperature and pressure.
+          <br><br>
+          <span class="tab"></span><strong><em>For ideal gases:</em></strong>
+          <ul>
+            <li>p = ρRT</li>
+            <li><em>p</em> is the absolute pressure (measured relative to a vacuum).</li>
+            <li><em>R</em> is the gas constant (287.1 <sup>J</sup>&frasl;<sub>kg*ºK</sub> ).</li>
+            <li><em>T</em> is the temperature (measured in ºK).</li>
+          </ul>
+          <span class="tab"></span><strong><em>Density Related Properties:</em></strong>
+          <ul>
+            <li>Specific Volume:</li>
+            <ul>
+              <li>v = <sup>1</sup>&frasl;<sub>ρ</sub> ( <sup>m<sup>3</sup></sup>&frasl;<sub>kg</sub> )</li>
+            </ul>
+            <li>Specific Weight:</li>
+            <ul>
+              <li>γ = ρ * g ( <sup>N</sup>&frasl;<sub>m<sup>3</sup></sub> )</li>
+            </ul>
+            <li>Specific Gravity:</li>
+            <ul>
+              <li>SG = <sup>ρ</sup>&frasl;<sub>ρ<sub>water</sub></sub></li>
+              <li>Generally at 4ºC where ρ<sub>water</sub> = <sup>m<sup>3</sup></sup>&frasl;<sub>kg</sub></li>
+            </ul>
+          </ul>
+          <div class="question-box">
+            A liquid when poured into a graduated cylinder is found to weigh 8 N and occupies a volume of 500 ml. Determine its specific weight,
+            density, and specific gravity. <button onclick="showAnswer('SampA', this.id,)" id="SampQ">Show answer</button>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
+            <ul>
+              <li><strong>Specific Weight:</strong></li>
+              <ul>
+                <li>m = <sup>w</sup>&frasl;<sub>g</sub> | <sup>8 N</sup>&frasl;<sub>9.81 <sup>m</sup>&frasl;<sub>s<sup>2</sup></sub></sub> = .82 kg</li>
+              </ul>
+              <li><strong>Density: <em>1630 <sup>kg</sup>&frasl;<sub>m<sup>3</sup></sub></em></strong></li>
+              <ul>
+                <li>γ = </li>
+              </ul>
+              <li><strong>Specific Gravity:</strong></li>
+              <ul>
+                <li>γ = </li>
+              </ul>
+            </ul>
+          </div>
+          <br>
+
+        </div>
+      </div>
+    </body>
+
+    <script type="text/javascript">
+      function showAnswer(id, but, ans, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10) {
+        var x = document.getElementById(id);
+        var y = document.getElementById(but);
+        var varAns = document.getElementById(ans);
+        var varAns2 = document.getElementById(ans2);
+        var varAns3 = document.getElementById(ans3);
+        var varAns4 = document.getElementById(ans4);
+        var varAns5 = document.getElementById(ans5);
+        var varAns6 = document.getElementById(ans6);
+        var varAns7 = document.getElementById(ans7);
+        var varAns8 = document.getElementById(ans8);
+        var varAns9 = document.getElementById(ans9);
+        var varAns10 = document.getElementById(ans10);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.innerHTML = 'Hide Answer';
+        }
+        else {
+          x.style.display = "none";
+          y.innerHTML = 'Show Answer';
+        }
+        if (varAns.classList.contains("correct")) {
+          varAns.classList.remove("correct")
+          varAns2.classList.remove("correct")
+          varAns3.classList.remove("correct")
+          varAns4.classList.remove("correct")
+          varAns5.classList.remove("correct")
+          varAns6.classList.remove("correct")
+          varAns7.classList.remove("correct")
+          varAns8.classList.remove("correct")
+          varAns9.classList.remove("correct")
+          varAns10.classList.remove("correct")
+        }
+        else {
+          varAns.classList.add("correct")
+          varAns2.classList.add("correct")
+          varAns3.classList.add("correct")
+          varAns4.classList.add("correct")
+          varAns5.classList.add("correct")
+          varAns6.classList.add("correct")
+          varAns7.classList.add("correct")
+          varAns8.classList.add("correct")
+          varAns9.classList.add("correct")
+          varAns10.classList.add("correct")
+        }
+        varAns.classList.add("correct")
+      }
+      function selectMultAns(id) {
+        var x = document.getElementById(id);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+
+      function selectAns(id, id2, id3, id4, id5, id6, id7, id8, id9, id10) {
+        var x = document.getElementById(id);
+        var x2 = document.getElementById(id2);
+        var x3 = document.getElementById(id3);
+        var x4 = document.getElementById(id4);
+        var x5 = document.getElementById(id5);
+        var x6 = document.getElementById(id6);
+        var x7 = document.getElementById(id7);
+        var x8 = document.getElementById(id8);
+        var x9 = document.getElementById(id9);
+        var x10 = document.getElementById(id10);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+          x2.classList.replace("answer-choice-selected", "answer-choice")
+          x3.classList.replace("answer-choice-selected", "answer-choice")
+          x4.classList.replace("answer-choice-selected", "answer-choice")
+          x5.classList.replace("answer-choice-selected", "answer-choice")
+          x6.classList.replace("answer-choice-selected", "answer-choice")
+          x7.classList.replace("answer-choice-selected", "answer-choice")
+          x8.classList.replace("answer-choice-selected", "answer-choice")
+          x9.classList.replace("answer-choice-selected", "answer-choice")
+          x10.classList.replace("answer-choice-selected", "answer-choice")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+    </script>
+</html>

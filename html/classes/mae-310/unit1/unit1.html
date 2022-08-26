@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="https://therealwolfden.github.io/">
+        <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
+        <link href="/style/course.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
+        <title>Physical Origins and Rate Equations</title>
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/scripts.js"></script>
+    </head>
+    <body style="background-color:#ffffff">
+      <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
+      <div style="height: 40px;"></div>
+        <div class="fixed"><div class="navbar">
+
+          <!-- The Home Button -->
+          <a href="/index.html" style="margin-left: 10px;"><img src="/assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
+
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="/html/events/events.html">Events</a>
+
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="/html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="/html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="/html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="/html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="/html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
+          </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="/html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="/html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="/html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="/html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="/html/calendar/calendar.html" style="float: right;"><img src="/assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="/html/notifications/notifications.html" style="float: right;"><img src="/assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="/assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+      </div>
+
+      <div class="course-info-box">
+        <div style="float: left;"><strong>MAE 310 | Heat Transfer Fundamentals: </strong></div>
+        <div style="float: right;"><strong>A. Kuznetsov</strong></div>
+        <br>
+        <br>
+        <em>Analysis of steady state and transient one and multidimensional heat conduction employing both analytical methods and numerical techniques.
+          Integration of principles and concepts of thermodynamics and fluid mechanics to the development of practicalconvective heat transfer
+          relations relevant to mechanical engineers. Heat transfer by the mechanism of radiation heat transfer.</em>
+      </div>
+
+      <!-- Header for the page -->
+      <div class="sticky">
+        <div id="head" class="class-navbar">
+
+          <!-- Class Name -->
+          <a href="/html/classes/mae-310/mae-310.html"><strong><em>Heat Transfer Fundamentals</em></strong></a>
+
+          <!-- Class Content (Lectures and Units) -->
+          <div class="class-dropdown" id="content">
+            <button class="class-dropbtn"><em>Units</em>
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="class-dropdown-content">
+              <a href="/html/classes/mae-310/unit1/unit1.html"><em>Physical Origins and Rate Equations</em></a>
+            </div>
+          </div>
+
+          <!-- Formulas -->
+          <a href="/html/classes/mae-310/formulas/formulas.html"><em>Formulas</em></a>
+
+          <!-- Tables -->
+          <a href="/html/classes/mae-310/tables/tables.html"><em>Tables</em></a>
+
+          <!-- Grade Calculator -->
+          <a href="/html/classes/mae-310/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
+        </div>
+      </div>
+      <br>
+
+      <div class="body">
+
+        <!-- Section 1 -->
+        <div class="sect-box">
+          <h2><center>Physical Origins and Rate Equations</center></h2>
+          <hr>
+
+          <!-- Introduction -->
+          <h3><em>Introduction</em></h3>
+          <span class="tab"></span><strong><em>Heat Transfer</em></strong> is thermal energy in motion due to a temperature difference
+          <br><br>
+          <span class="tab"></span><strong><em>Key Units of Measurement:</em></strong>
+          <ul>
+            <li><strong>Thermal Energy (U or u)</strong> has the units of J or <sup>J</sup>&frasl;<sub>kg</sub></li>
+            <li><strong>Temperature (t)</strong> has the units of  K or ºC</li>
+            <li><strong>Heat (Q)</strong> has the units of  J</li>
+            <li><strong>Heat Rate (q)</strong> has the units of  W</li>
+            <li><strong>Heat Flux (q")</strong> has the units of  <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+          </ul>
+          <span class="tab"></span><strong><em>Three modes of heat transfer:</em></strong>
+          <ul>
+            <li><strong>Conduction:</strong></li>
+            <ul>
+              <li>Heat transfer in a solid or stationary fluid due to the <strong>random motion</strong> of it atoms, molecules, or electrons</li>
+              <li>Requires the presence of a temperature difference in a material medium</li>
+              <li>An example is heat transfering from a hot pan to cook food laying on the top of the pan</li>
+            </ul>
+            <li><strong>Convection:</strong></li>
+            <ul>
+              <li>Heat transfer due to <strong>bulk and random motion</strong> for a fluid flow over a surface</li>
+              <li>Typically transfers from a solid (the surface) to a moving fluid</li>
+              <li>Requires the presence of a temperature difference in a material medium</li>
+              <li>An example is a laptop fan blowing air on a hot computer chip to lower the chip's temperature</li>
+            </ul>
+            <li><strong>Radiation:</strong></li>
+            <ul>
+              <li>Energy that is <strong>emitted by matter</strong> due to changes in electon configurations</li>
+              <li>Transported as electromagnetic waves as photons</li>
+              <li>Transport does not require a material medium and is most efficient in a vacuum</li>
+              <li>An example is the sun giving off solar radiation to heat Earth</li>
+            </ul>
+          </ul>
+          <br>
+          <!-- Heat Transfer Rates -->
+          <h3><em>Heat Transfer Rates</em></h3>
+          <span class="tab"></span><strong><em>Conduction</em></strong> can be calculated using <strong>Fourier's Law:</strong>
+          <ul>
+            <li>q" = -k∇T</li>
+            <ul>
+              <li>q" is the heat flux in <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+              <li>k is the thermal conductivity in <sup>W</sup>&frasl;<sub>m*K</sub></li>
+              <ul>
+                <li>Higher values mean that the heat trasnfers quicker. This is why metal feels colder than plastic even when they are the same
+                  temperature</li>
+              </ul>
+              <li>∇T is the temperature gradient in <sup>ºC</sup>&frasl;<sub>m</sub> or <sup>K</sup>&frasl;<sub>m</sub></li>
+              <ul>
+                <li>∇T<sub>x</sub> = <sup>T<sub>2</sub> - T<sub>1</sub></sup> &frasl; <sub>L<sub>x</sub></sub></li>
+              </ul>
+            </ul>
+            <li>q = q" * A</li>
+            <ul>
+              <li>q is the heat rate in W</li>
+            </ul>
+          </ul>
+          <span class="tab"></span><strong><em>Convection</em></strong> can be calculated using <strong>Newton's law of cooling:</strong>
+          <ul>
+            <li>q" = h(T<sub>s</sub> - T<sub>∞</sub>)</li>
+            <ul>
+              <li>q" is the heat flux in <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+              <li>h is the convection heat transfer in <sup>W</sup>&frasl;<sub>m<sup>2</sup>*K</sub></li>
+              <ul>
+                <li>Changes with the velocity and the substance that the moving fluid is composed of</li>
+              </ul>
+              <li>T<sub>s</sub> is the temperature of the surface in ºC or K</li>
+              <li>T<sub>∞</sub> is the temperature of the moving fluid in ºC or K</li>
+            </ul>
+          </ul>
+          <span class="tab"></span><strong><em>Radiation</em></strong> can be calculated using emission and absorption equations
+          <ul>
+            <li><strong>Emission (E)</strong> is the release of heat due to radiation</li>
+            <ul>
+              <li>E = εE<sub>b</sub> = εσT<sub>s</sub><sup>4</sup></li>
+              <ul>
+                <li>E is the emissive power in <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+                <li>ε is the surface emmissivity (0 ≤ ε ≤ 1)</li>
+                <li>E<sub>b</sub> is the emmissive power of a black body (a perfect emitter)</li>
+                <li>σ is the <strong>Stefan-Boltzmann</strong> constant and is equal to 5.67 * 10<sup>-8</sup> <sup>W</sup>&frasl;<sub>m<sup>2</sup>*K<sup>4</sup></sub></li>
+              </ul>
+            </ul>
+            <li><strong>Absorbed Incident Radiation (G<sub>abs</sub>)</strong> is the absorption of heat due to radiation
+              <ul>
+                <li>G<sub>abs</sub> = αG</li>
+                <ul>
+                  <li>G<sub>abs</sub> is the absorbed incident radiation in <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+                  <li>α is the surface absorptivity (0 ≤ α ≤ 1)</li>
+                  <li>G is the irradiation in <sup>W</sup>&frasl;<sub>m<sup>2</sup></sub></li>
+                </ul>
+              </ul>
+            <li><strong>Irradiation</strong> is a special case of surface exposed to a large surrounding of uniform temperature
+              <ul>
+                <li>q"<sub>rad</sub> = εE<sub>b</sub>T<sub>s</sub> - αG = εσ(T<sub>s</sub><sup>4</sup> - T<sub>sur</sub><sup>4</sup>)</li>
+                <ul>
+                  <li>h<sub>r</sub> is the absorbed incident radiation in <sup>W</sup>&frasl;<sub>m<sup>2</sup>*K</sub></li>
+                  <li>h<sub>r</sub> = εσ(T<sub>s</sub> - T<sub>sur</sub>)(T<sub>s</sub><sup>2</sup> - T<sub>sur</sub><sup>2</sup>)</li>
+                </ul>
+              </ul>
+          </ul>
+
+        </div>
+      </div>
+    </body>
+
+    <script type="text/javascript">
+      function showAnswer(id, but, ans, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10) {
+        var x = document.getElementById(id);
+        var y = document.getElementById(but);
+        var varAns = document.getElementById(ans);
+        var varAns2 = document.getElementById(ans2);
+        var varAns3 = document.getElementById(ans3);
+        var varAns4 = document.getElementById(ans4);
+        var varAns5 = document.getElementById(ans5);
+        var varAns6 = document.getElementById(ans6);
+        var varAns7 = document.getElementById(ans7);
+        var varAns8 = document.getElementById(ans8);
+        var varAns9 = document.getElementById(ans9);
+        var varAns10 = document.getElementById(ans10);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.innerHTML = 'Hide Answer';
+        }
+        else {
+          x.style.display = "none";
+          y.innerHTML = 'Show Answer';
+        }
+        if (varAns.classList.contains("correct")) {
+          varAns.classList.remove("correct")
+          varAns2.classList.remove("correct")
+          varAns3.classList.remove("correct")
+          varAns4.classList.remove("correct")
+          varAns5.classList.remove("correct")
+          varAns6.classList.remove("correct")
+          varAns7.classList.remove("correct")
+          varAns8.classList.remove("correct")
+          varAns9.classList.remove("correct")
+          varAns10.classList.remove("correct")
+        }
+        else {
+          varAns.classList.add("correct")
+          varAns2.classList.add("correct")
+          varAns3.classList.add("correct")
+          varAns4.classList.add("correct")
+          varAns5.classList.add("correct")
+          varAns6.classList.add("correct")
+          varAns7.classList.add("correct")
+          varAns8.classList.add("correct")
+          varAns9.classList.add("correct")
+          varAns10.classList.add("correct")
+        }
+        varAns.classList.add("correct")
+      }
+      function selectMultAns(id) {
+        var x = document.getElementById(id);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+
+      function selectAns(id, id2, id3, id4, id5, id6, id7, id8, id9, id10) {
+        var x = document.getElementById(id);
+        var x2 = document.getElementById(id2);
+        var x3 = document.getElementById(id3);
+        var x4 = document.getElementById(id4);
+        var x5 = document.getElementById(id5);
+        var x6 = document.getElementById(id6);
+        var x7 = document.getElementById(id7);
+        var x8 = document.getElementById(id8);
+        var x9 = document.getElementById(id9);
+        var x10 = document.getElementById(id10);
+        if (x.classList.contains("answer-choice")) {
+          x.classList.replace("answer-choice", "answer-choice-selected")
+          x2.classList.replace("answer-choice-selected", "answer-choice")
+          x3.classList.replace("answer-choice-selected", "answer-choice")
+          x4.classList.replace("answer-choice-selected", "answer-choice")
+          x5.classList.replace("answer-choice-selected", "answer-choice")
+          x6.classList.replace("answer-choice-selected", "answer-choice")
+          x7.classList.replace("answer-choice-selected", "answer-choice")
+          x8.classList.replace("answer-choice-selected", "answer-choice")
+          x9.classList.replace("answer-choice-selected", "answer-choice")
+          x10.classList.replace("answer-choice-selected", "answer-choice")
+        }
+        else {
+          x.classList.replace("answer-choice-selected", "answer-choice")
+        }
+      }
+    </script>
+</html>
