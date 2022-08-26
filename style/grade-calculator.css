@@ -1,8 +1,0 @@
-.input-holder > input {
-  text-align: center;
-  width: 8%;
-}
-
-.input-holder:after {
-  content: ' %';
-}
