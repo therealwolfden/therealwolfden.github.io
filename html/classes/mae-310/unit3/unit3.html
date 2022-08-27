@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>Relationship to Thermodynamics</title>
+        <title>INSERT SECTION HERE</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -86,7 +86,6 @@
             <!-- The drop down menu for the Class Guides -->
             <div class="class-dropdown-content">
               <a href="/html/classes/mae-310/unit1/unit1.html"><em>Physical Origins and Rate Equations</em></a>
-              <a href="/html/classes/mae-310/unit2/unit2.html"><em>Relationship to Thermodynamics</em></a>
             </div>
           </div>
 
@@ -107,43 +106,41 @@
 
         <!-- Section 1 -->
         <div class="sect-box">
-          <h2><center>Relationship to Thermodynamics</center></h2>
+          <h2><center>UNIT TOPIC</center></h2>
           <hr>
 
-          <!-- First Law of thermodynamics -->
-          <h3><em>First Law of thermodynamics</em></h3>
-          <span class="tab"></span><strong><em>Application to a control volume</em></strong>
+          <!--  -->
+          <h3><em>SUB TOPIC</em></h3>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <br><br>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
           <ul>
-            <li><strong>Over a Time Interval:</strong></li>
-            <ul>
-              <li>∆E<sub>st</sub> = E<sub>in</sub> - E<sub>out</sub> + E<sub>g</sub></li>
-              <ul>
-                <li>∆E<sub>st</sub> is the energy storage in the system</li>
-                <li>E<sub>in</sub>is the energy transfered across the control surface gained</li>
-                <li>E<sub>out</sub>is the energy transfered across the control surface lost</li>
-                <li>E<sub>g</sub> is the thermal energy generation</li>
-              </ul>
-            </ul>
-            <li><strong>For a closed system:</strong></li>
-            <ul>
-              <li>∆E<sub>st</sub> = Q - W</li>
-              <li>For a negligible changes in kinetic and potential energy: ∆U<sub>t</sub> = Q - W</li>
-            </ul>
-            <li><strong>For steady state flow through an open system:</strong></li>
-            <ul>
-              <li>m'(u<sub>t</sub> + pv + <sup>V<sup>2</sup></sup>&frasl; <sub>2</sub> + gz)<sub>in</sub> + q - m'(u<sub>t</sub> + pv +
-                <sup>V<sup>2</sup></sup>&frasl; <sub>2</sub> + gz)<sub>out</sub> - W' = 0</li>
-            </ul>
+            <li>BULLETED POINTS HERE</li>
+            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
           </ul>
-          <span class="tab"></span><strong><em>Methodology of First Law Analysis:</strong></em>
-          <ul>
-            <li>On a schematic of the system, represent the control surface by dashed line(s)</li>
-            <li>Choose the appropriate time basis</li>
-            <li>Identify relevant energy transport, generation and/or storage terms by labeled arrows on the schematic</li>
-            <li>Write the governing form of the Conservation of Energy requirement</li>
-            <li>Substitute appropriate expressions for terms of the energy equation</li>
-            <li>Solve for the unknown quantity</li>
-          </ul>
+          <div class="question-box">
+            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
+              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
+          <br>
+          <div class="question-box">
+            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
+              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA2" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
           <br>
 
         </div>
