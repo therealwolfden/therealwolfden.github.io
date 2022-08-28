@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Growth Rates</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -125,45 +125,95 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 2 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Growth Rates</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
-          </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
-          <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          <!-- Rate functions -->
+          <h3><em>Rate Functions</em></h3>
+          <span class="tab"></span><strong><em>Functions and their Growth Rate by increasing order</em></strong>
+          <ol>
+            <li><em>log</em>(n)</li>
+            <li>n</li>
+            <li>n<em>log</em>(n)</li>
+            <li>n<sup>2</sup></li>
+            <li>n<sup>3</sup></li>
+            <li>2<sup>n</sup></li>
+          </ol>
           <br>
 
+          <!-- Big-Oh -->
+          <h3><em>Big-Oh</em></h3>
+          <span class="tab"></span><strong><em>Big-Oh: </em></strong>given functions <em>f(n)</em> and <em>g(n)</em>, it can be said that <em>f(n)</em>
+          is O(<em>g(n)</em>) if there are integer constants c > 0 and n<sub>0</sub> ≥ 1 such that
+          <strong><em>f(n)</em> ≤ c * <em>g(n)</em></strong> and <strong>∀n ≥ n<sub>0</sub></strong>
+          <br><br>
+          <span class="tab"></span><strong><em>Proving Big-Oh Using Definition</em></strong>
+          <ol>
+            <li>Chooose n<sub>0</sub> = 1</li>
+            <li>Assume n ≥ 1</li>
+            <ul>
+              <li>n ≥ 1 implies 1 ≤ n, n ≤ n<sup>2</sup>, n<sup>2</sup> ≤ n<sup>3</sup>, ...</li>
+            </ul>
+            <li>Find a c such that <em>f(n)</em> ≤ c * <em>g(n)</em></li>
+          </ol>
+          <span class="tab"></span><strong><em>Proving Big-Oh using Limit Test:</em></strong>if <em>f(n)</em> and <em>g(n)</em> are monotone
+          increasing and positive, then...
+          <ul>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = 0, then <em>f(n)</em> is O(<em>g(n)</em>),
+              but <em>g(n)</em> is NOT O(<em>f(n)</em>)</li>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = ∞, then <em>g(n)</em> is O(<em>f(n)</em>),
+              but <em>f(n)</em> is NOT O(<em>g(n)</em>)</li>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = c, 0 < c < ∞, then <em>f(n)</em> is O(<em>g(n)</em>),
+              and <em>g(n)</em> is O(<em>f(n)</em>)</li>
+          </ul>
+          <br>
+
+          <!-- Big-Omega -->
+          <h3><em>Big-Omega</em></h3>
+          <span class="tab"></span><strong><em>Big-Omega: </em></strong>given functions <em>f(n)</em> and <em>g(n)</em>, it can be said that <em>f(n)</em>
+          is Ω(<em>g(n)</em>) if there are integer constants c > 0 and n<sub>0</sub> ≥ 1 such that
+          <strong><em>f(n)</em> ≥ c * <em>g(n)</em></strong> and <strong>∀n ≥ n<sub>0</sub></strong>
+          <br><br>
+
+          <!-- Big-Theta -->
+          <h3><em>Big-Theta</em></h3>
+          <span class="tab"></span><strong><em>Big-Theta: </em></strong>given functions <em>f(n)</em> and <em>g(n)</em>, it can be said that <em>f(n)</em>
+          is Θ(<em>g(n)</em>) if there are integer constants c' > 0, c'' > 0 and n<sub>0</sub> ≥ 1 such that
+          <strong>c'<em>g(n)</em> ≤ <em>f(n)</em> ≤ c''<em>g(n)</em></strong> and <strong>∀n ≥ n<sub>0</sub></strong>
+          <br><br>
+
+          <!-- Limit Test -->
+          <h3><em>Limit Test</em></h3>
+          <span class="tab"></span><strong><em>Using Limit Test:</em></strong> if <em>f(n)</em> and <em>g(n)</em> are monotone
+          increasing and positive, then...
+          <ul>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = 0, then <em>f(n)</em> is O(<em>g(n)</em>),
+              and <em>g(n)</em> is Ω(<em>f(n)</em>)</li>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = ∞, then <em>g(n)</em> is O(<em>f(n)</em>),
+              but <em>f(n)</em> is Ω(<em>g(n)</em>)</li>
+            <li>if lim<sub>n→∞</sub> <sup><em>f(n)</em></sup>&frasl;<sub><em>g(n)</em></sub> = c, 0 < c < ∞, then <em>f(n)</em> is Θ(<em>g(n)</em>),
+              and <em>g(n)</em> is Θ(<em>f(n)</em>)</li>
+          </ul>
+          <br>
+
+          <!-- Analysis of Algorithms -->
+          <h3><em>Analysis of Algorithms</em></h3>
+          <span class="tab"></span><strong><em>Running time:</em></strong> is the time it takes for a program to successfully execute. It can depend
+            on a variety of things such as...
+          <ul>
+            <li><strong>Software</strong> includes the language and compiler</li>
+            <li><strong>Programmer</strong> includes the experience and coding details</li>
+            <li><strong>Hardware</strong> includes the machine used</li>
+            <li><strong>Algorithm</strong> includes the approach to solving the problem</li>
+          </ul>
+          <span class="tab"></span><strong><em>Theoretical Analysis:</em></strong>
+          <ul>
+            <li>Uses pseudocode instead of the implementation</li>
+            <li>Characterizes the running time as a function of input size n</li>
+            <li>Independent of the hardware/software environment</li>
+          </ul>
         </div>
       </div>
     </body>

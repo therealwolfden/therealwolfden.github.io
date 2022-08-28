@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Problems, Algorithms, and Programs</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -127,42 +127,121 @@
 
         <!-- Section 1 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Problems, Algorithms, and Programs</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Problems -->
+          <h3><em>Problems</em></h3>
+          <span class="tab"></span><strong><em>Problem:</em></strong> a general question to be answered with given parameters.
           <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <span class="tab"></span><strong><em>Problem Specification:</em></strong> general description of all its parameters and what properties
+          a solution must satisfy.
+          <br><br>
+          <span class="tab"></span><strong><em>Problem Instance:</em></strong> provides specific values for all problem parameters.
+          <br><br>
+          <span class="tab"></span><strong><em>Traveling Salesperson Problem:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li><strong>Problem</strong>: What is the shortest route I should take to visit all cities and return home without visiting a city more
+              than once?</li>
+            <li><strong>Parameters</strong>:</li>
+            <ul>
+              <li>A finite set of cities C = {C<sub>1</sub>, C<sub>2</sub> , ... , C<sub>n</sub>}</li>
+              <li>The distance between each pair of cities (c<sub>i</sub>, c<sub>j</sub>)</li>
+            </ul>
+            <li><strong>Solution</strong>:</li> An ordering of the n cities that minimizes the distance traveled.
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <!-- Algorithms -->
+          <h3><em>Algorithms</em></h3>
+          <span class="tab"></span><strong><em>Algorithms:</em></strong> a set methodology of finite steps that allows for a solution to be generated
+          for a problem.
+          <br><br>
+          <span class="tab"></span><strong><em>Types of Algorithms:</em></strong>
+          <ul>
+            <li><strong>Greedy Approach</strong></li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Takes the shortest path that is immediately available.</li>
+              <li>Easy to follow but often does not result in finding the best possible solution.</li>
+              <li>Not a true algorithm</li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+            <li><strong>Exhaustive Approach</strong></li>
+            <ul>
+              <li>Looks at all available paths and then executes the most effective path.</li>
+              <li>Harder to follow and more time consuming but guarantees the best possible solution.</li>
+              <li>Is a true algorithm</li>
+            </ul>
+          </ul>
+          <span class="tab"></span><strong><em>Properties of Algorithms:</em></strong>
+          <ul>
+            <li><strong>Correctness</strong>, always gives the right answer</li>
+            <li><strong>Termination</strong>, no infinite loops</li>
+            <li><strong>Robustness</strong>, able to handle unexpected inputs</li>
+            <li><strong>Complexity of Resulting Program</strong>, easily translates into code</li>
+            <li><strong>Adaptility</strong>, able to adapt to small changes in problem specifications</li>
+            <li><strong>Efficiency</strong>, low utilization of computational resources</li>
+          </ul>
           <br>
+
+          <!-- Pseudocode -->
+          <h3><em>Pseudocode</em></h3>
+          <span class="tab"></span><strong><em>Pseudocode</em></strong> are high level descriptions of algorithms
+          <ul>
+            <li>Combines natural language and structure of programming languages</li>
+            <li>Not actual computer programs but can be converted into a programming language by humans</li>
+            <li>Clear and informative</li>
+            <li>Ensures correctness and efficiency of an algorithm before actually implementing it</li>
+          </ul>
+          <span class="tab"></span><strong><em>Template:</em></strong><br>
+          <span class="tab"></span><span class="tab"></span><strong>Algorithm nameOfAlgorithm</strong>(parameters)<br>
+          <span class="tab"></span><span class="tab"></span><span class="tab"></span><strong>Input</strong> description of parameters<br>
+          <span class="tab"></span><span class="tab"></span><span class="tab"></span><strong>Output</strong> description of output<br>
+          <span class="tab"></span><span class="tab"></span><span class="tab"></span>first line<br>
+          <span class="tab"></span><span class="tab"></span><span class="tab"></span>second line<br>
+          <span class="tab"></span><span class="tab"></span><span class="tab"></span>third line<br>
+          <br>
+          <span class="tab"></span><strong><em>Notation:</em></strong><br>
+          <ul>
+            <li><strong>Assignment: </strong>←</li>
+            <li><strong>Comparisons: </strong><, >, ≤, ≥, =</li>
+            <li><strong>Definite Loop: </strong>for i ← X to Y do</li>
+            <li><strong>For-each Loop: </strong>for each X in Y do</li>
+            <ul>
+              <li>Loop bounds are inclusive (<em>for i ← 1 to n-1 do</em> is equal to <em>for(int i = 1; i <= n-1; i++)</em>)</li>
+            </ul>
+            <li><strong>If conditional: </strong>if X then</li>
+            <li><strong>Indefinite Loop: </strong>while X do</li>
+            <li><strong>Return: </strong>return x</li>
+            <li><strong>Comment: </strong>//</li>
+          </ul>
+          <br>
+
+          <!-- Efficiency and Data Structures -->
+          <h3><em>Efficiency and Data Structures</em></h3>
+          <span class="tab"></span><strong><em>Efficiency:</em></strong>
+          <ul>
+            <li><strong>Time efficient algorithms</strong> can be applied to large scale problems and focus on solving a problem as quickly
+            as possible.</li>
+            <li><strong>Space (memory) efficient algorithms</strong> are largely used for small devices such as phones and prioritize taking
+            up as little memore as possible.</li>
+          </ul>
+          <span class="tab"></span><strong><em>Data Structures</em></strong> often influence the time and memory efficiency of an algorithm.
+          They are systematic ways of organizing data.<br>
+          <ul>
+            <li><strong>Static Data Structure:</strong> Cannot be changed without recreating it from scratch such as an array.</li>
+            <li><strong>Dynamic Data Structure:</strong> May increase and decrease size at will such as a linked list.</li>
+            <li><strong>Deterministic Data Structure:</strong> A sequence of insert, find, and delete operations with key values which will
+            always result in the same resulting structure.</li>
+            <li><strong>Probabilistic Data Structure:</strong> Same sequence of operations which do not result in the same data structure and
+            are typically based on a randomization component.</li>
+          </ul>
+          <br>
+
+          <!-- Programs -->
+          <h3><em>Programs</em></h3>
+          <span class="tab"></span><strong><em>Computer Programs:</em></strong> an implementation of an algorithm. Typically written in coding
+          languages such as Java, Python, etc.
+          <br><br>
 
         </div>
       </div>
