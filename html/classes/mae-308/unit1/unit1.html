@@ -235,17 +235,75 @@
 
           <!-- Viscosity -->
           <h3><em>Viscosity</em></h3>
-          <span class="tab"></span><strong><em>Viscosity (µ)</strong></em> is a fluid's internal resistance to flow.
-          <li>τ = µ<sup>du</sup>&frasl;<sub>dy</sub> (<sup>kg</sup>&frasl;<sub>m*s</sub> or <sup>N*s</sup>&frasl;<sub>m<sup>2</sup></sub>)</li>
-          <img src="/html/classes/mae-308/unit1/assets/viscosity.jpg" alt="Diagram showing viscosity" class="fifty-text">
+          <span class="tab"></span><strong><em>Viscosity (µ)</strong></em> is a fluid's internal resistance to flow. It is highly dependent on
+          the fluids temperature.
+          <ul>
+            <li>τ = µ<sup>du</sup>&frasl;<sub>dy</sub> (<sup>kg</sup>&frasl;<sub>m*s</sub> or <sup>N*s</sup>&frasl;<sub>m<sup>2</sup></sub>)</li>
+            <li>Fluid Velocity:</li>
+            <ul>
+              <li>Next to moving plate, u = U</li>
+              <li>Next to fixed plate, u = 0</li>
+              <li>Middle between plates, u = u(y)</li>
+            </ul>
+          </ul>
+          <span class="tab"></span><strong><em>Newtonian Fluids</strong></em> are fluids in which the shearing stress is linearly related to the shearing
+          strain.
           <br><br>
+          <span class="tab"></span><strong><em>Non-Newtonian Fluids</strong></em> are fluids in which the shearing stress is no tlinearly related to
+          the shearing strain. The slope of the curve is denoted as the apparent viscosity µ<sub>ap</sub>.
+          <ul>
+            <li><strong>Shear Thinning Fluids</strong> are fluids when the apparent viscosity decreases with increasing shear rate</li>
+            <li><strong>Shear Thickening Fluids</strong> are fluids when the apparent viscosity increases with increasing shear rate</li>
+          </ul>
+          <span class="tab"></span><strong><em>No-slip Condition </strong></em>is common for liquids and gases and causes the velocity of liquids to
+          slow when closer to a fixed surface. This make the velocity distribution of Newtonian fluids parabolic with the highest velocity in the middle
+          of the two plates.
+          <ul>
+            <li>v = <sup>3U</sup>&frasl;<sub>2</sub> [1 - (<sup>y</sup>&frasl;<sub>h</sub>)<sup>2</sup>]</li>
+          </ul>
+          <br>
 
           <!-- Compressibility of Fluids -->
           <h3><em>Compressibility of Fluids</em></h3>
+          <span class="tab"></span><strong><em>Bulk Modulus (E<sub>v</sub>) </strong></em>is the property to characterize the compressibility of the
+          fluid.
+          <ul>
+            <li>E<sub>v</sub> = -<sup>dp</sup>&frasl;<sub>d∀/∀</sub> = <sup>dp</sup>&frasl;<sub>dρ/ρ</sub></li>
+            <ul>
+              <li>dp is the differential change in pressure</li>
+              <li>d∀ is the differential change in volume</li>
+              <li>∀ is the volume</li>
+            </ul>
+          </ul>
+          <span class="tab"></span>When gases are compressed or expanded the relationship between pressure and density depends on the nature of <thead>
+            process.
+            <ul>
+              <li><strong>Isothermal Process (constant temperature)</strong>: <sup>p</sup>&frasl;<sub>ρ</sub> = constant</li>
+              <li><strong>Isentropic Process (frictionless and no heat exchange)</strong>: <sup>p</sup>&frasl;<sub>ρ<sup>k</sup></sub> = constant</li>
+              <ul>
+                <li>k is the ratio of specific heat at constant pressure and volume (<sup>c<sub>p</sub></sup>&frasl;<sub>c<sub>v</sub></sub>)</li>
+              </ul>
+            </ul>
           <br>
 
           <!-- Speed of Sound -->
           <h3><em>Speed of Sound</em></h3>
+          <span class="tab"></span><strong><em>Sound</strong></em> is a signal or small disturbance of fluid properties propagating in a fluid
+          <ul>
+            <li>The <strong>speed of sound</strong> is the speed of these small disturbances (<sup>m</sup>&frasl;<sub>s</sub>)</li>
+            <ul>
+              <li>Since disturbances are small there is negligible heat transfer and can be assumed as isentropic</li>
+              <li>c = √(<sup>dp</sup>&frasl;<sub>dρ</sub>) = √(kRT)</li>
+              <li>c<sub>air</sub> = 330 <sup>m</sup>&frasl;<sub>s</sub></li>
+              <li>c<sub>water</sub> = 1560 <sup>m</sup>&frasl;<sub>s</sub></li>
+            </ul>
+            <li><strong>Mach Number (M)</strong></li>
+            <ul>
+              <li>M = <sup>v</sup>&frasl;<sub>c</sub></li>
+              <li>M < 1, subsonic</li>
+              <li>M > 1, supersonic</li>
+            </ul>
+          </ul>
           <br>
 
         </div>
