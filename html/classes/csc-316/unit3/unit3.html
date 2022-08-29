@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Algorithm Analysis and Iterative Sorting Algorithms</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -125,43 +125,133 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 3 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Algorithm Analysis and Iterative Sorting Algorithms</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Analysis of Algorithms -->
+          <h3><em>Analysis of Algorithms</em></h3>
+          <span class="tab"></span><strong><em>Running time:</em></strong> is the time it takes for a program to successfully execute. It can depend
+            on a variety of things such as...
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li><strong>Software</strong> includes the language and compiler</li>
+            <li><strong>Programmer</strong> includes the experience and coding details</li>
+            <li><strong>Hardware</strong> includes the machine used</li>
+            <li><strong>Algorithm</strong> includes the approach to solving the problem</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          <span class="tab"></span><strong><em>Theoretical Analysis:</em></strong>
+          <ul>
+            <li>Uses pseudocode instead of the implementation</li>
+            <li>Characterizes the running time as a function of input size n</li>
+            <li>Independent of the hardware/software environment</li>
+          </ul>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <!-- Comparison Based Sorting -->
+          <h3><em>Comparison Based Sorting</em></h3>
+          <span class="tab"></span><strong><em>Comparison Based Sorting</em></strong> is the organization into data structures by making
+          comparisons between pairs of elements. It is efficient for smaller data sets and data that is already almost sorted.
+          <br><br>
+          <span class="tab"></span><strong><em>Bogosort</em></strong> is an algorithm that checks to see if the data is already sorted and if it
+          is not the data is randomly shuffled before repeating the process.
+          <ul>
+            <li>What input of data would minimize the repetitions (<strong>most efficient</strong>)?</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>When the input data is already sorted it will not repeat at all.</li>
+              <li>Only goes through the code once so <em>T(n)</em> = n - 1.</li>
+              <li><strong><em>T(n)</em> is <em>O(n)</em></strong></li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+            <li>What input of data would maximize the repetitions (<strong>least efficient</strong>)?</li>
+            <ul>
+              <li>Any data that is not sorted can be equally efficient.</li>
+              <li>Regardless of how the unsorted data is entered the randomness makes it so <strong><em>T(n)</em> is unbounded</strong> and can
+                theoretically last forever.</li>
+            </ul>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Bubble Sort</em></strong> goes through an array of data and goes pair by pair swapping data as
+          necessary. This process is repeated until a full pass is completed without swapping.
+          <ul>
+            <li>What input of data would minimize the repetitions (<strong>most efficient</strong>)?</li>
+            <ul>
+              <li>When the input data is already sorted it will not repeat at all.</li>
+              <li>Only goes through the code once so <em>T(n)</em> = n - 1.</li>
+              <li><strong><em>T(n)</em> is <em>O(n)</em></strong></li>
+            </ul>
+            <li>What input of data would maximize the repetitions (<strong>least efficient</strong>)?</li>
+            <ul>
+              <li>Data sorted in reverse sorted order as it would have to move data from one end to the other.</li>
+              <li>If the data is in reverse order then <em>T(n)</em> = n(n - 1) = n<sup>2</sup> - n.</li>
+              <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
+            </ul>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Insertion Sort</em></strong> processes data one by one and will shift left until the data element is in
+          the correct sorted order. Basically just makes comparisons to from the end of the list and then actually places the element when the element is
+          compared as more than the element to the left of it or the front of the list is reached.
+          <ul>
+            <li>What input of data would minimize the repetitions (<strong>most efficient</strong>)?</li>
+            <ul>
+              <li>When the input data is already sorted it will not repeat at all.</li>
+              <li>Only goes through the code once so <em>T(n)</em> = n - 1.</li>
+              <li><strong><em>T(n)</em> is <em>O(n)</em></strong></li>
+            </ul>
+            <li>What input of data would maximize the repetitions (<strong>least efficient</strong>)?</li>
+            <ul>
+              <li>Data sorted in reverse sorted order as the algorithm would have to compare to the entire array of already sorted data before adding
+                an element to the front.</li>
+              <li>If the data is in reverse order then <em>T(n)</em> = <sup>n(n - 1)</sup>&frasl;<sub>2</sub> = <sup>n<sup>2</sup> -
+                n</sup>&frasl;<sub>2</sub>.</li>
+              <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
+            </ul>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Selection Sort</em></strong> finds the minimum of the unsorted data set and swaps it with the first
+          unsorted element. This continues until the data is sorted.
+          <ul>
+            <li>What input of data would minimize the repetitions (<strong>most efficient</strong>)?</li>
+            <ul>
+              <li>When the input data is already sorted it will not repeat at all.</li>
+              <li>Still makes the same number of comparions though it does not swap the data reuslting in <em>T(n)</em> = <sup>n(n -
+                1)</sup>&frasl;<sub>2</sub> = <sup>n<sup>2</sup> - n</sup>&frasl;<sub>2</sub>.</li>
+              <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
+            </ul>
+            <li>What input of data would maximize the repetitions (<strong>least efficient</strong>)?</li>
+            <ul>
+              <li>Data sorted in reverse sorted order as the algorithm would have to compare to the entire array of already sorted data before adding
+                an element to the front.</li>
+              <li>If the data is in reverse order then <em>T(n)</em> = n(n - 1) = n<sup>2</sup> - n.</li>
+              <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Non-Comparison Based Sorting -->
+          <h3><em>Non-Comparison Based Sorting</em></h3>
+          <span class="tab"></span><strong><em>Non-Comparison Based Sorting</em></strong> distributes values to intermediate data structures to help
+          with sorting. It does not make comparisons.
+          <br><br>
+          <span class="tab"></span><strong><em>Counting Sort</em></strong> takes an input array of size n integer elements in a range k. Processes each
+          integer input value and counts the number of times each element appears in the input. Creates the sorted output by using frequencies.
+          <ul>
+            <li>Steps:</li>
+            <ol>
+              <li>Compute the range.</li>
+              <li>Create an array C to store frequencies.</li>
+              <li>Process each value and increment frequencies as necessary.</li>
+              <li>Accumulate the frequencies.</li>
+              <li>Use the accumulated frequencies to produce the sorted output by iterating left to right.</li>
+            </ol>
+            <li><strong><em>T(n)</em> is <em>O(n + k)</em></strong></li>
+          </ul>
+          <span class="tab"></span><strong><em>Radix Sort</em></strong> uses N = radix (the number of unique digits used to represent numbers; base
+          radix = 10). w is the word size of integers (# of digits in an integer). Starts with the least significant digit of each element and adds
+          these elements to buckets. Moves the entries from the buckets back to the main array.
+          <ul>
+            <li>Uses counting sort with a range (k) equal to N</li>
+            <li><strong><em>T(n)</em> is <em>O(n * w)</em></strong></li>
+          </ul>
           <br>
 
         </div>
