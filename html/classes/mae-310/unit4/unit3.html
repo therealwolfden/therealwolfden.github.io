@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>One-Dimensional, Steady-State Conduction without Thermal Energy Generation</title>
+        <title>INSERT SECTION HERE</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -87,7 +87,6 @@
             <div class="class-dropdown-content">
               <a href="/html/classes/mae-310/unit1/unit1.html"><em>Physical Origins and Rate Equations</em></a>
               <a href="/html/classes/mae-310/unit1/unit1.html"><em>Fourier's Law and the Heat Equation</em></a>
-              <a href="/html/classes/mae-310/unit1/unit1.html"><em>One-Dimensional, Steady-State Conduction without Thermal Energy Generation</em></a>
             </div>
           </div>
 
@@ -108,39 +107,42 @@
 
         <!-- Section 1 -->
         <div class="sect-box">
-          <h2><center>One-Dimensional, Steady-State Conduction without Thermal Energy Generation</center></h2>
+          <h2><center>UNIT TOPIC</center></h2>
           <hr>
 
           <!--  -->
-          <h3><em>Conduction Analysis</em></h3>
-          <span class="tab"></span><strong><em>Methodology:</em></strong>
-          <ol>
-            <li>Specify appropriate form of the heat equation.</li>
-            <li>Solve for the temperature distribution.</li>
-            <li>Apply Fourier’s law to determine the heat flux.</li>
-          </ol>
-          <br>
-          <span class="tab"></span><strong><em>Common Geometries:</em></strong>
+          <h3><em>SUB TOPIC</em></h3>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <br><br>
+          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
           <ul>
-            <li>The Plane Wall: Described in rectangular (x) coordinate. Area perpendicular to direction of heat transfer is constant (independent of
-              x).</li>
-              <ul>
-                <li>Temperature difference for a constant k: T(x) = T<sub>s, 1</sub> + (T<sub>s, 2</sub> -
-                  T<sub>s, 1</sub>)<sup>x</sup>&frasl;<sub>L</sub></li>
-                <li>Heat Transfer Rate: q<sub>x</sub>'' = -kA<sup>dT</sup>&frasl;<sub>dx</sub> = <sup>KA</sup>&frasl;<sub>L</sub>(T<sub>s, 1</sub> -
-                  T<sub>s, 2</sub>)</li>
-                <li>Overall Heat Transfer Coefficient (U): q<sub>x</sub> = UA∆T<sub>overall</sub></li>
-                <li>R<sub>tot</sub> = <sup>1</sup>&frasl;<sub>UA</sub></li>
-              </ul>
-            <li>The Tube Wall: Radial conduction through tube wall.</li>
-              <ul>
-                <li></li>
-              </ul>
-            <li>The Spherical Shell: Radial conduction through shell wall.</li>
-              <ul>
-                <li></li>
-              </ul>
+            <li>BULLETED POINTS HERE</li>
+            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
           </ul>
+          <div class="question-box">
+            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
+              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
+          <br>
+          <div class="question-box">
+            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+            <ul>
+              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
+              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
+              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+            </ul>
+          </div>
+          <div id="SampA2" class="answer-box" style="display: none;">
+            Description of correct answer and explanation here
+          </div>
+          <br>
 
         </div>
       </div>

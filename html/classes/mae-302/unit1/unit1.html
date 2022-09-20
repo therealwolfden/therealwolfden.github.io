@@ -241,6 +241,8 @@
 
           <!-- Otto Cycle -->
           <h3><em>Otto Cycle</em></h3>
+          <span class="tab"></span><strong><em>Otto Cycle</em></strong> is a reciprocating spark ignition engine.
+          <br><br>
           <span class="tab"></span><strong><em>Process 1 -> 2:</em></strong>
           <ul>
             <li>Isentropic compression from BDC to TDC</li>
@@ -370,7 +372,7 @@
                 <sup>P<sub>3</sub>V<sub>3</sub></sup>&frasl;<sub>T<sub>3</sub></sub></li>
               <ul>
                 <li><strong>P<sub>3</sub></strong> = P<sub>2</sub>(<sup>T<sub>3</sub></sup>&frasl;<sub>T<sub>2</sub></sub>)(<sup>V<sub>2</sub></sup>&frasl;<sub>V<sub>3</sub></sub>)
-                  = P<sub>1</sub>(<sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub>)1 = 1799.7 kPa(<sup>1575.1 K</sup>&frasl;<sub>652.4 K</sub>) = <strong>4345 kPa</strong></li>
+                  = P<sub>2</sub>(<sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub>)1 = 1799.7 kPa(<sup>1575.1 K</sup>&frasl;<sub>652.4 K</sub>) = <strong>4345 kPa</strong></li>
               </ul>
             </ul>
             State 3 -> State 4
@@ -410,8 +412,330 @@
                   <sup>418.17 <sup>kJ</sup>&frasl;<sub>kg</sub></sup> &frasl; (<sub>.832 <sup>m<sup>3</sup></sup>&frasl;<sub>kg</sub> -
                   <sup>(.832 <sup>m<sup>3</sup></sup>&frasl;<sub>kg</sub>)</sup> &frasl; <sub>8</sub></sub>) = <strong>574 kPa</strong></li>
               </ul>
-            <ul>
+            </ul>
           </div>
+          <br>
+
+          <!-- Diesel Cycle -->
+          <h3><em>Diesel Cycle</em></h3>
+          <span class="tab"></span><strong><em>Diesal Cycle</em></strong> is the ideal cycle for compression-ignition engines.
+          <ul>
+            <li>Only air is compressed during the compression stroke eliminating the possibilty of autoignition (engine knock).</li>
+            <li>Can operate at much higher compression ratios than spark ignition engines (typically between 12 and 24).</li>
+            <li>The spark plug in spark ignition engines is replaced with a fuel injector.</li>
+            <li>Cut-off ratio r<sub>c</sub> = <sup>v<sub>3</sub></sup> &frasl; <sub>v<sub>2</sub></sub> = <sup>T<sub>3</sub></sup> &frasl;
+              <sub>T<sub>2</sub></sub></li>
+          </ul>
+          <span class="tab"></span><strong><em>Process 1 -> 2:</em></strong>
+          <ul>
+            <li>Isentropic compression from BDC to TDC</li>
+            <li>w<sub>in</sub> (<sup>kJ</sup>&frasl;<sub>kg</sub>) = u<sub>2</sub> - u<sub>1</sub></li>
+            <ul>
+              <li>For constant specific heats: w<sub>in</sub> = c<sub>v</sub>(T<sub>2</sub> - T<sub>1</sub>)</li>
+            </ul>
+            <li>Isentropic constraint where s<sub>1</sub> = s<sub>2</sub></li>
+            <ul>
+              <li>For constant specific heats:</li>
+              <ul>
+                <li><sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub> =
+                  (<sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub>)<sup>k-1</sup> = r<sup>k-1</sup></li>
+                <li><sup>p<sub>2</sub></sup>&frasl;<sub>p<sub>1</sub></sub> =
+                  (<sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub>)<sup>k</sup> = r<sup>k</sup></li>
+              </ul>
+              <li>For variable specific heats:</li>
+              <ul>
+                <li>r = <sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub> = <sup>V<sub>r1</sub></sup>&frasl;<sub>V<sub>r2</sub></sub></li>
+                <li><sup>p<sub>1</sub></sup>&frasl;<sub>p<sub>2</sub></sub> = <sup>p<sub>r1</sub></sup>&frasl;<sub>p<sub>r2</sub></sub></li>
+              </ul>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Process 2 -> 3:</em></strong>
+          <ul>
+            <li>Constant pressure heat addition at TDC</li>
+            <li>q<sub>in</sub> - w<sub>out, 2-3</sub> = u<sub>3</sub> - u<sub>2</sub> (<sup>kJ</sup>&frasl;<sub>kg</sub>)</li>
+            <li>q<sub>in</sub> = h<sub>3</sub> - h<sub>2</sub></li>
+            <ul>
+              <li>For constant specific heats: q<sub>in</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>2</sub>)</li>
+            </ul>
+            <li>w<sub>out, 2-3</sub> = R(T<sub>3</sub> - T<sub>2</sub>)</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Process 3 -> 4:</em></strong>
+          <ul>
+            <li>Isentropic expansion from cut-off to BDC</li>
+            <li>w<sub>out</sub> (<sup>kJ</sup>&frasl;<sub>kg</sub>) = u<sub>3</sub> - u<sub>4</sub></li>
+            <ul>
+              <li>For constant specific heats: w<sub>out</sub> = c<sub>v</sub>(T<sub>3</sub> - T<sub>4</sub>)</li>
+            </ul>
+            <li>Isentropic constraint where s<sub>3</sub> = s<sub>4</sub></li>
+            <ul>
+              <li>For constant specific heats:</li>
+              <ul>
+                <li><sup>T<sub>3</sub></sup>&frasl;<sub>T<sub>4</sub></sub> =
+                  (<sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub>)<sup>k-1</sup> = (<sup>r</sup>&frasl;<sub>r<sub>c</sub></sub>)<sup>k-1</sup> =
+                  r<sup>k-1</sup></li>
+                <li><sup>p<sub>3</sub></sup>&frasl;<sub>p<sub>4</sub></sub> = (<sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub>)<sup>k</sup> =
+                  (<sup>r</sup>&frasl;<sub>r<sub>c</sub></sub>)<sup>k</sup></li>
+              </ul>
+              <li>For variable specific heats:</li>
+              <ul>
+                <li>(<sup>r</sup>&frasl;<sub>r<sub>c</sub></sub>)<sup>k</sup> = <sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub> =
+                  <sup>V<sub>r4</sub></sup>&frasl;<sub>V<sub>r3</sub></sub></li>
+                <li><sup>p<sub>4</sub></sup>&frasl;<sub>p<sub>3</sub></sub> = <sup>p<sub>r4</sub></sup>&frasl;<sub>p<sub>r3</sub></sub></li>
+              </ul>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Process 4 -> 1:</em></strong>
+          <ul>
+            <li>Constant volume heat rejection at BDC</li>
+            <li>q<sub>out</sub> (<sup>kJ</sup>&frasl;<sub>kg</sub>) = u<sub>4</sub> - u<sub>1</sub></li>
+            <ul>
+              <li>For constant specific heats: q<sub>out</sub> = c<sub>v</sub>(T<sub>4</sub> - T<sub>1</sub>)</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Net Work Output:</em></strong>
+          <ul>
+            <li>W<sub>net, out</sub> = w<sub>out, 2-3</sub> + w<sub>out, 3-4</sub> - w<sub>in</sub> = q<sub>in</sub> - q<sub>out</sub> =
+              (h<sub>3</sub> - h<sub>2</sub>) - (u<sub>4</sub> - u<sub>1</sub>)</li>
+            <ul>
+              <li>For constant specific heats: w<sub>net, out</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>2</sub>) -
+              c<sub>v</sub>(T<sub>4</sub> - T<sub>1</sub>)</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Thermal Efficiency:</em></strong>
+          <ul>
+            <li>n<sub>th</sub> = 1- <sup>q<sub>out</sub></sup> &frasl; <sub>q<sub>in</sub></sub> = 1 - <sup>u<sub>4</sub> -
+              u<sub>1</sub></sup>&frasl;<sub>h<sub>3</sub> - h<sub>2</sub></sub></li>
+            <ul>
+              <li>For constant specific heats: n<sub>th, Diesel</sub> = 1 - <sup>1</sup> &frasl; <sub>r<sup> k - 1</sup></sub>(<sup>r<sup>k</sup><sub>c</sub></sup>
+                - 1 &frasl; <sub>r<sub>c</sub> - 1</sup></sub>)</li>
+            </ul>
+          </ul>
+          <div class="question-box">
+            An diesal engine has a compression ratio of r = 18, an intial pressure of 200 kPa, a low temperature (T<sub>1</sub>) of 473 K, a high
+            temperature (T<sub>3</sub>) of 2220 K. From this information, find n<sub>th</sub> or the thermal efficiency.
+            <button onclick="showAnswer('A2', this.id)" id="Q2">Show answer</button>
+          </div>
+          <div id="A2" class="answer-box" style="display: none;">
+            Assumptions:
+            <ul>
+              <li>Air Standard Cycle</li>
+              <li>∆KE = ∆PE = 0</li>
+              <li>Constant Specific Heats</li>
+            </ul>
+            <br>
+
+            Solution
+            <ul>
+              <li><strong><em>n<sub>th</sub> = </em></strong>56.5%</li>
+              <ul>
+                <li><sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub> = (<sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub>)<sup>k - 1</sup>
+                  = (r)<sup>k - 1</sup></li>
+                <li><strong>n<sub>th</sub></strong> = 1 - <sup>1</sup> &frasl; <sub>18<sup> 1.4 - 1</sup></sub>(<sup>1.46<sup>1.4</sup></sup>
+                  - 1 &frasl; <sub>1.46 - 1</sup></sub>) = </li>
+              </ul>
+            </ul>
+          </div>
+          <br>
+
+          <!-- Brayton Cycle -->
+          <h3><em>Brayton Cycle</em></h3>
+          <span class="tab"></span><strong><em>Brayton Cycle</em></strong> is the simple ideal cycle for gas-turbine engines.
+          <ul>
+            <li>The combustion process is replaced by a constant-pressure heat addition from an external source.</li>
+            <li>The exhaust process is replaced by a constant-pressure heat rejection to the ambient air.</li>
+            <li>Pressure ratio: r<sub>p</sub> = <sup>p<sub>2</sub></sup> &frasl; <sub>p<sub>1</sub></sub> =
+              <sup>p<sub>3</sub></sup> &frasl; <sub>p<sub>4</sub></sub><li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Performance Variables</em></strong>, W<sub>in</sub> = ∫vdp
+          <ul>
+            <li>The goal is to maximize the work output by operating with as high of a temperature as possible between the two pressures.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Assumptions:</em></strong>
+          <ul>
+            <li>Treated as open systems</li>
+            <li>Steady flow (no storage of energy or mass)</li>
+            <li>∆KE = ∆PE = 0</li>
+            <li>Ideal Gas</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 1 -> 2:</em></strong>
+          <ul>
+            <li>Isentropic compression in a compressor</li>
+            <li>W&#775;<sub>in</sub> = m&#775;(h<sub>2</sub> - h<sub>1</sub>)</li>
+            <li>w<sub>in</sub> (<sup>kJ</sup>&frasl;<sub>kg</sub>) = h<sub>2</sub> - h<sub>1</sub></li>
+            <ul>
+              <li>For constant specific heats: w<sub>in</sub> = c<sub>p</sub>(T<sub>2</sub> - T<sub>1</sub>)</li>
+            </ul>
+            <li>Isentropic constraint where s<sub>1</sub> = s<sub>2</sub></li>
+            <ul>
+              <li>For constant specific heats:</li>
+              <ul>
+                <li><sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub> =
+                  (<sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub>)<sup>k-1</sup></li>
+                <li><sup>p<sub>2</sub></sup>&frasl;<sub>p<sub>1</sub></sub> =
+                  (<sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub>)<sup>k</sup></li>
+                <li><sup>T<sub>2</sub></sup>&frasl;<sub>T<sub>1</sub></sub> =
+                  (<sup>p<sub>2</sub></sup>&frasl;<sub>p<sub>1</sub></sub>)<sup>(k-1)/k</sup> = r<sub>p</sub><sup>(k-1)/k</sup></li>
+              </ul>
+              <li>For variable specific heats:</li>
+              <ul>
+                <li>r = <sup>V<sub>1</sub></sup>&frasl;<sub>V<sub>2</sub></sub> = <sup>V<sub>r1</sub></sup>&frasl;<sub>V<sub>r2</sub></sub></li>
+                <li><sup>p<sub>1</sub></sup>&frasl;<sub>p<sub>2</sub></sub> = <sup>p<sub>r1</sub></sup>&frasl;<sub>p<sub>r2</sub></sub></li>
+              </ul>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 2 -> 3:</em></strong>
+          <ul>
+            <li>Constant pressure heat addition</li>
+            <li>Q&#775;<sub>in</sub> = m&#775;(h<sub>3</sub> - h<sub>2</sub>)
+            <li>q<sub>in</sub> = h<sub>3</sub> - h<sub>2</sub></li>
+            <ul>
+              <li>For constant specific heats: q<sub>in</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>2</sub>)</li>
+            </ul>
+            <li>q<sub>in</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>2</sub>)</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 3 -> 4:</em></strong>
+          <ul>
+            <li>Isentropic expansion in a turbine</li>
+            <li>W&#775;<sub>T</sub> = m&#775;(h<sub>3</sub> - h<sub>4</sub>)
+            <li>w<sub>out</sub> = h<sub>3</sub> - h<sub>4</sub></li>
+            <ul>
+              <li>For constant specific heats: w<sub>T</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>4</sub>)</li>
+            </ul>
+            <li>Isentropic constraint where s<sub>3</sub> = s<sub>4</sub></li>
+            <ul>
+              <li>For constant specific heats:</li>
+              <ul>
+                <li><sup>T<sub>3</sub></sup>&frasl;<sub>T<sub>4</sub></sub> =
+                  (<sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub>)<sup>k-1</sup></li>
+                <li><sup>p<sub>3</sub></sup>&frasl;<sub>p<sub>4</sub></sub> = (<sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub>)<sup>k</sup></li>
+                <li><sup>T<sub>3</sub></sup>&frasl;<sub>T<sub>4</sub></sub> =
+                  (<sup>p<sub>3</sub></sup>&frasl;<sub>p<sub>4</sub></sub>)<sup>(k-1)/k</sup> = r<sub>p</sub><sup>(k-1)/k</sup></li>
+              </ul>
+              <li>For variable specific heats:</li>
+              <ul>
+                <li><sup>V<sub>4</sub></sup>&frasl;<sub>V<sub>3</sub></sub> =
+                  <sup>V<sub>r4</sub></sup>&frasl;<sub>V<sub>r3</sub></sub></li>
+                <li>r<sub>p</sub> = <sup>p<sub>3</sub></sup>&frasl;<sub>p<sub>4</sub></sub> = <sup>p<sub>r3</sub></sup>&frasl;<sub>p<sub>r4</sub></sub></li>
+              </ul>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 4 -> 1:</em></strong>
+          <ul>
+            <li>Constant pressure heat rejection at BDC</li>
+            <li>Q&#775;<sub>out</sub> = m&#775;(h<sub>4</sub> - h<sub>1</sub>)
+            <li>q<sub>out</sub> = h<sub>4</sub> - h<sub>1</sub></li>
+            <ul>
+              <li>For constant specific heats: q<sub>out</sub> = c<sub>p</sub>(T<sub>4</sub> - T<sub>1</sub>)</li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Net Work Output:</em></strong>
+          <ul>
+            <li>W<sub>net, out</sub> = w<sub>out</sub> - w<sub>in</sub> = q<sub>in</sub> - q<sub>out</sub> =
+              (h<sub>3</sub> - h<sub>2</sub>) - (u<sub>4</sub> - u<sub>1</sub>)</li>
+            <ul>
+              <li>For constant specific heats: w<sub>net, out</sub> = c<sub>p</sub>(T<sub>3</sub> - T<sub>2</sub>) -
+              c<sub>v</sub>(T<sub>4</sub> - T<sub>1</sub>)</li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Thermal Efficiency:</em></strong>
+          <ul>
+            <li>n<sub>th</sub> = 1 - <sup>q<sub>out</sub></sup> &frasl; <sub>q<sub>in</sub></sub> = 1 - <sup>h<sub>4</sub> -
+              h<sub>1</sub></sup>&frasl;<sub>h<sub>3</sub> - h<sub>2</sub></sub></li>
+            <ul>
+              <li>For constant specific heats: n<sub>th, Brayton</sub> = 1 - <sup>1</sup> &frasl; <sub>r<sub>p</sub><sup>(k-1)/k</sup></sub></li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Development of Gas Turbines:</em></strong>
+          <ul>
+            <li>Increasing the turbine inlet (or firing) temperatures.</li>
+            <li>Increasing the efficiencies of turbomachinery components (turbines, compressors).</li>
+            <li>Adding modifications to the basic cycle (intercooling, regeneration or recuperation, and reheating).</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Deviation from actual vs idealized:</em></strong>
+          <ul>
+            <li>Irreversibilities in turbine and compressors, pressure drops, heat losses.</li>
+            <li>Isentropic efficiencies of the compressor and turbine:</li>
+            <ul>
+              <li>n<sub>c</sub> = <sup>w<sub>s</sub></sup> &frasl; <sub>w<sub>a</sub></sub> = <sup>h<sub>2s</sub> - h<sub>1</sub></sup> &frasl;
+                <sub>h<sub>2a</sub> - h<sub>1</sub></sub></li>
+              <li>n<sub>T</sub> = <sup>w<sub>a</sub></sup> &frasl; <sub>w<sub>s</sub></sub> = <sup>h<sub>3</sub> - h<sub>4a</sub></sup> &frasl;
+                <sub>h<sub>3</sub> - h<sub>4s</sub></sub></li>
+              <li>w<sub>s</sub> = w<sub>isentropic</sub></li>
+                <li>w<sub>a</sub> = w<sub>actual</sub></li>
+            </ul>
+            <li>Use the ideal states and isentropic efficiencies to determine the actual states.</li>
+            <li>Note that starting states (1 and 3) are fixed. There is no ideal or actual states for them.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Improving Thermal Efficiency:</em></strong>
+          <ul>
+            <li>If we increase the pressure ratio, at a certain r<sub>p</sub>, T<sub>2</sub> > T<sub>4</sub></li>
+            <li>If T<sub>2</sub> < T<sub>4</sub>, we can use part of q<sub>out</sub> to reduce the required q<sub>in</sub>. This process
+              is called <strong>regeneration</strong>.</li>
+            <li><strong>Intercooling</strong> is the insertion of cooling stages between different stages of compression.</li>
+            <li><strong>Reheating</strong> is the insertion of heating stages between different stages of expansion.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Regeneration:</em></strong>
+          <ul>
+            <li>Only valid if T<sub>2</sub> < T<sub>4</sub> and is most effective at lower pressure ratios and lower min to max temperature ratios.</li>
+            <li>High-pressure air leaving the compressor can be heated by the hot exhaust gases leaving the turbine by using
+              a counter-flow heat exchanger. Doing so increases the heat of the gas before reaching the combustion chamber.</li>
+            <li>q<sub>in, with regen</sub> = q<sub>in, w/o regen</sub> - q<sub>regen</sub> = h<sub>3</sub> - h<sub>5</sub></li>
+            <li>q<sub>out, with regen</sub> = q<sub>out, w/o regen</sub> - q<sub>regen</sub> = h<sub>6</sub> - h<sub>1</sub></li>
+            <li>q<sub>regen</sub> = h<sub>4</sub> - h<sub>6</sub> = h<sub>5</sub> - h<sub>2</sub></li>
+            <li>Underneath ideal regeneration, T<sub>4</sub> = T<sub>5'</sub>, T<sub>2</sub> = T<sub>6'</sub></li>
+            <li>Underneath ideal regeneration and an ideal gas, h<sub>4</sub> = h<sub>5'</sub>, h<sub>2</sub> = h<sub>6'</sub></li>
+            <li>Underneath ideal regeneration, q<sub>regen, ideal</sub> = h<sub>4</sub> - h<sub>2</sub></li>
+            <li><strong>Generator effectiveness:</strong> ε = <sup>q<sub>regen</sub></sup> &frasl; <sub>q<sub>regen, ideal</sub></sub></li>
+            <li>n<sub>th, regen</sub> = 1 - (<sup>T<sub>1</sub></sup> &frasl; <sub>T<sub>3</sub></sub>)(r<sub>p</sub>)<sup>(k - 1)/k</sup></li>
+            <ul>
+              <li>Only valid for constant c<sub>p</sub></li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Intercooling, Reheating, and Regeneration:</em></strong>
+          <ul>
+            <li><sup>P<sub>2</sub></sup> &frasl; <sub>P<sub>1</sub></sub> = <sup>P<sub>4</sub></sup> &frasl; <sub>P<sub>3</sub></sub></li>
+            <li><sup>P<sub>6</sub></sup> &frasl; <sub>P<sub>7</sub></sub> = <sup>P<sub>8</sub></sup> &frasl; <sub>P<sub>9</sub></sub> =
+              √(r<sub>p</sub>)</li>
+            <li><strong>Compressor</strong>: w<sub>c</sub> = (h<sub>2</sub> - h<sub>1</sub>) + (h<sub>4</sub> - h<sub>3</sub>) =
+              2(h<sub>2</sub> - h<sub>1</sub>)</li>
+            <li><strong>Turbine</strong>: w<sub>t</sub> = (h<sub>6</sub> - h<sub>7</sub>) + (h<sub>8</sub> - h<sub>9</sub>) =
+              2(h<sub>6</sub> - h<sub>7</sub>)</li>
+            <li><strong>Heat Addition</strong>: q<sub>in</sub> = (h<sub>6</sub> - h<sub>5</sub>) + (h<sub>8</sub> - h<sub>7</sub>)</li>
+            <li><strong>Heat Rejection</strong>: q<sub>out</sub> = (h<sub>2</sub> - h<sub>3</sub>) + (h<sub>10</sub> - h<sub>1</sub>)</li>
+            <li><strong>Regeneration</strong>: q<sub>regen</sub> = h<sub>9</sub> - h<sub>10</sub> = h<sub>5</sub> - h<sub>4</sub></li>
+            <li><strong>Thermal Efficiency</strong>: n<sub>th</sub> = 1 - <sup>q<sub>out</sub></sup> &frasl; <sub>q<sub>in</sub></sub></li>
+          </ul>
         </div>
       </div>
     </body>

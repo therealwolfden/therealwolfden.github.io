@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>Relationship to Thermodynamics</title>
+        <title>Fourier's Law and the Heat Equation</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -86,7 +86,7 @@
             <!-- The drop down menu for the Class Guides -->
             <div class="class-dropdown-content">
               <a href="/html/classes/mae-310/unit1/unit1.html"><em>Physical Origins and Rate Equations</em></a>
-              <a href="/html/classes/mae-310/unit2/unit2.html"><em>Relationship to Thermodynamics</em></a>
+              <a href="/html/classes/mae-310/unit2/unit2.html"><em>Fourier's Law and the Heat Equation</em></a>
             </div>
           </div>
 
@@ -105,47 +105,80 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 2 -->
         <div class="sect-box">
-          <h2><center>Relationship to Thermodynamics</center></h2>
+          <h2><center>Fourier's Law and the Heat Equation</center></h2>
           <hr>
 
           <!-- First Law of thermodynamics -->
-          <h3><em>First Law of thermodynamics</em></h3>
-          <span class="tab"></span><strong><em>Application to a control volume</em></strong>
+          <h3><em>Fourier's Law</em></h3>
+          <span class="tab"></span><strong><em>Fourier's Law</em></strong> is a rate equation that allows the determination of the conduction heat flux
+          using knowledge of the temperature distribution in a medium.
           <ul>
-            <li><strong>Over a Time Interval:</strong></li>
+            <li>Its most general vector form is: q" = -k∇T and can be expressed in various coordinate grids.</li>
             <ul>
-              <li>∆E<sub>st</sub> = E<sub>in</sub> - E<sub>out</sub> + E<sub>g</sub></li>
-              <ul>
-                <li>∆E<sub>st</sub> is the energy storage in the system</li>
-                <li>E<sub>in</sub>is the energy transfered across the control surface gained</li>
-                <li>E<sub>out</sub>is the energy transfered across the control surface lost</li>
-                <li>E<sub>g</sub> is the thermal energy generation</li>
-              </ul>
+              <li>Cartesian (x, y, x)</li>
+              <li>Cylindrical (r, Φ,z)</li>
+              <li>Spherical (r,Φ, θ)</li>
             </ul>
-            <li><strong>For a closed system:</strong></li>
-            <ul>
-              <li>∆E<sub>st</sub> = Q - W</li>
-              <li>For a negligible changes in kinetic and potential energy: ∆U<sub>t</sub> = Q - W</li>
-            </ul>
-            <li><strong>For steady state flow through an open system:</strong></li>
-            <ul>
-              <li>m'(u<sub>t</sub> + pv + <sup>V<sup>2</sup></sup>&frasl; <sub>2</sub> + gz)<sub>in</sub> + q - m'(u<sub>t</sub> + pv +
-                <sup>V<sup>2</sup></sup>&frasl; <sub>2</sub> + gz)<sub>out</sub> - W' = 0</li>
-            </ul>
-          </ul>
-          <span class="tab"></span><strong><em>Methodology of First Law Analysis:</strong></em>
-          <ul>
-            <li>On a schematic of the system, represent the control surface by dashed line(s)</li>
-            <li>Choose the appropriate time basis</li>
-            <li>Identify relevant energy transport, generation and/or storage terms by labeled arrows on the schematic</li>
-            <li>Write the governing form of the Conservation of Energy requirement</li>
-            <li>Substitute appropriate expressions for terms of the energy equation</li>
-            <li>Solve for the unknown quantity</li>
+            <li>Heat transfer is in the direction of decreasing temperature.</li>
+            <li>Serves to define thermal conductivity (k).</li>
+            <li>Heat transfer is perpendicular to isotherms (lines of constant temperature).</li>
           </ul>
           <br>
+          <span class="tab"></span>For a <strong><em>cylinder</em></strong>:
+          <ul>
+            <li>q<sub>r</sub> = A<sub>r</sub>q<sub>r</sub>'' = 2πrLq<sub>r</sub>''</li>
+            <li>q<sub>r</sub>' = A<sub>r</sub>'q<sub>r</sub>'' = 2πrq<sub>r</sub>''</li>
+          </ul>
+          <span class="tab"></span>For a <strong><em>sphere</em></strong>:
+          <ul>
+            <li>q<sub>r</sub> = A<sub>r</sub>q<sub>r</sub>'' = 4πr<sup>2</sup>q<sub>r</sub>''</li>
+          </ul>
 
+          <!-- The Heat Equation -->
+          <h3><em>The Heat Equation</em></h3>
+          <span class="tab"></span><strong><em>The Heat Equation</em></strong> is a differential equation whose solution provides the temperature
+          distribution in a stationary medium.
+          <ul>
+            <li><strong>Cartesian Coordinates: </strong><sup>d</sup>&frasl;<sub>dx</sub>(k<sup>dT</sup>&frasl;<sub>dx</sub>) +
+              <sup>d</sup>&frasl;<sub>dy</sub>(k<sup>dT</sup>&frasl;<sub>dy</sub>) +
+              <sup>d</sup>&frasl;<sub>dz</sub>(k<sup>dT</sup>&frasl;<sub>dz</sub>) + q&#775; = ρc<sub>p</sub><sup>dT</sup>&frasl;<sub>dt</sub></li>
+          </ul>
+          <span class="tab"></span><strong><em>One-Dimensional Conduction</em></strong>
+          <ul>
+            <li><sup>d</sup>&frasl;<sub>dx</sub>(k<sup>dT</sup>&frasl;<sub>dx</sub>) = ρc<sub>p</sub><sup>dT</sup>&frasl;<sub>dt</sub></li>
+            <li><sup>d<sup>2</sup>T</sup>&frasl;<sub>dx<sup>2</sup></sub> = <sup>1</sup>&frasl;<sub>α</sub><sup>dT</sup>&frasl;<sub>dt</sub></li>
+            <ul>
+              <li>α = <sup>k</sup>&frasl;<sub>ρc<sub>p</sub></sub> is the thermal diffusivity of the medium in m<sup>2</sup>/s</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Boundary and Initial Conditions</em></strong>
+          <ul>
+            <li>For transient conduction, heat equation is first order in time, requiring specification of an initial temperature distribution.</li>
+            <ul>
+              <li>T(x,t)<sub>t=0</sub> = T(x,0)</li>
+            </ul>
+            <li>Since heat equation is second order in space, two boundary conditions must be specified.</li>
+            <ul>
+              <li>For constant applied flux, -k<sup>dt</sup>&frasl;<sub>dx</sub> |<sub>x=0</sub> = q''<sub>s</sub></li>
+              <li>For constant applied heat flux on an insulated surface, <sup>dt</sup>&frasl;<sub>dx</sub> |<sub>x=0</sub> = 0</li>
+              <li>For convection, -k<sup>dt</sup>&frasl;<sub>dx</sub> |<sub>x=0</sub> = h[T<sub>∞</sub> - T(0,t)]</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Thermophysical Properties</em></strong>
+          <ul>
+            <li><strong>Thermal Conductivity</strong>: a measure of a material's ability to transfer thermal energy via conduction.</li>
+            <li><strong>Thermal Diffusivity</strong>: a measure of a material's ability to respond to changes in it's thermal environment.</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Microscale and Nanoscale Effects</em></strong>
+          <ul>
+            <li>Conduction may be viewed as a consequence of energy carrier (electron or phonon) motion.</li>
+            <li>For a solid state, k = <sup>1</sup>&frasl;<sub>3</sub>Ccλ<sub>mfp</sub></li>
+          </ul>
         </div>
       </div>
     </body>

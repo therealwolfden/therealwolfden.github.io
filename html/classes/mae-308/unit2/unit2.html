@@ -115,39 +115,83 @@
           <h2><center>Fluid Statics</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Introduction -->
+          <h3><em>Introduction</em></h3>
+          <span class="tab"></span><strong><em>Fluid Statics</em></strong> is the analysis of fluids when there is no shearing stress in the fluid
+          and the only forces that develop on surfaces are due to gravity and pressure.
           <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+
+          <!-- Pressure at a Point -->
+          <h3><em>Pressure at a Point</em></h3>
+          <span class="tab"></span><strong><em>Pressure at a Point</em></strong> is the pressure taken at an individual particle or location.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>p = ρgh</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+          <span class="tab"></span><strong><em>Pascal's Law</em></strong> says that if a fluid is at rest the pressure is independent of the
+          direction so long as there is no shearing stress in the fluid.
+          <br><br>
+
+          <!-- Equation for Pressure Field -->
+          <h3><em>Equation for Pressure Field</em></h3>
+          <span class="tab"></span><strong><em>Pressure varies from point to point</em></strong>
+          <ul>
+            <li>Surface forces due to pressure vary as based on the depth of the liquid</li>
+            <li>If we assume that the pressure at the center of a cube is equal to P, then...</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>∑F<sub>x</sub> = - <sup>dP</sup> &frasl; <sub>dx</sub> = ρa<sub>x</sub></li>
+              <li>∑F<sub>y</sub> = - <sup>dP</sup> &frasl; <sub>dy</sub> = ρa<sub>y</sub></li>
+              <li>∑F<sub>z</sub> =  - <sup>dP</sup> &frasl; <sub>dz</sub> - γ = ρa<sub>z</sub></li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+            <li>If the fluid and the object are at rest, then p = ρgh</li>
+          </ul>
+          <span class="tab"></span><strong><em>General Equation of Motion:</em></strong> -∇p = γk&#770; = ρa
+          <br><br><br>
+
+          <!-- Pressure Variation in a Fluid -->
+          <h3><em>Pressure Variation in a Fluid</em></h3>
+          <span class="tab"></span><strong><em>For Incompressible Fluids:</em></strong>
+          <ul>
+            <li>p<sub>1</sub> = γh + p<sub>2</sub> (hydrostatic distribution)</li>
+              <li>h = <sup>p<sub>1</sub> - p<sub>2</sub></sup> &frasl; <sub>γ</sub> (pressure head)</li>
+          </ul>
+          <span class="tab"></span><strong><em>For Compressible Fluids:</em></strong>
+          <ul>
+            <li>p<sub>1</sub> = γh + p<sub>2</sub> (hydrostatic distribution)</li>
+              <li><em>ln</em>(<sup>p<sub>2</sub></sup> &frasl; <sub>p<sub>1</sub></sub>) = -<sup>g</sup>&frasl;<sub>R</sub> *
+                ∫<sub>z<sub>1</sub></sub><sup>z<sub>2</sub></sup> (<sup>dz</sup> &frasl; <sub>T</sub>)</li>
+              <li>For an isothermal process, p<sub>2</sub> = p<sub>1</sub>e<sup>(<sup>-g(z<sub>2</sub> - z<sub>1</sub>)</sup> &frasl;
+                <sub>RT<sub>0</sub></sub>)</sup></li>
+          </ul>
           <br>
+
+          <!-- Measurements of Pressure -->
+          <h3><em>Measurements of Pressure</em></h3>
+          <span class="tab"></span><strong><em>Pressure at a point is reported in one of two ways</em></strong>
+          <ul>
+            <li><strong>Absolute Pressure</strong> is the pressure measured relative to a vacuum.</li>
+            <li><strong>Gage Pressure</strong> is the pressure measured relative to the local atmospheric pressure.</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Atmospheric Pressure</em></strong> is typically measured using a mercury barometer.
+          <ul>
+            <li>p<sub>atm</sub> = γh + p<sub>vapor</sub></li>
+            <ul>
+              <li>p<sub>vapor</sub> = .16 Pa and can typically be ignored.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Pressure Measurement Devices -->
+          <h3><em>Pressure Measurement Devices</em></h3>
+          <span class="tab"></span><strong><em>Manometers</em></strong> are pressure devices that measure pressure using the height of liquid
+          columns. There are three common types:
+          <ul>
+            <li><strong>Piezometer</strong> are bulbs with a vertical tube coming out of their side.</li>
+            <li><strong>U-tube manometer</strong> are bulbs with a u shape tube that drops down after coming out of their side.</li>
+            <li><strong>Inclined tube manometer</strong> have two bulbs with a raised incline tube connecting them.</li>
+          </ul>
+          <img src="assets/manometers.jpg" alt="Image of the three manometers" width="80%">
 
         </div>
       </div>

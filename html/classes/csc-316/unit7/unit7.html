@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Map ADT</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -125,44 +125,196 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Map ADT -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Map ADT</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Map Abstract Data Type -->
+          <h3><em>Map Abstract Data Type</em></h3>
+          <span class="tab"></span><strong><em>Map ADT</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Models a searchable collection of key-value entries</li>
+            <li>Has "put" (insert), "get" (lookUp), and "remove" (delete) functions </li>
+            <li>Multiple entries with the same key are not allowed (at least in Java)</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          <span class="tab"></span><strong><em>Key-value Pairs in Java</em></strong> can be implemented using generics as an entry (K, V)
+          that contains a key field and a value field</li>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+          <span class="tab"></span><strong><em>Functions</em></strong>
+          <ul>
+            <li>put(k, v)</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Checks for duplicates and replaces duplicates if they exist.</li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+            <li>get(k)</li>
+            <ul>
+              <li>Searches for a value with a given key.</li>
+            </ul>
+            <li>remove(k)</li>
+            <ul>
+              <li>Removes a value with the corresponding key.</li>
+            </ul>
+            <li>size()</li>
+            <ul>
+              <li>Returns the size.</li>
+            </ul>
+            <li>isEmpty()</li>
+            <ul>
+              <li>Returns true if the list is empty (size = 0).</li>
+            </ul>
+          </ul>
           <br>
+
+          <!-- List Based Data Structures with Sequential Search -->
+          <h3><em>List Based Data Structures with Sequential Search</em></h3>
+          <span class="tab"></span><strong><em>Sequential Search</em></strong> is a search method that goes through the list one at a time.
+          <br><br>
+          <span class="tab"></span><strong><em>Array-Based List Performance:</em></strong>
+          <ul>
+            <li>put(k, v)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+            <li>get(k)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+            <li>remove(k)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Linked List Performance:</em></strong>
+          <ul>
+            <li>put(k, v)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+            <li>get(k)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+            <li>remove(k)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+          </ul>
+
+          <span class="tab"></span><strong><em>Heuristic</em></strong> is a rule of thumb that results in good performance
+          but not neccessarily optimal. They do not change the worst-case runtime but do lower the expected run time.
+          <ul>
+            <li><strong>Move-To-Front Heuristic</strong></li>
+            <ul>
+              <li>Whenever an entry is accessed it is moved to the front.</li>
+              <li>New entries are inserted at the front of the list</li>
+              <li>Still traverses linearly but then the most commonly accessed data types are at the front and thus more efficiently found.</li>
+            </ul>
+            <li><strong>Transpose Heuristic</strong></li>
+            <ul>
+              <li>Whenever an entry is accessed it is moved closer to the front by 1 (switched with the entry before it).</li>
+              <li>New entries are inserted at the front of the list</li>
+              <li>Still traverses linearly but then the most commonly accessed data types are slowly moved to the front and thus become more efficient
+                to find.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Introduction to Data Structures with More Efficient Searching -->
+          <h3><em>Introduction to Data Structures with More Efficient Searching</em></h3>
+          <span class="tab"></span><strong><em>Comparable Keys</em></strong> allows for the data to be sorted into a particular order allowing
+          for searching to be more efficient.
+          <ul>
+            <li>Keys follow a linear order.</li>
+            <li>Entries are listed in increasing/decreasing order based on the key.</li>
+            <li>Data Structures</li>
+            <ul>
+              <li>Contiguous-Memory model (search table)</li>
+              <li>Linked-Memory model (skip list)</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Search Table -->
+          <h3><em>Search Table</em></h3>
+          <span class="tab"></span><strong><em>Search Tables</em></strong> are a map implementation using a sorted array-based list. They are great
+          for maps that are mainly used to look up values and not really add or remove them.
+          <br><br>
+          <span class="tab"></span><strong><em>Using Binary Search Performance:</em></strong>
+          <ul>
+            <li>put(k, v)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+            <li>get(k)</li>
+            <ul>
+              <li>O(log(n))</li>
+            </ul>
+            <li>remove(k)</li>
+            <ul>
+              <li>O(n)</li>
+            </ul>
+          </ul>
+
+          <!-- Skip List -->
+          <h3><em>Skip List</em></h3>
+          <span class="tab"></span><strong><em>Skip Lists</em></strong> are a map implementation using a sorted linked list. Approximates binary
+          search by trading memory space for speed. Allows for an expected O(log(n)) for insert and remove operations.
+          <ul>
+            <li>Contains a series of linked lists (<em>S<sub>0</sub>, S<sub>1</sub>, S<sub>2</sub>, S<sub>h</sub></em>)</li>
+            <li><em>S<sub>0</sub></em> contains all entries in increasing order by key.</li>
+            <li>Each list is a subsequence of the previous one.</li>
+            <li>Contains quad nodes to store the previous, next, below, above, and the actual data.</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Search Operation</em></strong>
+          <ul>
+            <li>Starts at the sentinel head (<em>S<sub>h</sub></em>)</li>
+            <li>At the current node compare the key to the next node's data.</li>
+            <ul>
+              <li>k = key in the next node: return element(next(p))</li>
+              <li>k > key in the next node: scan forward at the same level</li>
+              <li>k < key in the next node: drop down to the level below</li>
+            </ul>
+            <li>Attempting to drop down past the bottom list should return null (no element in the list).</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Remove Operation</em></strong>
+          <ul>
+            <li>Search for k -> locate positions on all levels with key k.</li>
+            <li>Remove entries with key k from all levels.</li>
+            <li>If you end up with more than one list that contains only the two sentinel head/tail nodes, delete all but one.</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Put Operation</em></strong>
+          <ul>
+            <li>Search for k and if entries with k already exist, update the values associated with each, then return/stop. If no entries with k
+              already exist, add k to the bottom list S<sub>0</sub> and continue</li>
+            <li>Uses a random number generator (RNG) to decide if the node is added above the current list. This repeats until the random number
+              generator generates a heads (50% chance to stop).</li>
+            <li>If the sentinel list gains a node, create a new one to the top of the list.</li>
+          </ul>
+
+          <!-- Skip List Performance -->
+          <h3><em>Skip List Performance</em></h3>
+          <span class="tab"></span><strong><em>Expected space usage</em></strong> is O(n)
+          <br><br>
+          <span class="tab"></span><strong><em>Using the Average/Expected Performance:</em></strong>
+          <ul>
+            <li>put(k, v)</li>
+            <ul>
+              <li>O(log(n))</li>
+            </ul>
+            <li>get(k)</li>
+            <ul>
+              <li>O(log(n))</li>
+            </ul>
+            <li>remove(k)</li>
+            <ul>
+              <li>O(log(n))</li>
+            </ul>
+          </ul>
 
         </div>
       </div>
