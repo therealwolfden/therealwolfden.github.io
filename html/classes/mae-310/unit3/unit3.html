@@ -122,7 +122,7 @@
           <br>
           <span class="tab"></span><strong><em>Common Geometries:</em></strong>
           <ul>
-            <li>The Plane Wall: Described in rectangular (x) coordinate. Area perpendicular to direction of heat transfer is constant (independent of
+            <li><strong>The Plane Wall</strong>: Described in rectangular (x) coordinate. Area perpendicular to direction of heat transfer is constant (independent of
               x).</li>
               <ul>
                 <li>Temperature difference for a constant k: T(x) = T<sub>s, 1</sub> + (T<sub>s, 2</sub> -
@@ -132,14 +132,45 @@
                 <li>Overall Heat Transfer Coefficient (U): q<sub>x</sub> = UA∆T<sub>overall</sub></li>
                 <li>R<sub>tot</sub> = <sup>1</sup>&frasl;<sub>UA</sub></li>
               </ul>
-            <li>The Tube Wall: Radial conduction through tube wall.</li>
+            <li><strong>The Tube Wall</strong>: Radial conduction through tube wall.</li>
               <ul>
-                <li></li>
+                <li>Heat Equation: <sup>1</sup>&frasl;<sub>r</sub> * <sup>d</sup>&frasl;<sub>dr</sub> * (kr * <sup>dt</sup>&frasl;<sub>dr</sub>) = 0</li>
+                <li>Temperature Distribution: T(r) = <sup>(T<sub>s,1</sub> - T<sub>s,2</sub>)</sup>&frasl;<sub>ln(r<sub>1</sub> /
+                  r<sub>2</sub>)</sub> * ln(<sup>r</sup>&frasl;<sub>r<sub>2</sub></sub>) + T<sub>s, 2</sub></li>
+                <li>Heat Flux and Heat Rate:</li>
+                <ul>
+                  <li>q<sub>r</sub>'' = -k * <sup>dT</sup>&frasl;<sub>dr</sub> = <sup>k</sup>&frasl;<sub>(rln(r<sub>2</sub>/r<sub>1</sub>))</sub> *
+                    (T<sub>s,1</sub> - T<sub>s,2</sub>)</li>
+                  <li>q<sub>r</sub>' = 2π rq<sub>r</sub>'' = <sup>2π k</sup>&frasl;<sub>(ln(r<sub>2</sub>/r<sub>1</sub>))</sub> *
+                    (T<sub>s,1</sub> - T<sub>s,2</sub>)</li>
+                  <li>q<sub>r</sub> = 2π rLq<sub>r</sub>'' = <sup>2π Lk</sup>&frasl;<sub>(ln(r<sub>2</sub>/r<sub>1</sub>))</sub> *
+                    (T<sub>s,1</sub> - T<sub>s,2</sub>)</li>
+                </ul>
+                <li>Conduction Resistance:</li>
+                <ul>
+                  <li>R<sub>t,cond</sub> = <sup>ln(r<sub>2</sub>/r<sub>1</sub>)</sup>&frasl;<sub>2π Lk</sub></li>
+                  <li>R'<sub>t,cond</sub> = <sup>ln(r<sub>2</sub>/r<sub>1</sub>)</sup>&frasl;<sub>2π k</sub></li>
+                </ul>
               </ul>
-            <li>The Spherical Shell: Radial conduction through shell wall.</li>
+            <li><strong>The Spherical Shell</strong>: Radial conduction through shell wall.</li>
+            <ul>
+              <li>Heat Equation: <sup>1</sup>&frasl;<sub>r<sup>2</sup></sub> * <sup>d</sup>&frasl;<sub>dr</sub> *
+                (r<sup>2</sup> * <sup>dt</sup>&frasl;<sub>dr</sub>) = 0</li>
+              <li>Temperature Distribution: T(r) = T<sub>s,1</sub> - (T<sub>s,1</sub> - T<sub>s,2</sub>) * <sup>1 -
+                (r<sub>1</sub>/r)</sup>&frasl;<sub>1 - (r<sub>1</sub>/r<sub>2</sub>)</sub></li>
+              <li>Heat Flux and Heat Rate:</li>
               <ul>
-                <li></li>
+                <li>q<sub>r</sub>'' = -k * <sup>dT</sup>&frasl;<sub>dr</sub> =
+                  <sup>k</sup>&frasl;<sub>r<sup>2</sup>[(1/r<sub>1</sub>) - (1/r<sub>2</sub>)]</sub> * (T<sub>s,1</sub> - T<sub>s,2</sub>)</li>
+                <li>q<sub>r</sub> = 4π r<sup>2</sup>q<sub>r</sub>'' =
+                  <sup>4π k</sup>&frasl;<sub>(1/r<sub>1</sub>) - (1/r<sub>2</sub>)</sub> * (T<sub>s,1</sub> - T<sub>s,2</sub>) =
+                  <sup>ΔT<sub>overall</sup>&frasl;<sub>R<sub>tot</sub></sub> = UAΔT<sub>overall</sub></li>
               </ul>
+              <li>Thermal Resistance:</li>
+              <ul>
+                <li>R<sub>t,cond</sub> = <sup>(1/r<sub>1</sub>) - (1/r<sub>2</sub>)</sup>&frasl;<sub>4π k</sub></li>
+              </ul>
+            </ul>
           </ul>
 
         </div>

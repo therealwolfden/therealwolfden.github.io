@@ -115,39 +115,49 @@
           <h2><center>Elementary Fluid Dynamics</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Bernoulli Equation -->
+          <h3><em>Bernoulli Equation</em></h3>
+          <span class="tab"></span><strong><em>The Bernoulli Equation</em></strong> solves for the constant force along a streamline.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>F<sub>constant</sub> = p + <sup>1</sup>&frasl;<sub>2</sub>ρV<sup>2</sup> + γz</li>
+            <li>Viscous effects are negligible.</li>
+            <li>Flow is steady and incompressible</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          <span class="tab"></span><strong><em>Dividing the Bernoulli Equation by γ</em></strong>
+          <ul>
+            <li>Constant = <sup>p</sup>&frasl;<sub>γ</sub> + <sup>V<sup>2</sup></sup>&frasl;<sub>2g</sub> + z</li>
+            <li><sup>p</sup>&frasl;<sub>γ</sub> represents the <strong>pressure head</strong> (height of column needed to produce the pressure p).</li>
+            <li><sup>V<sup>2</sup></sup>&frasl;<sub>2g</sub> represents the <strong>velocity head</strong> (vertical distance needed for
+              fluid to fall freely to reach V).</li>
+            <li>z represents the <strong>elevation head</strong> (relates to the potential energy of the particle).</li>
+          </ul>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <!-- Types of Pressure -->
+          <h3><em>Types of Pressure</em></h3>
+          <span class="tab"></span><strong><em>Static, Stagnation, Dynamic, and Total Pressure</em></strong>
+          <ul>
+            <li><strong>Static Pressure</strong></li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Thermodynamic pressure of the fluid as it flows.</li>
+              <li>Measured by moving along with the fluid (thus static relative to the moving fluid).</li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
-          <br>
+            <li><strong>Dynamic Pressure</strong></li>
+            <ul>
+              <li>Pressure of the fluid due to it’s motion.</li>
+              <li>= <sup>1</sup>&frasl;<sub>2</sub>ρV<sup>2</sup></li>
+            </ul>
+            <li><strong>Stagnation Pressure</strong></li>
+            <ul>
+              <li>Static + dynamic pressures.</li>
+              <li>Pressure rise caused by converting all the kinetic energy along the streamline.</li>
+            </ul>
+            <li><strong>Total Pressure</strong></li>
+            <ul>
+              <li>Static + hydrostatic + dynamic pressures.</li>
+              <li>Constant along a streamline.</li>
+            </ul>
+          </ul>
 
         </div>
       </div>
