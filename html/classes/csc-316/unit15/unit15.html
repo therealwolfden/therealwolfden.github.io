@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>Map ADT</title>
+        <title>Hash Tables: Hash Functions</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -128,196 +128,150 @@
       <div class="body">
         <em></em>
 
-        <!-- Map ADT -->
+        <!-- Section 15 -->
         <div class="sect-box">
-          <h2><center>Map ADT</center></h2>
+          <h2><center>Hash Tables: Hash Functions</center></h2>
           <hr>
 
-          <!-- Map Abstract Data Type -->
-          <h3><em>Map Abstract Data Type</em></h3>
-          <span class="tab"></span><strong><em>Map ADT</em></strong>
+          <!-- Hashing -->
+          <h3><em>Hashing</em></h3>
+          <span class="tab"></span><strong><em>Hashing</em></strong> uses the concept of key transformation.
           <ul>
-            <li>Models a searchable collection of key-value entries</li>
-            <li>Has "put" (insert), "get" (lookUp), and "remove" (delete) functions </li>
-            <li>Multiple entries with the same key are not allowed (at least in Java)</li>
+            <li>Provides fast implementations of map ADTs.</li>
+            <li>Stores n items in an array or <em>Hash Table</em> with array capacity m.</li>
+            <li>Use a hash function to store items with key k in position h(k) of the hash table.</li>
           </ul>
-          <span class="tab"></span><strong><em>Key-value Pairs in Java</em></strong> can be implemented using generics as an entry (K, V)
-          that contains a key field and a value field</li>
           <br>
-          <span class="tab"></span><strong><em>Functions</em></strong>
+
+          <span class="tab"></span><strong><em>Hash Functions, h(k)</em></strong>, transform any key into one of m << k positions.
           <ul>
-            <li>put(k, v)</li>
+            <li>Involves a hash code and a compression function.</li>
+            <li>Should be easy to compute/execute due to their frequent usage during implementation.</li>
+            <li>Should spread out keys uniformly to minimize collisions.</li>
             <ul>
-              <li>Checks for duplicates and replaces duplicates if they exist.</li>
-            </ul>
-            <li>get(k)</li>
-            <ul>
-              <li>Searches for a value with a given key.</li>
-            </ul>
-            <li>remove(k)</li>
-            <ul>
-              <li>Removes a value with the corresponding key.</li>
-            </ul>
-            <li>size()</li>
-            <ul>
-              <li>Returns the size.</li>
-            </ul>
-            <li>isEmpty()</li>
-            <ul>
-              <li>Returns true if the list is empty (size = 0).</li>
+              <li>Collisions are when two objects have the same hash code value but do not equal each other.</li>
+              <li>Needs to minimize them as well as resolve possible collisions if they can't be avoided.</li>
             </ul>
           </ul>
           <br>
 
-          <!-- List Based Data Structures with Sequential Search -->
-          <h3><em>List Based Data Structures with Sequential Search</em></h3>
-          <span class="tab"></span><strong><em>Sequential Search</em></strong> is a search method that goes through the list one at a time.
-          <br><br>
-          <span class="tab"></span><strong><em>Array-Based List Performance:</em></strong>
+          <span class="tab"></span><strong><em>Hash Codes</em></strong> are integer values corresponding to a key.
           <ul>
-            <li>put(k, v)</li>
+            <li>May provide a value not within the range (≥ m) or even a negative value.</li>
+            <li>A set of hash codes should eliminate collisions as often as possible.</li>
+            <li>There are several hash code schemes.</li>
             <ul>
-              <li>O(n)</li>
-            </ul>
-            <li>get(k)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-            <li>remove(k)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-          </ul>
-
-          <span class="tab"></span><strong><em>Linked List Performance:</em></strong>
-          <ul>
-            <li>put(k, v)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-            <li>get(k)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-            <li>remove(k)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-          </ul>
-
-          <span class="tab"></span><strong><em>Heuristic</em></strong> is a rule of thumb that results in good performance
-          but not neccessarily optimal. They do not change the worst-case runtime but do lower the expected run time.
-          <ul>
-            <li><strong>Move-To-Front Heuristic</strong></li>
-            <ul>
-              <li>Whenever an entry is accessed it is moved to the front.</li>
-              <li>New entries are inserted at the front of the list</li>
-              <li>Still traverses linearly but then the most commonly accessed data types are at the front and thus more efficiently found.</li>
-            </ul>
-            <li><strong>Transpose Heuristic</strong></li>
-            <ul>
-              <li>Whenever an entry is accessed it is moved closer to the front by 1 (switched with the entry before it).</li>
-              <li>New entries are inserted at the front of the list</li>
-              <li>Still traverses linearly but then the most commonly accessed data types are slowly moved to the front and thus become more efficient
-                to find.</li>
+              <li>Additive Hash Code</li>
+              <li>Polynomial Hash Code</li>
+              <li>Cyclic-shift Hash Code</li>
             </ul>
           </ul>
           <br>
 
-          <!-- Introduction to Data Structures with More Efficient Searching -->
-          <h3><em>Introduction to Data Structures with More Efficient Searching</em></h3>
-          <span class="tab"></span><strong><em>Comparable Keys</em></strong> allows for the data to be sorted into a particular order allowing
-          for searching to be more efficient.
+          <!-- Hash Code Schemes -->
+          <h3><em>Hash Code Schemes</em></h3>
+          <span class="tab"></span><strong><em>Additive Hash Code</em></strong>
           <ul>
-            <li>Keys follow a linear order.</li>
-            <li>Entries are listed in increasing/decreasing order based on the key.</li>
-            <li>Data Structures</li>
+            <li>Generates a numerical hash code equal to the sum of all corresponding ascii values of a string.</li>
+            <li>A string "ABC" would hash to (65 + 66 + 67 = 198).</li>
+            <li>While this is easy and effective it results in collisions often due to it not being dependent on order.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Polynomial Hash Code</em></strong>
+          <ul>
+            <li>Generates a numerical hash code equal to the sum of all ascii values multiplyed by r<sup>idx</sup>
+              where r is a nonzero constant.</li>
+            <li>A string "ABC" with r = 33 would hash to (65 * 33<sup>0</sup> + 66 * 33<sup>1</sup> + 67 * 33<sup>2</sup>= 75206).</li>
+            <li>Common values of r to minimize collisions are 33, 37, 39, or 41 as they experimentally result in < 7 collisions.</li>
+            <li>This method accounts for order and greatly reduces collisons while still being relatively easy.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Cyclic-shift Hash Code</em></strong>
+          <ul>
+            <li>Replaces the multiplication in polynomial hashing.</li>
+            <li>Shifts the first 5 bits in a 32 bit value to the end.</li>
+            <li>Uses an unsigned right shift so that 0s are always used to pad the front.</li>
+            <li>Shifting by 5 is experimentally determined to be a shift value that reduces collions the most.</li>
+          </ul>
+          <div class="question-box">
+            <strong>Algorithm cyclicShift(S)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a string S<br>
+            <span class="tab"></span><strong>Output</strong> the hash code for S<br>
+            <span class="tab"></span>h &larr; 0<br>
+            <span class="tab"></span>for i &larr; 0 to length(S) - 1 do<br>
+            <span class="tab"></span><span class="tab"></span>h &larr; (h << 5) | (h >>> 27)<br>
+            <span class="tab"></span><span class="tab"></span>h &larr; h + charAt(S, i)<br>
+            <span class="tab"></span>return h<br>
+          </div>
+          <br>
+
+          <!-- Compression Functions -->
+          <h3><em>Compression Functions</em></h3>
+          <span class="tab"></span><strong><em>Compression Functions:</em></strong>
+          <ul>
+            <li>Converts an integer key value to a value within the range of 0 < val < m.</li>
+            <li>Compression Strategies.</li>
             <ul>
-              <li>Contiguous-Memory model (search table)</li>
-              <li>Linked-Memory model (skip list)</li>
+              <li>Division method</li>
+              <ul>
+                <li>Takes the hash code and mods by m [h(k) = f(k) mod m].</li>
+                <li>r-1 should not be evenly divisible by m. In most cases m should be a prime number.</li>
+              </ul>
+              <li>Multiply-and-Divide (MAD) Method</li>
+              <ul>
+                <li>h(k) = 	(αf(k) + β) mod m α > 0, β ≥ 0</li>
+                <li>α and β are constants where α mod m ≠ 0.</li>
+              </ul>
+              <li>Golden-Ratio Method</li>
+              <ul>
+                <li>Allows m to be any integer value instead of just prime.</li>
+                <li>φ = <sup>1 + √(5)</sup> &frasl; <sub>2</sub> = 1.61803399...</li>
+                <li><sup>1</sup> &frasl; <sub>φ</sub> = φ - 1 = 0.61803399...</li>
+                <li>h(k) = floor(m{f(k)φ<sup>-1</sup>})</li>
+                <li>For a large n, the n fractions iφ − 1 are distributed almost uniformly in (0,1)</li>
+              </ul>
             </ul>
           </ul>
           <br>
 
-          <!-- Search Table -->
-          <h3><em>Search Table</em></h3>
-          <span class="tab"></span><strong><em>Search Tables</em></strong> are a map implementation using a sorted array-based list. They are great
-          for maps that are mainly used to look up values and not really add or remove them.
-          <br><br>
-          <span class="tab"></span><strong><em>Using Binary Search Performance:</em></strong>
+          <!-- Hashing -->
+          <h3><em>Hashing Utility</em></h3>
+          <span class="tab"></span><strong><em>Hashing</em></strong> is based off the equals() method
           <ul>
-            <li>put(k, v)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
-            <li>get(k)</li>
-            <ul>
-              <li>O(log(n))</li>
-            </ul>
-            <li>remove(k)</li>
-            <ul>
-              <li>O(n)</li>
-            </ul>
+            <li>The values hashed within an object are based off the fields compared in equals().</li>
+            <li>If two objects are considered equal, regardless on if they have different fields, they should have the same hashcode.</li>
+            <li>Use a hash function to store items with key k in position h(k) of the hash table.</li>
           </ul>
+          <br>
 
-          <!-- Skip List -->
-          <h3><em>Skip List</em></h3>
-          <span class="tab"></span><strong><em>Skip Lists</em></strong> are a map implementation using a sorted linked list. Approximates binary
-          search by trading memory space for speed. Allows for an expected O(log(n)) for insert and remove operations.
+          <span class="tab"></span><strong><em>Hashing in Security</em></strong>
           <ul>
-            <li>Contains a series of linked lists (<em>S<sub>0</sub>, S<sub>1</sub>, S<sub>2</sub>, S<sub>h</sub></em>)</li>
-            <li><em>S<sub>0</sub></em> contains all entries in increasing order by key.</li>
-            <li>Each list is a subsequence of the previous one.</li>
-            <li>Contains quad nodes to store the previous, next, below, above, and the actual data.</li>
+            <li>Hashing is easy to generate but hard to go back to the original value (One-way Function).</li>
+            <li>Commonly used when values need to be compared without knowing the original value.</li>
+            <li>Passwords are commonly hashed to be stored and compared.</li>
           </ul>
+          <br>
 
-          <span class="tab"></span><strong><em>Search Operation</em></strong>
+          <span class="tab"></span><strong><em>SHA-1</em></strong> or Secure Hash Algorithm 1
           <ul>
-            <li>Starts at the sentinel head (<em>S<sub>h</sub></em>)</li>
-            <li>At the current node compare the key to the next node's data.</li>
-            <ul>
-              <li>k = key in the next node: return element(next(p))</li>
-              <li>k > key in the next node: scan forward at the same level</li>
-              <li>k < key in the next node: drop down to the level below</li>
-            </ul>
-            <li>Attempting to drop down past the bottom list should return null (no element in the list).</li>
+            <li>Provides a 160-bit value called a message digest.</li>
+            <li>Designed by the NSA.</li>
+            <li>No longer considered secure as it is susceptible to collision attack.</li>
+            <li>Git uses it to identify revisions.</li>
           </ul>
+          <br>
 
-          <span class="tab"></span><strong><em>Remove Operation</em></strong>
+          <span class="tab"></span><strong><em>Cracking Hashing</em></strong>
           <ul>
-            <li>Search for k -> locate positions on all levels with key k.</li>
-            <li>Remove entries with key k from all levels.</li>
-            <li>If you end up with more than one list that contains only the two sentinel head/tail nodes, delete all but one.</li>
+            <li><strong>Dictionary Attacks</strong> uses a file of common passwords and other strings that are likely to be used as passwords.</li>
+            <li><strong>Brute Force Attacks</strong> tries every possible combination of characters.</li>
+            <li><strong>Lookup Tables Attacks</strong> use pre-computed hashes of common strings to find a password.</li>
+            <li>To prevent cracking many security hashes use a randomly generated "salt" or random value in the hash. This random salt is stored
+            in the database as well.</li>
           </ul>
-
-          <span class="tab"></span><strong><em>Put Operation</em></strong>
-          <ul>
-            <li>Search for k and if entries with k already exist, update the values associated with each, then return/stop. If no entries with k
-              already exist, add k to the bottom list S<sub>0</sub> and continue</li>
-            <li>Uses a random number generator (RNG) to decide if the node is added above the current list. This repeats until the random number
-              generator generates a heads (50% chance to stop).</li>
-            <li>If the sentinel list gains a node, create a new one to the top of the list.</li>
-          </ul>
-
-          <!-- Skip List Performance -->
-          <h3><em>Skip List Performance</em></h3>
-          <span class="tab"></span><strong><em>Expected space usage</em></strong> is O(n)
-          <br><br>
-          <span class="tab"></span><strong><em>Using the Average/Expected Performance:</em></strong>
-          <ul>
-            <li>put(k, v)</li>
-            <ul>
-              <li>O(log(n))</li>
-            </ul>
-            <li>get(k)</li>
-            <ul>
-              <li>O(log(n))</li>
-            </ul>
-            <li>remove(k)</li>
-            <ul>
-              <li>O(log(n))</li>
-            </ul>
-          </ul>
+          <br>
 
         </div>
       </div>

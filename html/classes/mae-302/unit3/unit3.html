@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>Refrigeration cycles</title>
+        <title>Refrigeration Cycles</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -116,38 +116,122 @@
           <h2><center>Refrigeration cycles</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Refrigeration Cycles -->
+          <h3><em>Refrigeration Cycles</em></h3>
+          <span class="tab"></span><strong><em>The purpose</em></strong> of a refrigeration cycle is to...
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Remove heat from a cold space (Refrigerator)</li>
+            <li>Reject heat from a warm space (Heat pump)</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <span class="tab"></span><strong><em>The required input and desired outputs...</em></strong>
+          <ul>
+            <li>W<sub>net, in</sub> is the input.</li>
+            <li>Q<sub>L</sub> and Q<sub>H</sub> is the output.</li>
+            <li>Thus, Q<sub>L</sub> + W<sub>net, in</sub> = Q<sub>H</sub></li>
+            <li>Q<sub>H</sub> > Q<sub>L</sub> and Q<sub>H</sub> > W<sub>net, in</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Coefficient of Performance:</em></strong>
+          <ul>
+            <li>COP<sub>R</sub> = <sup>Q<sub>L</sub></sup> &frasl; <sub>W<sub>net, in</sub></sub></li>
+            <li>COP<sub>H</sub> = <sup>Q<sub>H</sub></sup> &frasl; <sub>W<sub>net, in</sub></sub></li>
+            <li>COP<sub>H</sub> = COP<sub>R</sub> + 1</li>
+          </ul>
+          <br><br>
+
+          <!-- Ideal Vapor-Compression Refrigeration Cycle -->
+          <h3><em>Ideal Vapor-Compression Refrigeration Cycle</em></h3>
+          <span class="tab"></span><strong><em>Process 1 &rarr; 2:</em></strong>
+          <ul>
+            <li>Isentropic compression in a compressor</li>
+            <li>W&#775;<sub>c</sub> = m&#775;<sub>1</sub>(h<sub>2</sub> - h<sub>1</sub>)</li>
+            <li>w<sub>c</sub> = h<sub>2</sub> - h<sub>1</sub></li>
+            <li>For a non-ideal compressor</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>n<sub>c</sub> = <sup>W<sub>c, s</sub></sup> &frasl; <sub>w<sub>c</sub></sub> = <sup>h<sub>2, s</sub> - h<sub>1</sub></sup> &frasl;
+                <sub>h<sub>2</sub> - h<sub>1</sub></sub></li>
+              <li>h<sub>2</sub> = h<sub>1</sub> + <sup>h<sub>2, s</sub> - h<sub>1</sub></sup> &frasl; <sub>n<sub>c</sub></sub></li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 2 &rarr; 3:</em></strong>
+          <ul>
+            <li>Constant pressure heat rejection in a condenser</li>
+            <li>Q&#775;<sub>H</sub> = m&#775;(h<sub>2</sub> - h<sub>3</sub>)</li>
+            <li>q<sub>H</sub> = h<sub>2</sub> - h<sub>3</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 3 &rarr; 4:</em></strong>
+          <ul>
+            <li>Throttling in an expansion device</li>
+            <li>h<sub>3</sub> = h<sub>4</sub></li>
+            <li>It may be desirable to subcool the refrigerant at state 3 such that the outlet of state 3 is a compressed liquid at P<sub>3</sub>.
+            This expands the path for heat removal and heat input</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Process 4 &rarr; 1:</em></strong>
+          <ul>
+            <li>Constant pressure heat absorption in an evaporator</li>
+            <li>Q&#775;<sub>L</sub> = m&#775;(h<sub>1</sub> - h<sub>4</sub>)</li>
+            <li>q<sub>L</sub> = h<sub>1</sub> - h<sub>4</sub></li>
+          </ul>
+          <br><br>
+
+          <!-- Innovative Vapor-Compression Refrigeration Systems -->
+          <h3><em>Innovative Vapor-Compression Refrigeration Systems</em></h3>
+          <span class="tab"></span><strong><em>Innovative Vapor-Compression Refrigeration Systems:</em></strong>
+          <ul>
+            <li>The ordinary refrigeration cycle is the most widely used cycle due to its simple, reliable, and inexpensive nature.</li>
+            <li>When required temperatures for the refrigerator are very low one the following cycles may be used...</li>
+            <ul>
+              <li>Cascade refrigeration systems</li>
+              <li>Multistage compression refrigeration systems</li>
+              <li>Multipurpose refrigeration systems with a single compressor</li>
+              <li>Liquefaction of gases</li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Cascade Refrigeration Systems:</em></strong>
+          <ul>
+            <li>Allows for different refrigerants.</li>
+            <li>Used when lower temperatures are required and the temperature range may be to large for a single vapor-compression cycle.</li>
+            <li>Consists of multiple cycles linked together by connecting the evaporator of one with the compressor of another.</li>
+            <li>m&#775;<sub>A</sub>(h<sub>5</sub> - h<sub>8</sub>) = m&#775;<sub>B</sub>(h<sub>2</sub> - h<sub>3</sub>)</li>
+            <li>COP<sub>R, cascade</sub> = <sup>m&#775;<sub>B</sub>(h<sub>1</sub> - h<sub>4</sub>)</sup> &frasl; <sub>m&#775;<sub>A</sub>(h<sub>6</sub>
+              - h<sub>5</sub>) + m&#775;<sub>B</sub>(h<sub>2</sub> - h<sub>1</sub>)</sub>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Multistage Compression Refrigeration Systems:</em></strong>
+          <ul>
+            <li>When the cascade refrigerants are the same, the connecting compressor and evaporator can be replaced by a single flash chamber.</li>
+            <li>p<sub>2</sub> = p<sub>3</sub> = p<sub>9</sub></li>
+            <li>m&#775;h<sub>9</sub> = X<sub>6</sub>m&#775;h<sub>3</sub> + (1 - X<sub>6</sub>)m&#775;h<sub>2</sub> or h<sub>9</sub> =
+              X<sub>g</sub>h<sub>3</sub> + (1 - X<sub>6</sub>)h<sub>2</sub></li>
+            <li>W&#775;<sub>c</sub> = (1 - X<sub>6</sub>)m&#775;(h<sub>2</sub> - h<sub>1</sub>) + m&#775;(h<sub>4</sub> - h<sub>9</sub>)</li>
+            <li>Q&#775;<sub>L</sub> = (1 - X<sub>6</sub>)m&#775;(h<sub>1</sub> - h<sub>8</sub>)</li>
+            <li>Q&#775;<sub>H</sub> = m&#775;(h<sub>4</sub> - h<sub>5</sub>)</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Multipurpose Refrigeration Systems with a Single Compressor:</em></strong>
+          <ul>
+            <li>Used when multiple temperatures need to be maintained at the same time such as in a refigerator/freezer combo.</li>
+            <li>Routes all exit streams from the evaporators to a single compressor and allow that compressor to handle all compressor processes.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Liquefaction of Gases:</em></strong>
+          <ul>
+            <li>Allows for cryogenic temperatures (< 100 K) in order to liquefy gases. These gases mainly include liquid Nitrogen and Oxygen.</li>
+          </ul>
           <br>
 
         </div>

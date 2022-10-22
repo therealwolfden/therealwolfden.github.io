@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title>Ideal gas mixtures and psychrometrics</title>
+        <title>Ideal Gas Mixtures and Psychrometrics</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -111,44 +111,85 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 3 -->
         <div class="sect-box">
-          <h2><center>Ideal gas mixtures and psychrometrics</center></h2>
+          <h2><center>Ideal Gas Mixtures and Psychrometrics</center></h2>
           <hr>
-
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Ideal Gas Mixtures -->
+          <h3><em>Ideal Gas Mixtures</em></h3>
+          <span class="tab"></span><strong><em>Ideal Gases:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Defined by 2 main governing equations. These equations being <strong>pv = RT</strong> and <strong>pV = mRT =
+              N<span style="text-decoration:overline">R</span>T</strong> where...</li>
+            <ul>
+              <li>m is the mass</li>
+              <li>N is the number of moles</li>
+              <li><span style="text-decoration:overline">R</span> is the universal gas constant.</li>
+              <li>R is the gas constant.</li>
+            </ul>
+            <li>Enthalpy and internal energy are functions of temperature only.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+
+          <span class="tab"></span><strong><em>For Ideal Gases Mixtures:</em></strong>
+          <ul>
+            <li>Masses of k different components add up.</li>
+            <li>Moles of k different components add up.</li>
+            <li>Volume occupied by k different components are shared.</li>
+            <li>Temperatures are shared.</li>
+            <li>Pressures contributed by each component add up to the total pressure.</li>
+            <li><strong></strong></li>
+          </ul>
           <br>
+
+          <span class="tab"></span><strong><em>Mole Fractions:</em></strong>
+          <ul>
+            <li>Y<sub>i</sub> = <sup>N<sub>i</sub></sup> &frasl; <sub>N</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Mass Fractions:</em></strong>
+          <ul>
+            <li>mf<sub>i</sub> = <sup>m<sub>i</sub></sup> &frasl; <sub>m</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Sanity Checks:</em></strong>
+          <ul>
+            <li>0 ≤ Y<sub>i</sub> ≤ 1 and 0 ≤ mf<sub>i</sub> ≤ 1</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Mixture Molar Mass:</em></strong>
+          <ul>
+            <li><span style="text-decoration:overline">M</span><sub>i</sub> = <sup>m<sub>i</sub></sup> &frasl; <sub>N<sub>i</sub></sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Contribution to Total Pressure:</em></strong>
+          <ul>
+            <li>p<sub>i</sub> = Y<sub>i</sub>p</li>
+            <li>The fraction of the total pressure contributed by species i is the mole fraction.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>When does the Ideal Gas Assumption Apply?</em></strong>
+          <ul>
+            <li>General form with the compressibility factor, Z.</li>
+            <li>pv = ZRT</li>
+            <li>Z = Z(<sup>T</sup> &frasl; <sub>T<sub>cr</sub></sub>, <sup>p</sup> &frasl; <sub>p<sub>cr</sub></sub>)</li>
+            <li></li>
+          </ul>
+          <br>
+
+          <!-- Psychometrics -->
+          <h3><em>Psychometrics</em></h3>
+          <span class="tab"></span><strong><em>Psychometrics</em></strong> is the study of moist air.
+          <ul>
+            <li>H<sub>2</sub>O in moist air is typically a superheated vapor though it can be saturated.</li>
+          </ul>
+          <br>
+
 
         </div>
       </div>
