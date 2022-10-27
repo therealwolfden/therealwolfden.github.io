@@ -265,15 +265,12 @@ div.numer {
     border-bottom:1px solid;
     text-align:center;
     font-size: 0.8em;
-    top: 2px;
 }
 
 div.denom {
     text-align:center;
     font-size: 0.8em;
-    top: 2px;
 }
 
 div.bound {
-    font-size: 0.8em;
 }
