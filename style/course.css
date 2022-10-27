@@ -256,3 +256,22 @@ td, th {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
+div.fract {
+    display: inline-block;
+}
+
+div.numer {
+    border-bottom:1px solid;
+    text-align:center;
+    font-size: 0.8em;
+}
+
+div.denom {
+    text-align:center;
+    font-size: 0.8em;
+}
+
+div.bound {
+    font-size: 0.8em;
+}
