@@ -115,38 +115,112 @@
           <h2><center>Fluid Kinematics</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- The Velocity Field -->
+          <h3><em>The Velocity Field</em></h3>
+          <span class="tab"></span><strong><em>Velocity Fields</em></strong> describe the flow of particles at different locations
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Description of any fluid property can be given as a function of the fluid's locations.</li>
+            <li>Representation of fluid parameters as a function of spatial coordinates and time.</li>
+            <li>Velocity of a particle = time rate of change of the position vector.</li>
+            <li>Velocity = <sup>dr<sub>A</sub></sup> &frasl; <sub>dt</sub> = V<sub>A</sub></li>
+            <li>V = u(x, y, z, t)i&#770; + v(x, y, z, t)j&#770; + w(x, y, z, t)k&#770;</li>
+            <li>|V| = √(u<sup>2</sup> + v<sup>2</sup> + w<sup>2</sup>)</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+
+          <!-- Eulerian and Lagrangian Flow -->
+          <h3><em>Eulerian and Lagrangian Flow</em></h3>
+          <span class="tab"></span><strong><em>Eulerian Method:</em></strong>
+          <ul>
+            <li>Uses the field concept.</li>
+            <li>Fluid motion given by describing the properties as functions of space and time.</li>
+            <li>Used to obtain flow information at fixed points in space.</li>
+            <li>Usually easier and more common.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Lagrangian Method:</em></strong>
+          <ul>
+            <li>Involves following individual fluid particles.</li>
+            <li>Used to determine flow fluid properties of the particle as it changes with time.</li>
+            <li>Fluid particles are "tagged".</li>
+            <li>Used when particle behavior is required.</li>
+          </ul>
+          <br>
+
+          <!-- Dimensional Flow -->
+          <h3><em>Dimensional Flow</em></h3>
+          <span class="tab"></span><strong><em>Three Dimensional Flow:</em></strong>
+          <ul>
+            <li>V = V(x,y,z,t) = ui&#770; + vj&#770; + wk&#770;.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Streamlines:</em></strong>
+          <ul>
+            <li>Line that is tangential to the velocity vector.</li>
+            <li>Slope of the streamline in 2-D flows is equal to <sup>dy</sup>&frasl;<sub>dx</sub> = <sup>v</sup>&frasl;<sub>u</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Streaklines:</em></strong>
+          <ul>
+            <li>Consists of all particles in a flow that previously passed through a common point.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Pathlines:</em></strong>
+          <ul>
+            <li>Line traced out by a given particle as it flows from point to point.</li>
+            <li>Based around the lagrangian concept.</li>
+            <li>Can be obtained from the velocity field data.</li>
+          </ul>
+          <br>
+
+          <!-- The Acceleration Field -->
+          <h3><em>The Acceleration Field</em></h3>
+          <span class="tab"></span><strong><em>Acceleration Fields</em></strong> describe the acceleration of particles at different locations
+          <ul>
+            <li>For Eulerian formulation the acceleration field is modeled as a function of position and time.</li>
+            <li>For Lagrangian formulation the acceleration field is modeled as a function of time.</li>
+            <li>a = <sup>∂V</sup>&frasl;<sub>∂t</sub> + <sup>∂V</sup>&frasl;<sub>∂x</sub> + <sup>∂V</sup>&frasl;<sub>∂y</sub> +
+              <sup>∂V</sup>&frasl;<sub>∂z</sub></li>
+            <li><sup>D( )</sup>&frasl;<sub>Dt</sub> = <sup>∂( )</sup>&frasl;<sub>∂t</sub> + (V * ∇)( )</li>
+            <li>a = V<sup>∂V</sup>&frasl;<sub>∂s</sub>s&#770; + <sup>V<sup>2</sup></sup>&frasl;<sub>R</sub>n&#770;</li>
+          </ul>
+          <br>
+
+          <!-- Control Volume -->
+          <h3><em>Control Volume</em></h3>
+          <span class="tab"></span><strong><em>System:</em></strong>
+          <ul>
+            <li>Following Lagrangian approach we should consider a system a collection of matter of fixed identity/unchanging contents.</li>
+            <li>It is easy to state the governing laws for a system (M<sub>sys</sub> = Const, F = ma, Q = ∆U+W).</li>
+            <li>Mathematical treatment is hard due to constantly changing geometry.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Control Volume:</em></strong>
+          <ul>
+            <li>Eulerian flow description where the flow of the field is mapped.</li>
+            <li>It is much easier to select a fixed volume and check how the fluid is going through.</li>
+            <li>We can select a volume in a fluid and write integral equations of conservation for this volume.</li>
+            <li>For engineers it is more important to understand the effect of flowing fluid on some material objects or control volumes such as
+              (engine, pump, turbine, etc.) than the effect of the object on the fluid.</li>
+            <li>Control volumes can be fixed, moving, or deforming.</li>
+          </ul>
+          <br>
+
+          <!-- Reynolds Transport Theorem -->
+          <h3><em>Reynolds Transport Theorem</em></h3>
+          <span class="tab"></span><strong><em>Reynolds Transport Theorem</em></strong> is a tool to convert basic conservations laws from systems
+            to a control volume representation.
+          <ul>
+            <li>Consider B, a fluid property related to mass (extensive property).</li>
+            <li>b = <sup>B</sup>&frasl;<sub>m</sub> where b is the amount of property per unit mass.</li>
+            <li><sup>DB<sub>sys</sub></sup>&frasl;<sub>Dt</sub> = <sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub>ρbdV +
+              ∫<sub>cs</sub>ρb(V * n&#770;) dA</li>
+          </ul>
           <br>
 
         </div>

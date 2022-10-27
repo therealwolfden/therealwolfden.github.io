@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Red-Black Trees</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -126,45 +129,100 @@
       <br>
 
       <div class="body">
-        <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 14 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Red-Black Trees</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Red-Black Trees -->
+          <h3><em>Red-Black Trees</em></h3>
+          <span class="tab"></span><strong><em>Red-Black Trees</em></strong> use color to ensure O(1) structural changes after an insertion or
+          deletion to remain balanced.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Each node stores its color and is either red or black.</li>
+            <li>Red-black trees are binary search tree implementations of 2-4 trees.</li>
+            <li>A red-black tree must maintain 4 properties...</li>
+            <ol>
+              <li><strong>Root Property:</strong> the root is black.</li>
+              <li><strong>Leaf Property:</strong> every leaf is black.</li>
+              <li><strong>Red Property:</strong> the children of a red node are black.</li>
+              <li><strong>Depth Property:</strong> all leaf nodes have the same number of black ancestors.</li>
+            </ol>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <span class="tab"></span><strong><em>Red-Black Trees to 2-4 Tree:</em></strong>
+          <ol>
+            <li>Merge every red node, <em>w</em>, with its parent.</li>
+            <li>Store the entry from w at the parent.</li>
+            <li>Let the children of w become children of the parent</li>
+          </ol>
+          <br>
+
+          <span class="tab"></span><strong><em>put(k, v):</em></strong>
+          <ol>
+            <li>Insert the node following the normal binary tree method and set the color to red unless it is the root in which case color it black.</li>
+            <li>All properties are preserved except for possibly the red property.</li>
+            <li>If the parent of the new node is red, the red property is violated.</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Case 1: the sibing <em>s</em> of the parent <em>y</em> is black.</li>
+              <ul>
+                <li>Perform trinode restructuring of y, x, z.</li>
+                <li>Recolor b to black.</li>
+                <li>Recolor a and c to red.</li>
+              </ul>
+              <li>Case 2: the sibing <em>s</em> of the parent <em>y</em> is red.</li>
+              <ul>
+                <li>Recolor y and s to black.</li>
+                <li>Recolor z to red unless z is the root.</li>
+              </ul>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ol>
+          <br>
+
+          <span class="tab"></span><strong><em>remove(k):</em></strong>
+          <ul>
+            <li>Delete k using the traditional binary search tree delete operation.</li>
+            <li>If the removed node, <em>p</em>, was red, no restructuring is needed.</li>
+            <li>If the removed node was black and has one red child.</li>
+            <ul>
+              <li>Promote the red child node.</li>
+              <li>Deleting did violate the black-depth property.</li>
+              <li>Recolor the promoted child to black.</li>
+            </ul>
+            <li>If the removed node was black and had both sentinel children.</li>
+            <ul>
+              <li>Case 1: sibling <em>y</em> of p is black and has a red child <em>x</em>.</li>
+              <ul>
+                <li>Perform a trinode restructuring.</li>
+                <li>Recolor b to x's original color.</li>
+                <li>Recolor a and c to black</li>
+              </ul>
+              <li>Case 2: sibling <em>y</em> of p is black and both children of y are black.</li>
+              <ul>
+                <li>Recolor y to red.</li>
+                <li>Recolor z. If z is black, perform case 1 or 2 on z.</li>
+              </ul>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Performance -->
+          <h3><em>Performance of Red-Black Trees</em></h3>
+          <span class="tab"></span><strong><em>Height:</em></strong>
+          <ul>
+            <li>The height of a red-black tree is O(log(n)).</li>
+            <li>For leaf with a black depth, <em>d</em>, there are ≥ 2<sup>d-1</sup> interior nodes.</li>
+            <li>The height, <em>h</em>, is less than or equal to double the black depth (h ≤ 2d).</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Operations:</em></strong>
+          <ul>
+            <li>get(k) runs in O(log(n)) time.</li>
+            <li>put(k, v) runs in O(log(n)) time.</li>
+            <li>remove(k) runs in O(log(n)) time.</li>
+          </ul>
           <br>
 
         </div>

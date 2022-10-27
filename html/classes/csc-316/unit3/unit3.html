@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -156,6 +159,7 @@
           <span class="tab"></span><strong><em>Comparison Based Sorting</em></strong> is the organization into data structures by making
           comparisons between pairs of elements. It is efficient for smaller data sets and data that is already almost sorted.
           <br><br>
+
           <span class="tab"></span><strong><em>Bogosort</em></strong> is an algorithm that checks to see if the data is already sorted and if it
           is not the data is randomly shuffled before repeating the process.
           <ul>
@@ -172,6 +176,25 @@
                 theoretically last forever.</li>
             </ul>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm shuffle(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> random shuffled array<br>
+            <span class="tab"></span>for x &larr; 0 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>index1 &larr; random() * n<br>
+            <span class="tab"></span><span class="tab"></span>index2 &larr; random() * n<br>
+            <span class="tab"></span><span class="tab"></span>value &larr; A[index1]<br>
+            <span class="tab"></span><span class="tab"></span>A[index1] &larr; A[index2]<br>
+            <span class="tab"></span><span class="tab"></span>A[index1] &larr; A[value]<br>
+            <br>
+            <strong>Algorithm isInOrder(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> true if the array is sorted<br>
+            <span class="tab"></span>for x &larr; 0 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>if A[x] < A[x-1]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>return false<br>
+            <span class="tab"></span>return true<br>
+          </div>
           <br>
           <span class="tab"></span><strong><em>Bubble Sort</em></strong> goes through an array of data and goes pair by pair swapping data as
           necessary. This process is repeated until a full pass is completed without swapping.
@@ -189,6 +212,20 @@
               <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
             </ul>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm bubbleSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>repeat &larr; true<br>
+            <span class="tab"></span>while repeat is TRUE do<br>
+            <span class="tab"></span><span class="tab"></span>repeat &larr; false<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 1 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>if A[i] < A[i-1] then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>x &larr; A[i-1]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i-1] &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i] &larr; x<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>repeat &larr; true<br>
+          </div>
           <br>
           <span class="tab"></span><strong><em>Insertion Sort</em></strong> processes data one by one and will shift left until the data element is in
           the correct sorted order. Basically just makes comparisons to from the end of the list and then actually places the element when the element is
@@ -209,6 +246,18 @@
               <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
             </ul>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm insertionSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>for i &larr; 1 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>x &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span>j &larr; i - 1<br>
+            <span class="tab"></span><span class="tab"></span>while j >= 0 and A[j] > x<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[j+1] &larr; A[j]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>j &larr; j - 1<br>
+            <span class="tab"></span><span class="tab"></span>A[j+1] &larr; x<br>
+          </div>
           <br>
           <span class="tab"></span><strong><em>Selection Sort</em></strong> finds the minimum of the unsorted data set and swaps it with the first
           unsorted element. This continues until the data is sorted.
@@ -228,6 +277,20 @@
               <li><strong><em>T(n)</em> is <em>O(n<sup>2</sup>)</em></strong></li>
             </ul>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm selectionSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>for i &larr; 0 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>min &larr; i<br>
+            <span class="tab"></span><span class="tab"></span>for j &larr; i+1 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>if A[j] < A[min] then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>min &larr;j<br>
+            <span class="tab"></span><span class="tab"></span>if NOT i = min then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>x &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i] &larr; A[min]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[min] &larr; x<br>
+          </div>
           <br>
 
           <!-- Non-Comparison Based Sorting -->
@@ -248,6 +311,34 @@
             </ol>
             <li><strong><em>T(n)</em> is <em>O(n + k)</em></strong></li>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm countingSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>min &larr; A[0]<br>
+            <span class="tab"></span>max &larr; A[0]<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>min &larr; min(A[i], min)<br>
+            <span class="tab"></span><span class="tab"></span>max &larr; max(A[i], max)<br>
+            <span class="tab"></span>// Calculate the range of the elements<br>
+            <span class="tab"></span>k &larr; (max-min+1)<br>
+            <span class="tab"></span>// Create array to hold counts<br>
+            <span class="tab"></span>C &larr; new array with length k<br>
+            <span class="tab"></span>// Count frequency of values<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>C[ A[i]-min ] &larr; C[ A[i]-min ] + 1<br>
+            <span class="tab"></span>// Accumulate frequencies<br>
+            <span class="tab"></span>for i &larr; 1 to k-1 do<br>
+            <span class="tab"></span><span class="tab"></span>C[i] &larr; C[i-1] + C[i]<br>
+            <span class="tab"></span>// Build Final output array<br>
+            <span class="tab"></span>F &larr; new array with length n<br>
+            <span class="tab"></span>for i &larr; n-1 down to 0 do<br>
+            <span class="tab"></span><span class="tab"></span>F[ C[ A[i]-min ] - 1 ] &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span>C[ A[i]-min ] &larr; C[ A[i]-min ] – 1<br>
+            <span class="tab"></span>A &larr; F<br>
+          </div>
+          <br>
+
           <span class="tab"></span><strong><em>Radix Sort</em></strong> uses N = radix (the number of unique digits used to represent numbers; base
           radix = 10). w is the word size of integers (# of digits in an integer). Starts with the least significant digit of each element and adds
           these elements to buckets. Moves the entries from the buckets back to the main array.
@@ -255,6 +346,29 @@
             <li>Uses counting sort with a range (k) equal to N</li>
             <li><strong><em>T(n)</em> is <em>O(n * w)</em></strong></li>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm radixSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>max &larr; 0<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>max &larr; max( max, A[i])<br>
+            <span class="tab"></span>// Calculate number of digits in largest value<br>
+            <span class="tab"></span>w &larr; ceiling( log10(max+1) )<br>
+            <span class="tab"></span>p &larr; 1<br>
+            <span class="tab"></span>for j &larr; 1 to w do<br>
+            <span class="tab"></span><span class="tab"></span>C &larr; new array with length 10<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">C[ (A[i]/p) % 10 ] &larr; C[ (A[i]/p) % 10 ] + 1</span><br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 1 to 9 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">C[i] &larr; C[i-1] + C[i]</span><br>
+            <span class="tab"></span><span class="tab"></span>F &larr; new array with length n<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; n-1 down to 0 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">F[ C[ (A[i]/p) % 10 ] - 1 ] &larr; A[i]</span><br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>C[ (A[i]/p) % 10 ] &larr; C[ (A[i]/p) % 10 ] - 1<br>
+            <span class="tab"></span><span class="tab"></span>A &larr; F<br>
+            <span class="tab"></span><span class="tab"></span>p &larr; p X 10<br>
+          </div>
           <br>
 
         </div>

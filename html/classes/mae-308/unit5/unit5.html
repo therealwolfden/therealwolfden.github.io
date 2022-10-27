@@ -115,38 +115,164 @@
           <h2><center>Finite Control Volume Analysis</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Finite Control Volume Analysis -->
+          <h3><em>Finite Control Volume Analysis</em></h3>
+          <span class="tab"></span><strong><em>Basis of Finite CV Analysis:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Conservation of Mass.</li>
+            <li>Newton's Second Law of Motion.</li>
+            <li>1<sup>st</sup> and 2<sup>nd</sup> Laws of Thermodynamics.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <span class="tab"></span><strong><em>Conservation of Mass:</em></strong>
+          <ul>
+            <li>Key to tracking flowing fluid.</li>
+            <li>Based on amount of fluid entering and leaving a control volume.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Newton's Second Law of Motion:</em></strong>
+          <ul>
+            <li>Concludes that forces can result from or cause changes in fluid velocity magnitude and/or direction.</li>
+            <li>Torque can result in a flowing fluid’s moment-of-momentum change.</li>
+            <li>Help’s analyze work and power transfer of the fluid.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>1<sup>st</sup> Law of Thermodynamics.:</em></strong>
+          <ul>
+            <li>Conservation of energy, energy cannot be created or destroyed.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>2<sup>nd</sup> Law of Thermodynamics.</em></strong>
+          <ul>
+            <li>Clarifies the loss of useful energy associated with every actual process.</li>
+            <li>Laws help analyze work/losses in devices.</li>
+          </ul>
+          <br>
+
+          <!-- The Continuity Equation -->
+          <h3><em>The Continuity Equation</em></h3>
+          <span class="tab"></span><strong><em>Conservation of Mass:</em></strong>
+          <ul>
+            <li><sup>DM<sub>sys</sub></sup>&frasl;<sub>Dt</sub> = 0</li>
+            <li>By RTT, <sup>D</sup>&frasl;<sub>Dt</sub> ∫<sub>sys</sub> ρ dV= <sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub>ρ dV +
+              ∫<sub>cs</sub>ρ(V * n&#770;) dA</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>(V * n&#770;) dA is the volume flow rate through dA.</li>
+              <li>ρ(V * n&#770;) dA is mass flow rate through dA.</li>
+              <li>V * n&#770; is the component of velocity perpendicular to dA and is positive for flow out of the CV.</li>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>For a fixed non-deforming C.V.,</em></strong>
+          <ul>
+            <li><sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub> ρ dV + ∫<sub>cs</sub>ρ(V * n&#770;) dA = 0</li>
+            <li>∫<sub>cs</sub>ρ(V * n&#770;) dA = Σ m&#775;<sub>out</sub> - Σ m&#775;<sub>in</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>For a moving non-deforming C.V.,</em></strong>
+          <ul>
+            <li>V = W + V<sub>cv</sub></li>
+            <ul>
+              <li>W is the fluid velocity as seen from the observer moving with the control volume.</li>
+              <li>V<sub>cv</sub> is the velocity of the control volume from a fixed point.</li>
+              <li>V is the fluid velocity with respect to the fixed point.</li>
+            </ul>
+            <li><sup>DM<sub>sys</sub></sup>&frasl;<sub>Dt</sub> = <sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub> ρ dV +
+              ∫<sub>cs</sub>ρ(W * n&#770;) dA</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>For a deforming C.V.,</em></strong>
+          <ul>
+            <li>V = W + V<sub>cs</sub></li>
+            <ul>
+              <li>W is the fluid velocity with respect to the fixed point.</li>
+              <li>V<sub>cv</sub> is the velocity of the control volume from a fixed point. This non-uniform due to the c.v. deforming.</li>
+              <li>V is the fluid velocity with respect to the fixed point.</li>
+            </ul>
+            <li><sup>DM<sub>sys</sub></sup>&frasl;<sub>Dt</sub> = <sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub> ρ dV +
+              ∫<sub>cs</sub>ρ(W * n&#770;) dA = 0</li>
+          </ul>
+          <br>
+
+          <!-- The Linear Momentum Equation -->
+          <h3><em>The Linear Momentum Equation</em></h3>
+          <span class="tab"></span><strong><em>Newton's Second Law:</em></strong>
+          <ul>
+            <li>Any reference or coordinate system that fits the second law is said to be inertial (not accelerating or deforming).</li>
+            <ul>
+              <li>Fixed, non-deforming c.v.</li>
+              <li>Moving but inertial, non-deforming c.v.</li>
+            </ul>
+            <li><sup>D<sub>sys</sub></sup>&frasl;<sub>Dt</sub> ∫<sub>sys</sub> VρdV = ΣF<sub>sys</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Moving, Intertial, Non-Deformign C.V.,</em></strong>
+          <ul>
+            <li><sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub> (W + V<sub>cv</sub>)ρ dV + ∫<sub>cs</sub>(W * V<sub>cv</sub>)ρW * n&#770; dA =
+              ΣF<sub>content of the cv</sub></li>
+            <li>For a constant c.v. velocity (V<sub>cv</sub>) and a steady flow rate:</li>
+            <ul>
+              <li>∫<sub>cs</sub>WρW * n&#770; dA = ΣF<sub>content of the cv</sub></li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- The Moment-of-Momentum Equation -->
+          <h3><em>The Moment-of-Momentum Equation</em></h3>
+          <span class="tab"></span><strong><em>The Moment-of-Momentum Equation:</em></strong> relates torque and angular momentum of the flow.
+          <ul>
+            <li>Used when torques are important.</li>
+            <li>Predominantly used to solve dynamics of machines that rotate about a single axis (turbomachines).</li>
+            <li><sup>D</sup>&frasl;<sub>dt</sub> ∫<sub>sys</sub>(r x V)ρ dV = <sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub>(r x V)ρ dV +
+              ∫<sub>cs</sub>(r x V)ρV * n&#770; dA</li>
+            <li><sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub>(r x V)ρ dV + ∫<sub>cs</sub>(r x V)ρV * n&#770; dA = Σ(r x F)</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Generic Interpretation:</em></strong>
+          <ul>
+            <li>T<sub>shaft</sub> = (-m&#775;<sub>in</sub>)(±r<sub>in</sub>V<sub>θin</sub>) +
+              m&#775;<sub>out</sub>(±r<sub>out</sub>V<sub>θout</sub>)</li>
+            <li>W&#775;<sub>shaft</sub> = (-m&#775;<sub>in</sub>)(±U<sub>in</sub>V<sub>θin</sub>) +
+              m&#775;<sub>out</sub>(±U<sub>out</sub>V<sub>θout</sub>)</li>
+            <li>w<sub>shaft</sub> = (±U<sub>in</sub>V<sub>θin</sub>) + (±U<sub>out</sub>V<sub>θout</sub>)</li>
+          </ul>
+          <br>
+
+          <!-- First Law of Thermodynamics -->
+          <h3><em>First Law of Thermodynamics</em></h3>
+          <span class="tab"></span><strong><em>First Law of Thermodynamics Equation</em></strong>
+          <ul>
+            <li><sup>D</sup>&frasl;<sub>dt</sub> ∫<sub>sys</sub>eρ dV = (Q&#775;<sub>net in</sub> + W&#775;<sub>net in</sub>)<sub>sys</sub></li>
+            <ul>
+              <li>e is the total stored energy per unit mass for each particle.</li>
+              <li>e = u&#770; + <sup>V<sup>2</sup></sup>&frasl;<sub>2</sub> + gz</li>
+              <li>Q&#775;<sub>net in</sub> is the net rate of heat transfer into the system.</li>
+              <li>W&#775;<sub>net in</sub> is the net rate of work transfer into the system.</li>
+            </ul>
+            <li><sup>∂</sup>&frasl;<sub>∂t</sub> ∫<sub>cv</sub>eρ dV + ∫<sub>cs</sub>eρ(V * n&#770;) dA = (Q&#775;<sub>net in</sub> +
+              W&#775;<sub>net in</sub>)<sub>cv</sub></li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>For a steady single fluid stream entering and leaving a c.v.,</em></strong>
+          <ul>
+            <li>m&#775;[u&#770;<sub>out</sub> - u&#770;<sub>in</sub> + (<sup>p</sup>&frasl;<sub>ρ</sub>)<sub>out</sub> -
+              (<sup>p</sup>&frasl;<sub>ρ</sub>)<sub>in</sub> + <sup>V<sup>2</sup><sub>out</sub> - V<sup>2</sup><sub>in</sub></sup> &frasl;
+              <sub>2</sub> + g(z<sub>out</sub> - z<sub>in</sub>)] = Q&#775;<sub>net in</sub> + W&#775;<sub>shaft net in</sub></li>
+            <li>m&#775;[h&#770;<sub>out</sub> - h&#770;<sub>in</sub> + <sup>V<sup>2</sup><sub>out</sub> - V<sup>2</sup><sub>in</sub></sup> &frasl;
+              <sub>2</sub> + g(z<sub>out</sub> - z<sub>in</sub>)] = Q&#775;<sub>net in</sub> + W&#775;<sub>shaft net in</sub></li>
+            <li>If flow is truly steady throughout such that no work is done, is 1D, and involves a single fluid stream, then
+              W&#775;<sub>shaft net in</sub> = 0</li>
+          </ul>
           <br>
 
         </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Tree ADT</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -128,43 +131,174 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 9 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Tree ADT</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Trees -->
+          <h3><em>Trees</em></h3>
+          <span class="tab"></span><strong><em>Trees</em></strong> are a directed, acyclic structure of linked nodes.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Directed means that there are one way links between nodes.</li>
+            <li>Acyclic means that no path wraps back around to the same node twice.</li>
+            <li>Can be defined as empty (null) or as a root node that contains data and zero or more children nodes.</li>
+            <li>Often used for folders and files on a computer.</li>
+            <li>Can be used to model AI decision trees</li>
+            <li>For a comprehensive list of Tree operations see Table K.</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Nodes</em></strong> are an object containing a data value and zero or more children.
+          <ul>
+            <li>Internal nodes are a node with at least one child.</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Root</em></strong> is the topmost node of a tree and has no parent node.
+          <br><br>
+          <span class="tab"></span><strong><em>Leaf</em></strong> or external nodes are nodes that have no children.
+          <br><br>
+          <span class="tab"></span><strong><em>Branch</em></strong> any internal node (not a root or a leaf).
+          <br><br>
+          <span class="tab"></span><strong><em>Subtree</em></strong> is the tree of nodes reachable from the current node.
+          <br><br>
+          <span class="tab"></span><strong><em>Height</em></strong> the length of the longest path from the root to any node.
+          <br><br>
+          <span class="tab"></span><strong><em>Level/Depth</em></strong> is the length of the path from the root to a given node.
+          <br><br>
+
+          <!-- Tree Traversals -->
+          <h3><em>Tree Traversals</em></h3>
+          <span class="tab"></span><strong><em>Traversals:</em></strong>
+          <ul>
+            <li>A method for visiting every node in a tree.</li>
+            <li>Creates a well-defined ordering of tree nodes.</li>
+            <li>Some operation can be performed when visiting each node.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Preorder Traversal:</em></strong>
+          <ul>
+            <li>A node is visited before its descendents.</li>
+            <li>An example would be printing a directory structure.</li>
+            <li>Root &rarr; Left Child &rarr; Right Child</li>
+            <li>T(n) is O(n)</li>
           </ul>
           <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
+            <strong>Algorithm preOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            visit p<br>
+            for each child w in T.children(p)<br>
+            <span class="tab"></span>preOrder(T, w)</span><br>
           </div>
           <br>
+
+          <span class="tab"></span><strong><em>Postorder Traversal:</em></strong>
+          <ul>
+            <li>A node is visited after its descendents.</li>
+            <li>An example would be computing space used by files in a directory and its subdirectories.</li>
+            <li>Left Child &rarr; Right Child &rarr; Root</li>
+            <li>T(n) is O(n)</li>
+          </ul>
           <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
+            <strong>Algorithm postOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            for each child w in T.children(p)<br>
+            <span class="tab"></span>preOrder(T, w)<br>
+            visit p</span><br>
           </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
+          <br>
+
+          <span class="tab"></span><strong><em>Levelorder Traversal:</em></strong>
+          <ul>
+            <li>A node is visited from top to bottom, left to right.</li>
+            <li>T(n) is O(n)</li>
+          </ul>
+          <div class="question-box">
+            <strong>Algorithm levelOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            Q &larr; initially empty queue of nodes<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            Q.enqueue(p)<br>
+            while NOT Q.isEmpty() do<br>
+            <span class="tab">q &larr; Q.dequeue()<br>
+            visit(q)<br>
+            for each child w in T.children(q)<br>
+            <span class="tab"></span>Q.enqueue(w)</span></span><br>
           </div>
+          <br>
+
+          <!-- Binary Trees -->
+          <h3><em>Binary Trees</em></h3>
+          <span class="tab"></span><strong><em>Binary Tree:</em></strong>
+          <ul>
+            <li>Each internal node has at most two children.</li>
+            <li>Children of a node are ordered with left and right.</li>
+            <li>Some operation can be performed when visiting each node.</li>
+            <li>An empty tree is a binary tree.</li>
+            <li>A node with left and right subtrees, each of which is a binary tree, is a binary tree.</li>
+          </ul>
+
+          <span class="tab"></span><strong><em>Inorder Traversal:</em></strong>
+          <ul>
+            <li>A node is visited after its left subtree and before its right subtree.</li>
+            <li>An example would be outputing keys in order for a binary search tree.</li>
+            <li>Left Child &rarr; Root &rarr; Right Child</li>
+            <li>T(n) is O(n)</li>
+          </ul>
+          <div class="question-box">
+            <strong>Algorithm inOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            inOrder(T, T.left(p))<br>
+            visit(p)<br>
+            inOrder(T, T.right(p))</span><br>
+          </div>
+          <br>
+
+          <span class="tab"></span><strong><em>Height:</em></strong>
+          <ul>
+            <li>The minimum possible height of a binary tree is O(log(n)).</li>
+            <li>The maximum possible height of a binary tree is O(n).</li>
+            <li>The maximum possible number of nodes on a given level is 2<sup>h</sup>.</li>
+          </ul>
+          <br>
+
+          <!-- Tree Classifications -->
+          <h3><em>Tree Classifications</em></h3>
+          <span class="tab"></span><strong><em>Proper Binary Trees</em></strong>
+          <ul>
+            <li>Each non-leaf node has exactly two children.</li>
+            <li>Number of leaves = number of non-leaves + 1</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Perfect Binary Trees</em></strong>
+          <ul>
+            <li>Each non-leaf node has exactly two children.</li>
+            <li>All leaves are the same depth.</li>
+            <li>A perfect binary tree is a proper binary tree but a proper binary tree is not always a perfect one.</li>
+            <li>Contains 2<sup>h+1</sup> - 1 nodes.</li>
+            <li>Contains 2<sup>h</sup> leaves.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Complete Binary Trees</em></strong>
+          <ul>
+            <li>All leaves are the same depth.</li>
+            <li>All leaves are filled from left to right but does not neccessarily have to be full.</li>
+            <li>The number of node <em>n</em> in a complete binary tree is 2<sup>k</sup> ≤ n ≤ 2<sup>k+1</sup>.</li>
+            <li>Garunteed least height.</li>
+          </ul>
           <br>
 
         </div>

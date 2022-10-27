@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
+    <head>
+        <meta charset="UTF-8" />
+        <base href="https://therealwolfden.github.io/">
+        <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
+        <link href="/style/course.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
+        <title>Pseudocode</title>
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script src="/js/scripts.js"></script>
+    </head>
+    <body style="background-color:#ffffff">
+      <!-- Creates the top portion of the page that follows the screen and has all the important controls -->
+      <div style="height: 40px;"></div>
+        <div class="fixed"><div class="navbar">
+
+          <!-- The Home Button -->
+          <a href="/index.html" style="margin-left: 10px;"><img src="/assets/home-icon.jpg" alt="Home Icon" class="icon"></a>
+
+          <!-- The Events Button that takes the user to the events page -->
+          <a href="/html/events/events.html">Events</a>
+
+          <!-- The Class Guides Button that toggles a drop down menu with links to various class pages -->
+          <div class="dropdown" id="guides">
+            <button class="dropbtn">Class Guides
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="dropdown-content">
+              <a href="/html/classes/csc-316/csc-316.html">CSC 316 (Data Structures and Algorithms)</a>
+              <a href="/html/classes/mae-302/mae-302.html">MAE 302 (Engineering Thermodynamics II)</a>
+              <a href="/html/classes/mae-308/mae-308.html">MAE 308 (Fluid Mechanics)</a>
+              <a href="/html/classes/mae-310/mae-310.html">MAE 310 (Heat Transfer Fundamentals)</a>
+              <a href="/html/classes/mae-315/mae-315.html">MAE 315 (Dynamics of Machines)</a>
+            </div>
+          </div>
+
+          <!-- The Organizations Button that takes the user to the organizations page -->
+          <a href="/html/organizations/organizations.html">Organizations</a>
+
+          <!-- The Brain Teasers Button that takes the user to the brain teasers page -->
+          <a href="/html/brain_teasers/brain_teasers.html">Brain Teasers</a>
+
+          <!-- The Forums Button that takes the user to the forums page -->
+          <a href="/html/forums/forums.html">Forums</a>
+
+          <!-- The Profile Button that toggles a drop down menu for logging out and other options -->
+          <a href="/html/forums/forums.html" style="float: right; margin-right: 10px;" style="margin-right: 10px;">Profile</a>
+
+          <!-- The Calendar Button that takes the user to their calendar -->
+          <a href="/html/calendar/calendar.html" style="float: right;"><img src="/assets/calendar-icon.jpg" alt="Calendar Icon" class="icon"></a>
+
+          <!-- The Notifications Button that toggles a drop down menu with recent notifications -->
+          <a href="/html/notifications/notifications.html" style="float: right;"><img src="/assets/notification-icon.jpg" alt="Notification Icon" class="icon"></a>
+
+          <!-- The Search Button that opens a menu for searching through the website -->
+          <a href="" style="float: right;"><img src="/assets/search-icon.jpg" alt="Search Icon" class="icon"></a>
+        </div>
+      </div>
+
+      <div class="course-info-box">
+        <div style="float: left;"><strong>CSC 316 | Data Structures and Algorithms: </strong></div>
+        <div style="float: right;"><strong>J. King</strong></div>
+        <br>
+        <br>
+        <em>Abstract data types; abstract and implementation-level views of data types. Linear and branching data structures, including stacks, queues,
+          trees, heaps, hash tables, graphs, and others at discretion of instructor. Best, worst, and average case asymptotic time and space complexity
+          as a means of formal analysis of iterative and recursive algorithms.</em>
+      </div>
+
+      <!-- Header for the page -->
+      <div class="sticky">
+        <div id="head" class="class-navbar">
+
+          <!-- Class Name -->
+          <a href="/html/classes/csc-316/csc-316.html"><strong><em>Data Structures and Algorithms</em></strong></a>
+
+          <!-- Class Content (Lectures and Units) -->
+          <div class="class-dropdown" id="content">
+            <button class="class-dropbtn"><em>Units</em>
+              <i class="fa fa-caret-down"></i>
+            </button>
+
+            <!-- The drop down menu for the Class Guides -->
+            <div class="class-dropdown-content">
+              <a href="/html/classes/csc-316/unit1/unit1.html"><em>Problems, Algorithms, and Programs</em></a>
+              <a href="/html/classes/csc-316/unit2/unit2.html"><em>Growth Rates</em></a>
+              <a href="/html/classes/csc-316/unit3/unit3.html"><em>Algorithm Analysis and Iterative Sorting Algorithms</em></a>
+              <a href="/html/classes/csc-316/unit4/unit4.html"><em>Stack and Queue ADTs</em></a>
+              <a href="/html/classes/csc-316/unit5/unit5.html"><em>Recursive Algorithm Analysis</em></a>
+              <a href="/html/classes/csc-316/unit6/unit6.html"><em>Recursive Comparison-based Sorting Algorithms</em></a>
+              <a href="/html/classes/csc-316/unit7/unit7.html"><em>Map ADT</em></a>
+              <a href="/html/classes/csc-316/unit8/unit8.html"><em>Tree ADT</em></a>
+              <a href="/html/classes/csc-316/unit9/unit9.html"><em>Splay Trees</em></a>
+              <a href="/html/classes/csc-316/unit10/uni10t.html"><em>Multiway Search Trees: (2, 4) Trees</em></a>
+              <a href="/html/classes/csc-316/unit11/unit11.html"><em>Red-Black Trees</em></a>
+              <a href="/html/classes/csc-316/unit12/unit12.html"><em>Hash Tables: Hash Functions</em></a>
+              <a href="/html/classes/csc-316/unit13/unit13.html"><em>Hash Tables: Collision Resolution</em></a>
+              <a href="/html/classes/csc-316/unit14/unit14.html"><em>Priority Queue ADT</em></a>
+              <a href="/html/classes/csc-316/unit15/unit15.html"><em>Set and Disjoint Set ADTs</em></a>
+              <a href="/html/classes/csc-316/unit16/unit16.html"><em>Graph Abstract Data Type</em></a>
+              <a href="/html/classes/csc-316/unit17/unit17.html"><em>Graph Traversals</em></a>
+              <a href="/html/classes/csc-316/unit18/unit18.html"><em>Transitive Closure and All-Pairs Shortest Paths Algorithm</em></a>
+              <a href="/html/classes/csc-316/unit19/unit19.html"><em>Single-Source Shortest Paths and Minimum Spanning Tree Algorithms</em></a>
+              <a href="/html/classes/csc-316/unit20/unit20.html"><em>Graph Applications</em></a>
+              <a href="/html/classes/csc-316/unit21/unit21.html"><em>Complexity Theory; Data Structures in the Java Libraries</em></a>
+              <a href="/html/classes/csc-316/unit22/unit22.html"><em>Secret Rules of Modern Living: Algorithms</em></a>
+            </div>
+          </div>
+
+          <!-- Formulas -->
+          <a href="/html/classes/csc-316/formulas/formulas.html"><em>Formulas</em></a>
+
+          <!-- Tables -->
+          <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
+
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
+          <!-- Grade Calculator -->
+          <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
+        </div>
+      </div>
+      <br>
+
+      <div class="body">
+        <!-- Brief coverage and run down of the page -->
+        <em>Below is a list of various algorithms. Selecting the box containing the algorithm name will reveal its pseudocode.</em>
+        <hr>
+
+        <br>
+        <br>
+
+        <!-- Pseudocode Template -->
+        <div class="sect-header" onclick="showContent('pseudo-temp')">
+        <em><strong>Pseudocode Template</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-temp" style="display: none;">
+          <center>
+            <em>Template to be used for all pseudocode used for algorithms.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm nameOfAlgorithm</strong>(parameters)<br>
+            <span class="tab"></span><strong>Input</strong> description of parameters<br>
+            <span class="tab"></span><strong>Output</strong> description of output<br>
+            <span class="tab"></span>first line<br>
+            <span class="tab"></span>second line<br>
+            <span class="tab"></span>third line<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for bogosort -->
+        <div class="sect-header" onclick="showContent('pseudo-bogosort')">
+        <em><strong>Bogosort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-bogosort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that randomly arranges indexs until the array is sorted.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm shuffle(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> random shuffled array<br>
+            <span class="tab"></span>for x &larr; 0 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>index1 &larr; random() * n<br>
+            <span class="tab"></span><span class="tab"></span>index2 &larr; random() * n<br>
+            <span class="tab"></span><span class="tab"></span>value &larr; A[index1]<br>
+            <span class="tab"></span><span class="tab"></span>A[index1] &larr; A[index2]<br>
+            <span class="tab"></span><span class="tab"></span>A[index1] &larr; A[value]<br>
+            <br>
+            <strong>Algorithm isInOrder(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> true if the array is sorted<br>
+            <span class="tab"></span>for x &larr; 0 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>if A[x] < A[x-1]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>return false<br>
+            <span class="tab"></span>return true<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for bubble sort-->
+        <div class="sect-header" onclick="showContent('pseudo-bubblesort')">
+        <em><strong>Bubble Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-bubblesort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that iterates through an array and swaps adjacent elements as needed.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm bubbleSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>repeat &larr; true<br>
+            <span class="tab"></span>while repeat is TRUE do<br>
+            <span class="tab"></span><span class="tab"></span>repeat &larr; false<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 1 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>if A[i] < A[i-1] then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>x &larr; A[i-1]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i-1] &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i] &larr; x<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>repeat &larr; true<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for insertion sort-->
+        <div class="sect-header" onclick="showContent('pseudo-insertionsort')">
+        <em><strong>Insertion Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-insertionsort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that processes each element one at a time and shifts each element left unti it is in its
+              proper place.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm insertionSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>for i &larr; 1 to n-1<br>
+            <span class="tab"></span><span class="tab"></span>x &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span>j &larr; i - 1<br>
+            <span class="tab"></span><span class="tab"></span>while j >= 0 and A[j] > x<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[j+1] &larr; A[j]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>j &larr; j - 1<br>
+            <span class="tab"></span><span class="tab"></span>A[j+1] &larr; x<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for selection sort-->
+        <div class="sect-header" onclick="showContent('pseudo-selectionsort')">
+        <em><strong>Selection Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-selectionsort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that finds the minimum of the unsorted data set and swaps it with the first unsorted element.
+              This continues until the data is sorted.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm selectionSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>for i &larr; 0 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>min &larr; i<br>
+            <span class="tab"></span><span class="tab"></span>for j &larr; i+1 up to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>if A[j] < A[min] then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>min &larr;j<br>
+            <span class="tab"></span><span class="tab"></span>if NOT i = min then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>x &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[i] &larr; A[min]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>A[min] &larr; x<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for counting sort-->
+        <div class="sect-header" onclick="showContent('pseudo-countingsort')">
+        <em><strong>Counting Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-countingsort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that calculates the frequency of indentical integers and readds to the array from an
+              array of frequencies.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm countingSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>min &larr; A[0]<br>
+            <span class="tab"></span>max &larr; A[0]<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>min &larr; min(A[i], min)<br>
+            <span class="tab"></span><span class="tab"></span>max &larr; max(A[i], max)<br>
+            <span class="tab"></span>// Calculate the range of the elements<br>
+            <span class="tab"></span>k &larr; (max-min+1)<br>
+            <span class="tab"></span>// Create array to hold counts<br>
+            <span class="tab"></span>C &larr; new array with length k<br>
+            <span class="tab"></span>// Count frequency of values<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>C[ A[i]-min ] &larr; C[ A[i]-min ] + 1<br>
+            <span class="tab"></span>// Accumulate frequencies<br>
+            <span class="tab"></span>for i &larr; 1 to k-1 do<br>
+            <span class="tab"></span><span class="tab"></span>C[i] &larr; C[i-1] + C[i]<br>
+            <span class="tab"></span>// Build Final output array<br>
+            <span class="tab"></span>F &larr; new array with length n<br>
+            <span class="tab"></span>for i &larr; n-1 down to 0 do<br>
+            <span class="tab"></span><span class="tab"></span>F[ C[ A[i]-min ] - 1 ] &larr; A[i]<br>
+            <span class="tab"></span><span class="tab"></span>C[ A[i]-min ] &larr; C[ A[i]-min ] – 1<br>
+            <span class="tab"></span>A &larr; F<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for radix sort-->
+        <div class="sect-header" onclick="showContent('pseudo-radixsort')">
+        <em><strong>Radix Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-radixsort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that calculates the frequency of indentical integers starting from the least significant digit for
+              each element and readds to the array from an array of frequencies.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm radixSort(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A of n element<br>
+            <span class="tab"></span><strong>Output</strong> the array sorted in ascending order<br>
+            <span class="tab"></span>max &larr; 0<br>
+            <span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span>max &larr; max( max, A[i])<br>
+            <span class="tab"></span>// Calculate number of digits in largest value<br>
+            <span class="tab"></span>w &larr; ceiling( log10(max+1) )<br>
+            <span class="tab"></span>p &larr; 1<br>
+            <span class="tab"></span>for j &larr; 1 to w do<br>
+            <span class="tab"></span><span class="tab"></span>C &larr; new array with length 10<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 0 to n-1 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">C[ (A[i]/p) % 10 ] &larr; C[ (A[i]/p) % 10 ] + 1</span><br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; 1 to 9 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">C[i] &larr; C[i-1] + C[i]</span><br>
+            <span class="tab"></span><span class="tab"></span>F &larr; new array with length n<br>
+            <span class="tab"></span><span class="tab"></span>for i &larr; n-1 down to 0 do<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab">F[ C[ (A[i]/p) % 10 ] - 1 ] &larr; A[i]</span><br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>C[ (A[i]/p) % 10 ] &larr; C[ (A[i]/p) % 10 ] - 1<br>
+            <span class="tab"></span><span class="tab"></span>A &larr; F<br>
+            <span class="tab"></span><span class="tab"></span>p &larr; p X 10<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for merge sort-->
+        <div class="sect-header" onclick="showContent('pseudo-mergesort')">
+        <em><strong>Merge Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-mergesort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that recursively splits data in half and then sorts the data when merging the data
+              back together.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm mergeSort(T)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array T of n element<br>
+            <span class="tab"></span><strong>Output</strong> array T with sorted elements<br>
+            <span class="tab"></span>if n ≤ 1 then<br>
+            <span class="tab"></span><span class="tab"></span>return T<br>
+            <span class="tab"></span>mid &larr; n/2 // integer division<br>
+            <span class="tab"></span>left &larr; copyArray(T, 0, mid-1)<br>
+            <span class="tab"></span>right &larr; copyArray(T, mid,n-1)<br>
+            <span class="tab"></span>mergesort(left)<br>
+            <span class="tab"></span>mergesort(right)<br>
+            <span class="tab"></span>merge(left, right, T)<br>
+            <br>
+            <strong>Algorithm merge(left, right, T)</strong><br>
+            <span class="tab"></span><strong>Input</strong> the original array T of n elements<br>
+            <span class="tab"></span><span class="tab"></span>the array containing the sorted left half<br>
+            <span class="tab"></span><span class="tab"></span>the array containing the sorted right half<br>
+            <span class="tab"></span><strong>Output</strong> merges the left and right arrays into the output sorted T array<br>
+            <span class="tab"></span>leftIndex &larr; 0<br>
+            <span class="tab"></span>rightIndex &larr; 0<br>
+            <span class="tab"></span>while leftIndex + rightIndex < n do<br>
+            <span class="tab"></span><span class="tab"></span>if rightIndex = length(right) OR ( leftIndex < length(left) AND
+            left[leftIndex] < right[rightIndex] ) then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>T[leftIndex + rightIndex] &larr; left[leftIndex]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>leftIndex &larr; leftIndex + 1<br>
+            <span class="tab"></span><span class="tab"></span>else<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>T[leftIndex + rightIndex] &larr; right[rightIndex]<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>rightIndex &larr; rightIndex + 1<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for quick sort-->
+        <div class="sect-header" onclick="showContent('pseudo-quicksort')">
+        <em><strong>Quick Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-quicksort" style="display: none;">
+          <center>
+            <em>Pseudocode for a sorting method that recursively splits data around a pivot point and then recursively sorts the data before
+              merging the data back together.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm quickSort(T, low, high)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array T of n element<br>
+            <span class="tab"></span><span class="tab"></span>the lowest index to sort<br>
+            <span class="tab"></span><span class="tab"></span>the highest index to sort<br>
+            <span class="tab"></span><strong>Output</strong> sorted array T<br>
+            <span class="tab"></span>if low < high then<br>
+            <span class="tab"></span><span class="tab"></span>pivotLocation &larr; partition(T, low, high)<br>
+            <span class="tab"></span><span class="tab"></span>quickSort(T, low, pivotLocation - 1)<br>
+            <span class="tab"></span><span class="tab"></span>quickSort(T, pivotLocation + 1, high)<br>
+            <br>
+            <strong>Algorithm partition(T, low, high)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array T of n element<br>
+            <span class="tab"></span><span class="tab"></span>the lowest index being sort<br>
+            <span class="tab"></span><span class="tab"></span>the highest index being sort<br>
+            <span class="tab"></span><strong>Output</strong> the index of the pivot element<br>
+            <span class="tab"></span>// Select a Pivot element<br>
+            <span class="tab"></span>pivotIndex &larr; selectPivot(low, high)<br>
+            <span class="tab"></span>// Swap the pivot to be the last element<br>
+            <span class="tab"></span>swap( T, pivotIndex, high )<br>
+            <span class="tab"></span>return partitionHelper(T, low, high)<br>
+            <br>
+            <strong>Algorithm partitionHelper(T, low, high)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array T of n element<br>
+            <span class="tab"></span><span class="tab"></span>the lowest index being sort<br>
+            <span class="tab"></span><span class="tab"></span>the highest index being sort<br>
+            <span class="tab"></span><strong>Output</strong> the index of the pivot element<br>
+            <span class="tab"></span>// The pivot will be in the last index<br>
+            <span class="tab"></span>pivot &larr; T[high]<br>
+            <span class="tab"></span>index &larr; low; // index of smaller element<br>
+            <span class="tab"></span>for j &larr; low to high - 1 do<br>
+            <span class="tab"></span><span class="tab"></span>if T[j] <= pivot then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>swap( T, index, j )<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>index <-- index + 1<br>
+            <span class="tab"></span>// swap the index with the pivot<br>
+            <span class="tab"></span>// Remember: (T[high] is the pivot)<br>
+            <span class="tab"></span>swap( T, index, high )<br>
+            <span class="tab"></span>// Return the index of the pivot element<br>
+            <span class="tab"></span>return index;<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for pre order traversal-->
+        <div class="sect-header" onclick="showContent('pseudo-preorder')">
+        <em><strong>Preorder Traversal</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-preorder" style="display: none;">
+          <center>
+            <em>Algorithm that generates the preorder traversal for a tree ADT.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm preOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            visit p<br>
+            for each child w in T.children(p)<br>
+            <span class="tab"></span>preOrder(T, w)</span><br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for post order traversal-->
+        <div class="sect-header" onclick="showContent('pseudo-postorder')">
+        <em><strong>Postorder Traversal</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-postorder" style="display: none;">
+          <center>
+            <em>Algorithm that generates the postorder traversal for a tree ADT.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm postOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            for each child w in T.children(p)<br>
+            <span class="tab"></span>preOrder(T, w)<br>
+            visit p</span><br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for level order traversal-->
+        <div class="sect-header" onclick="showContent('pseudo-levelorder')">
+        <em><strong>Levelorder Traversal</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-levelorder" style="display: none;">
+          <center>
+            <em>Algorithm that generates the levelorder traversal for a tree ADT.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm levelOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            Q &larr; initially empty queue of nodes<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            Q.enqueue(p)<br>
+            while NOT Q.isEmpty() do<br>
+            <span class="tab">q &larr; Q.dequeue()<br>
+            visit(q)<br>
+            for each child w in T.children(q)<br>
+            <span class="tab"></span>Q.enqueue(w)</span></span><br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for in order traversal-->
+        <div class="sect-header" onclick="showContent('pseudo-inorder')">
+        <em><strong>Inorder Traversal</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-inorder" style="display: none;">
+          <center>
+            <em>Algorithm that generates the inorder traversal for a tree ADT.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm inOrder(T, p)</strong><br>
+            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"></span> a position, p<br>
+            if p is null then<br>
+            <span class="tab"></span>return<br>
+            inOrder(T, T.left(p))<br>
+            visit(p)<br>
+            inOrder(T, T.right(p))</span><br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for binary search -->
+        <div class="sect-header" onclick="showContent('pseudo-binarySearch')">
+        <em><strong>Binary Tree Search</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-binarySearch" style="display: none;">
+          <center>
+            <em>Algorithm that searches for an element with the given key in a binary search tree.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm search(T, k, p)</strong><br>
+            <span class="tab"><strong>Input</strong> a binary search tree, T<br>
+            <span class="tab"></span> a target key, k<br>
+            <span class="tab"></span> a position, p<br>
+            <strong>Output</strong> the last position visited when searching for p<br>
+            if T.isLeaf(p) then<br>
+            <span class="tab"></span>return p<br>
+            result &larr; compare(k, p.getElement().getKey())<br>
+            if result = 0 then<br>
+            <span class="tab"></span>return p<br>
+            if result < 0 then<br>
+            <span class="tab"></span>return search(T, k, T.left(p))<br>
+            return search(T, k, T.right(p))</span><br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for cyclic shift -->
+        <div class="sect-header" onclick="showContent('pseudo-cyclicShift')">
+        <em><strong>Cyclic-Shift Hash Codes</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-cyclicShift" style="display: none;">
+          <center>
+            <em>Pseudocode for a hash code scheme that swaps parts of a 32-bit value.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm cyclicShift(S)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a string S<br>
+            <span class="tab"></span><strong>Output</strong> the hash code for S<br>
+            <span class="tab"></span>h &larr; 0<br>
+            <span class="tab"></span>for i &larr; 0 to length(S) - 1 do<br>
+            <span class="tab"></span><span class="tab"></span>h &larr; (h << 5) | (h >>> 27)<br>
+            <span class="tab"></span><span class="tab"></span>h &larr; h + charAt(S, i)<br>
+            <span class="tab"></span>return h<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for rehashing (resize) -->
+        <div class="sect-header" onclick="showContent('pseudo-rehashing')">
+        <em><strong>Rehashing (Resize)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-rehashing" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that resizes a hash table to increase the load factor for the table.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm resize(A)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an array A<br>
+            <span class="tab"></span><strong>Output</strong> a new hash table<br>
+            <span class="tab"></span>// Create a larger array<br>
+            <span class="tab"></span>h &larr; new array of size length(A) * 2 + 1<br>
+            <span class="tab"></span>// Rehash<br>
+            <span class="tab"></span>for each entry e in A<br>
+            <span class="tab"></span><span class="tab"></span>put(H, e)<br>
+            <span class="tab"></span>return H<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for PQ Sort -->
+        <div class="sect-header" onclick="showContent('pseudo-pqSort')">
+        <em><strong>Priority Queue Sort</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-pqSort" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that sorts an array of data using a priority queue.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm PQ-Sort(L, C)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a list L of n entries<br>
+            <span class="tab"></span><strong>Output</strong> list L sorted in with keys sorted in increasing order<br>
+            <span class="tab"></span>P &larr; a new empty priority queue<br>
+            <span class="tab"></span>while NOT L.isEmpty() do<br>
+            <span class="tab"></span><span class="tab"></span>e &larr; L.removeFirst()<br>
+            <span class="tab"></span><span class="tab"></span>P.insert(e.key, e)<br>
+            <span class="tab"></span>while NOT P.isEmpty() do<br>
+            <span class="tab"></span><span class="tab"></span>e &larr; P.deleteMin()<br>
+            <span class="tab"></span><span class="tab"></span>L.addLast(e)<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for heap -->
+        <div class="sect-header" onclick="showContent('pseudo-heap')">
+        <em><strong>Heap ADT Algorithms</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-heap" style="display: none;">
+          <center>
+            <em>Pseudocode for various heap algorithms.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm insert(key k, element x, list L)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a key k for an element x to insert into an arraylist L with n elements<br>
+            <span class="tab"></span>e &larr; new PQEntry(k, x)<br>
+            <span class="tab"></span>L.addLast(e)<br>
+            <span class="tab"></span>upHeap(L, L.size()-1)<br>
+            <span class="tab"></span>return e<br>
+            <br><br>
+            <strong>Algorithm upHeap(arraylist L, integer i)</strong><br>
+            <span class="tab"></span><strong>Input</strong> the index i of the entry in the arraylist L<br>
+            <span class="tab"></span>if i > 0 then<br>
+            <span class="tab"></span><span class="tab"></span>parentIndex &larr; (i-1)/2<br>
+            <span class="tab"></span><span class="tab"></span>if key( L.get(parentIndex) ) > key( L.get(i) ) then<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>L.swap(parentIndex, i)<br>
+            <span class="tab"></span><span class="tab"></span><span class="tab"></span>upHeap(L, parentIndex)<br>
+            <br><br>
+            <strong>Algorithm deleteMin(arraylist L)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an arraylist L with n entries<br>
+            <span class="tab"></span><strong>Output</strong> the minimum entry in the heap<br>
+            <span class="tab"></span>if L.isEmpty() then<br>
+            <span class="tab"></span><span class="tab"></span>return “empty heap”<br>
+            <span class="tab"></span>temp &larr; L.first()<br>
+            <span class="tab"></span>L.swap(0, L.size()-1 )<br>
+            <span class="tab"></span>L.removeLast()<br>
+            <span class="tab"></span>downHeap(L, 0)<br>
+            <span class="tab"></span>return temp<br>
+            <br><br>
+            <strong>Algorithm downHeap(arraylist L, integer i)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an arraylist L with n entries, index i being downheaped<br>
+            <span class="tab"></span>leftIndex &larr; 2*i + 1<br>
+            <span class="tab"></span>rightIndex &larr; 2*i + 2<br>
+            <span class="tab"></span>if leftIndex >= L.size() then<br>
+            <span class="tab"></span><span class="tab"></span>return “already a leaf, no more downheaps needed”<br>
+            <span class="tab"></span>smallestChildIndex &larr; leftIndex<br>
+            <span class="tab"></span>if rightIndex < L.size() AND key( L.get(rightIndex) ) < key( L.get(leftIndex) ) then<br>
+            <span class="tab"></span><span class="tab"></span>smallestChildIndex &larr; rightIndex<br>
+            <span class="tab"></span>if key( L.get(smallestChildIndex) ) >= key( L.get(i) ) then<br>
+            <span class="tab"></span><span class="tab"></span>return “no downheaps needed”<br>
+            <span class="tab"></span>L.swap( smallestChildIndex, i)<br>
+            <span class="tab"></span>downHeap( L, smallestChildIndex)<br>
+          </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for bubble -->
+        <div class="sect-header" onclick="showContent('pseudo-bubbleAPQ')">
+        <em><strong>Bubble (Abstract Priority Queue)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-bubbleAPQ" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that determines whether an upHeap or a downHeap is required.</em></center>
+            <hr>
+            <br>
+          <div class="question-box">
+            <strong>Algorithm bubble(L, i)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an arraylist L, an index i<br>
+            <span class="tab"></span><strong>Output</strong> the minheap after restoring partial order property<br>
+            <span class="tab"></span>parentIndex &larr; (i-1)/2<br>
+            <span class="tab"></span>if key( L.get(i) ) < key( L.get(parentIndex) ) then<br>
+            <span class="tab"></span><span class="tab"></span>upHeap(L, i)<br>
+            <span class="tab"></span>else<br>
+            <span class="tab"></span><span class="tab"></span>downHeap(L, i)<br>
+          </div>
+        </div>
+        <br>
+      </div>
+    </body>
+
+    <script type="text/javascript">
+      function showContent(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+</html>

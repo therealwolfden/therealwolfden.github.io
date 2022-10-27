@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
@@ -116,6 +116,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -131,39 +134,1181 @@
         <br>
         <br>
 
-        <!-- First Table -->
+        <!-- Growth Rates -->
         <div class="sect-header" onclick="showContent('table-a')">
-        <em><strong>Table A: </strong>INSERT TABLE TITLE HERE</em>
+        <em><strong>Table A: </strong>Growth Rates</em>
         </div>
         <div class="sect-box" id="table-a" style="display: none;">
           <center>
-            <!-- A table template -->
-            <em>INSERT BRIEF TABLE DESCRIPTION HERE</em>
+            <em>Table containing various growth rates. As the table descends the rate of growth increases.</em>
             <hr>
             <br>
             <table>
               <!-- Headers -->
               <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
+                <th>Function</th>
+                <th>Math Representation</th>
+                <th>Description</th>
               </tr>
               <!-- Row 1 -->
               <tr>
-                <td>Cell 1</td>
-                <td>Cell 2</td>
-                <td>Cell 3</td>
+                <td><strong>Constant</strong></td>
+                <td>c</td>
+                <td>Independent of input</td>
               </tr>
               <!-- Row 2 -->
               <tr>
-                <td>Cell 1</td>
-                <td>Cell 2</td>
-                <td>Cell 3</td>
+                <td><strong>Logarithmic</strong></td>
+                <td>log<sub>2</sub>(n)</td>
+                <td>Doubling input size takes one more unit of time</td>
+              </tr>
+              <!-- Row 3 -->
+              <tr>
+                <td><strong>Fractional</strong></td>
+                <td>√(2)</td>
+                <td></td>
+              </tr>
+              <!-- Row 4 -->
+              <tr>
+                <td><strong>Linear</strong></td>
+                <td>n</td>
+                <td>Doubling input size doubles the running time</td>
+              </tr>
+              <!-- Row 5 -->
+              <tr>
+                <td><strong>Quadratic</strong></td>
+                <td>n<sup>2</sup></td>
+                <td>Doubling the input size quadruples the running time</td>
+              </tr>
+              <!-- Row 6 -->
+              <tr>
+                <td><strong>Polynomial</strong></td>
+                <td>n<sup>k</sup></td>
+                <td></td>
+              </tr>
+              <!-- Row 7 -->
+              <tr>
+                <td><strong>Exponential</strong></td>
+                <td>2<sup>n</sup></td>
+                <td>Doubling the input size squares the running time</td>
+              </tr>
+              <!-- Row 8 -->
+              <tr>
+                <td><strong>Factorial</strong></td>
+                <td>n!</td>
+                <td></td>
               </tr>
             </table>
           </center>
         </div>
         <br>
+
+        <!-- List Abstract Data Type -->
+        <div class="sect-header" onclick="showContent('table-b')">
+        <em><strong>Table B: </strong>List ADT Operations</em>
+        </div>
+        <div class="sect-box" id="table-b" style="display: none;">
+          <center>
+            <em>A table that contains all required list operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- add -->
+              <tr>
+                <td><strong>add(index, e)</strong></td>
+                <td>Adds the element at the specified index in the list</td>
+              </tr>
+              <!-- addFirst -->
+              <tr>
+                <td><strong>addFirst(e)</strong></td>
+                <td>Adds the element to the front of the list</td>
+              </tr>
+              <!-- addLast -->
+              <tr>
+                <td><strong>addLast(e)</strong></td>
+                <td>Adds the element to the end of the list</td>
+              </tr>
+              <!-- first -->
+              <tr>
+                <td><strong>first()</strong></td>
+                <td>Returns, but does not remove, the first element in the list</td>
+              </tr>
+              <!-- get -->
+              <tr>
+                <td><strong>get(index)</strong></td>
+                <td>Returns, but does not remove, the element at the</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the list is empty; otherwise, returns false</td>
+              </tr>
+              <!-- last -->
+              <tr>
+                <td><strong>last()</strong></td>
+                <td>Returns, but does not remove, the last element in the list</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(index)</strong></td>
+                <td>Removes and returns the element at the specified index</td>
+              </tr>
+              <!-- removeFirst -->
+              <tr>
+                <td><strong>removeFirst()</strong></td>
+                <td>Removes and returns the first element in the list</td>
+              </tr>
+              <!-- removeLast -->
+              <tr>
+                <td><strong>removeLast()</strong></td>
+                <td>Removes and returns the last element in the list</td>
+              </tr>
+              <!-- set -->
+              <tr>
+                <td><strong>set(index, e)</strong></td>
+                <td>Replaces the element at the specified index with the new element e</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of elements in the list</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- List ADT Efficiency -->
+        <div class="sect-header" onclick="showContent('table-c')">
+        <em><strong>Table C: </strong>List ADT Efficiency</em>
+        </div>
+        <div class="sect-box" id="table-c" style="display: none;">
+          <center>
+            <em>Table containing the armortized/worst-case runtime costs of List ADT operations using various types of Data Structures. The following
+            assumes the size of the list is maintained as a field. The most optimal for each operation is highlighted in green.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>ArrayList</th>
+                <th>Singly LinkedList with Head</th>
+                <th>Singly LinkedList with Head and Tail</th>
+                <th>Circularly LinkedList with Tail</th>
+                <th>Doubly LinkedList with Head and Tail</th>
+              </tr>
+              <!-- add -->
+              <tr>
+                <td><strong>add(index, e)</strong></td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+              </tr>
+              <!-- addFirst -->
+              <tr>
+                <td><strong>addFirst(e)</strong></td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- addLast -->
+              <tr>
+                <td><strong>addLast(e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- first -->
+              <tr>
+                <td><strong>first()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- get -->
+              <tr>
+                <td><strong>get(index)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- last -->
+              <tr>
+                <td><strong>last()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(index)</strong></td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+                <td style="background-color: #bbffa8;">O(n)</td>
+              </tr>
+              <!-- removeFirst -->
+              <tr>
+                <td><strong>removeFirst()</strong></td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- removeLast -->
+              <tr>
+                <td><strong>removeLast()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- set -->
+              <tr>
+                <td><strong>set(index, e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Positional List Abstract Data Type -->
+        <div class="sect-header" onclick="showContent('table-d')">
+        <em><strong>Table D: </strong>Positional List Operations</em>
+        </div>
+        <div class="sect-box" id="table-d" style="display: none;">
+          <center>
+            <em>A table that contains all required positional list operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- first -->
+              <tr>
+                <td><strong>first()</strong></td>
+                <td>Returns, but does not remove, the position of the first element in the list</td>
+              </tr>
+              <!-- last -->
+              <tr>
+                <td><strong>last()</strong></td>
+                <td>Returns, but does not remove, the position of the last element in the list</td>
+              </tr>
+              <!-- before -->
+              <tr>
+                <td><strong>before(p)</strong></td>
+                <td>Returns the position immediately before the given position in the list</td>
+              </tr>
+              <!-- after -->
+              <tr>
+                <td><strong>after(p)</strong></td>
+                <td>Returns the position immediately after the given position in the list</td>
+              </tr>
+              <!-- addFirst -->
+              <tr>
+                <td><strong>addFirst()</strong></td>
+                <td>Adds a new element at the front of the list, and returns the position of the new element</td>
+              </tr>
+              <!-- addLast -->
+              <tr>
+                <td><strong>addLast(e)</strong></td>
+                <td>Adds a new element at the end of the list, and returns the position of the new element</td>
+              </tr>
+              <!-- addBefore -->
+              <tr>
+                <td><strong>addBefore(p, e)</strong></td>
+                <td>Adds a new element immediately before position p, and returns the position of the new element</td>
+              </tr>
+              <!-- addAfter -->
+              <tr>
+                <td><strong>addAfter(p, e)</strong></td>
+                <td>Adds a new element immediately after position p, and retusn the position of the new element</td>
+              </tr>
+              <!-- set -->
+              <tr>
+                <td><strong>set(p, e)</strong></td>
+                <td>Replaces the element at position p, and returns the original element at the position</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(p)</strong></td>
+                <td>Removes and returns the element at position p (eliminating the position)</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of elements in the list</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the list is empty; otherwise, returns false</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Stack Operations -->
+        <div class="sect-header" onclick="showContent('table-e')">
+        <em><strong>Table E: </strong>Stack operations</em>
+        </div>
+        <div class="sect-box" id="table-e" style="display: none;">
+          <center>
+            <em>A table that contains all required stack operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- push -->
+              <tr>
+                <td>push(e)</td>
+                <td>Adds the element to the top of the stack</td>
+              </tr>
+              <!-- pop -->
+              <tr>
+                <td>pop()</td>
+                <td>Removes and returns the element at the top of the stack</td>
+              </tr>
+              <!-- top -->
+              <tr>
+                <td>top()</td>
+                <td>Returns, but does not remove, the element at the top of the stack</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td>size()</td>
+                <td>Returns the number of elements in the stack</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td>isEmpty()</td>
+                <td>Returns true if the stack is empty; otherwise, returns false</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Stack ADT Efficiency -->
+        <div class="sect-header" onclick="showContent('table-f')">
+        <em><strong>Table F: </strong>Stack ADT Efficiency</em>
+        </div>
+        <div class="sect-box" id="table-f" style="display: none;">
+          <center>
+            <em>Table containing the armortized/worst-case runtime costs of stack ADT operations using various types of Data Structures. The following
+            assumes the size of the list is maintained as a field. The most optimal for each operation is highlighted in green.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Array-based Stack</th>
+                <th>Array-based Stack</th>
+                <th>Singly Linked Stack</th>
+                <th>Singly Linked Stack</th>
+                <th>CircularlyLinked Stack</th>
+                <th>CircularlyLinked Stack</th>
+                <th>DoublyLinked Stack</th>
+                <th>Positional Stack</th>
+              </tr>
+              <!-- Where is top? -->
+              <tr>
+                <td><strong>Where is the top?</strong></td>
+                <td>index size - 1</td>
+                <td>index 0</td>
+                <td>index 0</td>
+                <td>index size - 1</td>
+                <td>index 0</td>
+                <td>index size - 1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- push -->
+              <tr>
+                <td><strong>push(e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- pop -->
+              <tr>
+                <td><strong>pop()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- top -->
+              <tr>
+                <td><strong>top()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Queue Operations -->
+        <div class="sect-header" onclick="showContent('table-f')">
+        <em><strong>Table F: </strong>Queue Operations</em>
+        </div>
+        <div class="sect-box" id="table-f" style="display: none;">
+          <center>
+            <em>A table that contains all required queue operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- enqueue -->
+              <tr>
+                <td>enqueue(e)</td>
+                <td>Adds the element to the back of the queue</td>
+              </tr>
+              <!-- dequeue -->
+              <tr>
+                <td>dequeue()</td>
+                <td>Removes and returns the element at the front of the queue</td>
+              </tr>
+              <!-- front -->
+              <tr>
+                <td>top()</td>
+                <td>Returns, but does not remove, the element at the front of the queue</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td>size()</td>
+                <td>Returns the number of elements in the stack</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td>isEmpty()</td>
+                <td>Returns true if the stack is empty; otherwise, returns false</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Queue ADT Efficiency -->
+        <div class="sect-header" onclick="showContent('table-g')">
+        <em><strong>Table G: </strong>Queue ADT Efficiency</em>
+        </div>
+        <div class="sect-box" id="table-g" style="display: none;">
+          <center>
+            <em>Table containing the armortized/worst-case runtime costs of queue ADT operations using various types of Data Structures. The following
+            assumes the size of the list is maintained as a field. The most optimal for each operation is highlighted in green.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Array-based Queue (linear)</th>
+                <th>Array-based Queue (linear)</th>
+                <th>Array-based Queue (circular)</th>
+                <th>Singly Linked Queue (front and tail)</th>
+                <th>Singly Linked Queue (front and tail)</th>
+                <th>CircularlyLinked Queue (tail)</th>
+                <th>CircularlyLinked Queue (tail)</th>
+                <th>DoublyLinked Queue (front and tail)</th>
+                <th>Positional Stack</th>
+              </tr>
+              <!-- Where is front? -->
+              <tr>
+                <td><strong>Where is the front?</strong></td>
+                <td>index 0</td>
+                <td>index size - 1</td>
+                <td>index front variable</td>
+                <td>index 0</td>
+                <td>index size - 1</td>
+                <td>index 0</td>
+                <td>index size - 1</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <!-- enqueue -->
+              <tr>
+                <td><strong>enqueue(e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- dequeue -->
+              <tr>
+                <td><strong>dequeue()</strong></td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- front -->
+              <tr>
+                <td><strong>front()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <tdv>O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Tree/Levels Table -->
+        <div class="sect-header" onclick="showContent('table-h')">
+        <em><strong>Table H: </strong>Sample Tree/Levels Table</em>
+        </div>
+        <div class="sect-box" id="table-h" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>An example template for a Tree/Levels table to be used with recursive method analysis. <strong>d</strong> is the input size at the base
+            case, <strong>g(n)</strong> is the number of times the specified operation occurs at the base case, <strong>a</strong> is the number
+            of recursive calls executed in one pass of the algorithm, <strong>b</strong> is the input size, and <strong>f(n)</strong> is the number
+            of times the specified operation occurs in the recursive case.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Level</th>
+                <th># Instances</th>
+                <th>Instance Size</th>
+                <th>Cost Per Instance</th>
+                <th>Total Cost</th>
+              </tr>
+              <!-- Row 1 -->
+              <tr>
+                <td>0</td>
+                <td>a</td>
+                <td>b</td>
+                <td>f(n)</td>
+                <td># instances * cost per instance</td>
+              </tr>
+              <!-- Row 2 -->
+              <tr>
+                <td>1</td>
+                <td>a</td>
+                <td>b</td>
+                <td>f(n)</td>
+                <td># instances * cost per instance</td>
+              </tr>
+              <!-- Row 3 -->
+              <tr>
+                <td>2</td>
+                <td>a</td>
+                <td>b</td>
+                <td>f(n)</td>
+                <td># instances * cost per instance</td>
+              </tr>
+              <!-- Row 4 -->
+              <tr>
+                <td>i</td>
+                <td>a</td>
+                <td>b</td>
+                <td>f(n)</td>
+                <td># instances * cost per instance</td>
+              </tr>
+              <!-- Row 5 -->
+              <tr>
+                <td>k</td>
+                <td>a</td>
+                <td>d</td>
+                <td>g(n)</td>
+                <td># instances * cost per instance</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Map Operations -->
+        <div class="sect-header" onclick="showContent('table-i')">
+        <em><strong>Table I: </strong>Map Operations</em>
+        </div>
+        <div class="sect-box" id="table-i" style="display: none;">
+          <center>
+            <em>A table that contains all required map operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- put -->
+              <tr>
+                <td>put(k, v)</td>
+                <td>Adds the entry with key K and value V to the map, if the key does not exist already (returns null). If the key already exists,
+                  update the key K to have the new value V, and return the original value that was replaced</td>
+              </tr>
+              <!-- get -->
+              <tr>
+                <td>get(k)</td>
+                <td>Returns the value V associated with the key K. If the key does not exist, returns null</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td>remove(k)</td>
+                <td>Removes the entry with key K and returns the value V associated with that key K</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td>size()</td>
+                <td>Returns the number of entries in the map</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td>isEmpty()</td>
+                <td>Returns true if the map contains no entries</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Queue ADT Efficiency -->
+        <div class="sect-header" onclick="showContent('table-j')">
+        <em><strong>Table J: </strong>Map ADT Efficiency</em>
+        </div>
+        <div class="sect-box" id="table-j" style="display: none;">
+          <center>
+            <em>Table containing the armortized/worst-case runtime costs of queue ADT operations using various types of Data Structures. The following
+            assumes the size of the list is maintained as a field. The most optimal for each operation is highlighted in green.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Array-based List</th>
+                <th>Linked List</th>
+                <th>Self-Organizing List</th>
+                <th>Search Table</th>
+                <th>Skip List</th>
+              </tr>
+              <!-- Type of search -->
+              <tr>
+                <td><strong>Type of search</strong></td>
+                <td>sequential</td>
+                <td>sequential</td>
+                <td>sequential with heuristics</td>
+                <td>binary search</td>
+                <td>approximation of binary search</td>
+              </tr>
+              <!-- put -->
+              <tr>
+                <td><strong>put(k, v)</strong></td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">avg O(log(n))</td>
+              </tr>
+              <!-- get -->
+              <tr>
+                <td><strong>get(k)</strong></td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">O(log(n))</td>
+                <td style="background-color: #bbffa8;">avg O(log(n))</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(k)</strong></td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+                <td style="background-color: #bbffa8;">avg O(log(n))</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Tree ADT -->
+        <div class="sect-header" onclick="showContent('table-k')">
+        <em><strong>Table K: </strong>Tree Operations</em>
+        </div>
+        <div class="sect-box" id="table-k" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required tree operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- parent -->
+              <tr>
+                <td><strong>parent(p)</strong></td>
+                <td>Returns the parent of the given node p</td>
+              </tr>
+              <!-- children -->
+              <tr>
+                <td><strong>children(p)</strong></td>
+                <td>Returns a list of children of the given node p</td>
+              </tr>
+              <!-- numChildren -->
+              <tr>
+                <td><strong>numChildren(p)</strong></td>
+                <td>Returns the number of children of the given node p</td>
+              </tr>
+              <!-- isInternal -->
+              <tr>
+                <td><strong>isInternal(p)</strong></td>
+                <td>Returns true if the node has one or more children</td>
+              </tr>
+              <!-- isLeaf -->
+              <tr>
+                <td><strong>isLeaf(p)</strong></td>
+                <td>Returns true if the node has no children</td>
+              </tr>
+              <!-- isRoot -->
+              <tr>
+                <td><strong>isRoot(p)</strong></td>
+                <td>Returns true if the node is the root of the tree (has no parent)</td>
+              </tr>
+              <!-- root -->
+              <tr>
+                <td><strong>root()</strong></td>
+                <td>Returns the root of the tree</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of entries in the tree</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the tree is empty; otherwise, returns false</td>
+              </tr>
+              <!-- addRoot -->
+              <tr>
+                <td><strong>addRoot(e)</strong></td>
+                <td>If root is null, creates a position with element e and sets root to the position</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(p)</strong></td>
+                <td>Returns and removes position p from the tree if p has 0 or 1 child</td>
+              </tr>
+              <!-- set -->
+              <tr>
+                <td><strong>set(p, e)</strong></td>
+                <td>Sets the element in p to e and returns the original element that was replaced</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Binary Tree ADT -->
+        <div class="sect-header" onclick="showContent('table-l')">
+        <em><strong>Table L: </strong>Binary Tree Operations</em>
+        </div>
+        <div class="sect-box" id="table-l" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required binary tree operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- parent -->
+              <tr>
+                <td><strong>parent(p)</strong></td>
+                <td>Returns the parent of the given node p</td>
+              </tr>
+              <!-- children -->
+              <tr>
+                <td><strong>children(p)</strong></td>
+                <td>Returns a list of children of the given node p</td>
+              </tr>
+              <!-- numChildren -->
+              <tr>
+                <td><strong>numChildren(p)</strong></td>
+                <td>Returns the number of children of the given node p</td>
+              </tr>
+              <!-- isInternal -->
+              <tr>
+                <td><strong>isInternal(p)</strong></td>
+                <td>Returns true if the node has one or more children</td>
+              </tr>
+              <!-- isLeaf -->
+              <tr>
+                <td><strong>isLeaf(p)</strong></td>
+                <td>Returns true if the node has no children</td>
+              </tr>
+              <!-- isRoot -->
+              <tr>
+                <td><strong>isRoot(p)</strong></td>
+                <td>Returns true if the node is the root of the tree (has no parent)</td>
+              </tr>
+              <!-- root -->
+              <tr>
+                <td><strong>root()</strong></td>
+                <td>Returns the root of the tree</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of entries in the tree</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the tree is empty; otherwise, returns false</td>
+              </tr>
+              <!-- addRoot -->
+              <tr>
+                <td><strong>addRoot(e)</strong></td>
+                <td>If root is null, creates a position with element e and sets root to the position</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(p)</strong></td>
+                <td>Returns and removes position p from the tree if p has 0 or 1 child</td>
+              </tr>
+              <!-- set -->
+              <tr>
+                <td><strong>set(p, e)</strong></td>
+                <td>Sets the element in p to e and returns the original element that was replaced</td>
+              </tr>
+              <!-- left -->
+              <tr>
+                <td><strong>left(p)</strong></td>
+                <td>Returns the left child of the node p</td>
+              </tr>
+              <!-- right -->
+              <tr>
+                <td><strong>right(p)</strong></td>
+                <td>Returns the right child of the node p</td>
+              </tr>
+              <!-- sibling -->
+              <tr>
+                <td><strong>sibling(p)</strong></td>
+                <td>Returns the sibling of the node p</td>
+              </tr>
+              <!-- addLeft -->
+              <tr>
+                <td><strong>addLeft(p, e)</strong></td>
+                <td>Adds a new element as a left child of p</td>
+              </tr>
+              <!-- addRight -->
+              <tr>
+                <td><strong>addRight(p, e)</strong></td>
+                <td>Adds a new element as a right child of p</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Tree Implementations -->
+        <div class="sect-header" onclick="showContent('table-m')">
+        <em><strong>Table M: </strong>Tree Implementations</em>
+        </div>
+        <div class="sect-box" id="table-m" style="display: none;">
+          <center>
+            <em>The following shows the advantages and disadvantages of various tree implementations.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Tree Type</th>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+              </tr>
+              <!-- Binary Search Trees -->
+              <tr>
+                <td><strong>Binary Search Trees</strong></td>
+                <td><ul>
+                  <li>Easy to implement.</li>
+                </ul></td>
+                <td><ul>
+                  <li>No guarantee of balance.</li>
+                  <li>Height may be O(n), leading to O(n) worst-case runtimes for Map behaviors.</li>
+                </ul></td>
+              </tr>
+              <!-- AVL Trees -->
+              <tr>
+                <td><strong>AVL Trees</strong></td>
+                <td><ul>
+                  <li>Guaranteed O(log(n)) height for worst-case O(log(n)) runtimes for Map ADT behaviors.</li>
+                </ul></td>
+                <td><ul>
+                  <li>Must use extra space as each position must keep track of its own height.</li>
+                  <li>May require restructuring at EVERY LEVEL of the tree when removing.</li>
+                </ul></td>
+              </tr>
+              <!-- Splay Trees -->
+              <tr>
+                <td><strong>Splay Trees</strong></td>
+                <td><ul>
+                  <li>No need for positions to store any extra information.</li>
+                  <li>Move to front heuristic.</li>
+                  <li>Amortized cost for Map ADT behaviors is O(log(n)).</li>
+                </ul></td>
+                <td><ul>
+                  <li>Worst-case height is still O(n), leading to O(n) worst case runtimes for Map ADT behaviors.</li>
+                  <li>Require restructuring (splay) at every level of the tree on every operation.</li>
+                </ul></td>
+              </tr>
+              <!-- (2,4) Trees & B-Trees -->
+              <tr>
+                <td><strong>(2,4) Trees & B-Trees</strong></td>
+                <td><ul>
+                  <li>Guaranteed O(log(n)) height for worst-case O(log(n)) runtimes for Map ADT behaviors.</li>
+                </ul></td>
+                <td><ul>
+                  <li>More difficult to implement than BSTs.</li>
+                  <li>May require restructuring (split and fusion) at every level of the tree when putting and removing.</li>
+                </ul></td>
+              </tr>
+              <!-- Red-Black Trees -->
+              <tr>
+                <td><strong>Red-Black Trees</strong></td>
+                <td><ul>
+                  <li>Guaranteed O(log(n)) height for worst-case O(log(n)) runtimes for Map ADT behaviors.</li>
+                  <li>O(1) restructuring.</li>
+                </ul></td>
+                <td><ul>
+                  <li>Must use extra space for each node to keep track of its own color.</li>
+                </ul></td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Adaptable Priority Queue ADT -->
+        <div class="sect-header" onclick="showContent('table-o')">
+        <em><strong>Table O: </strong>Adaptable Priority Queue Operations</em>
+        </div>
+        <div class="sect-box" id="table-o" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required adaptable priority queue operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- insert -->
+              <tr>
+                <td><strong>insert(k, v)</strong></td>
+                <td>Adds the entry with key K and value V to the priority queue</td>
+              </tr>
+              <!-- min -->
+              <tr>
+                <td><strong>min()</strong></td>
+                <td>Returns, but does not remove, the entry with the smallest key</td>
+              </tr>
+              <!-- deleteMin -->
+              <tr>
+                <td><strong>deleteMin()</strong></td>
+                <td>Removes and returns the entry with the smallest key</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of entries in the priority queue</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the priority queue is empty; otherwise, returns false</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(e)</strong></td>
+                <td>Removes and returns entry e from the priority queue</td>
+              </tr>
+              <!-- replaceKey -->
+              <tr>
+                <td><strong>replaceKey(e, k)</strong></td>
+                <td>Replaces the key of existing entry e</td>
+              </tr>
+              <!-- replaceValue -->
+              <tr>
+                <td><strong>replaceValue(e, v)</strong></td>
+                <td>Replaces the value of the existing entry e</td>
+              </tr>
+            </table>
+          </center>
+        </div>
         <br>
       </div>
     </body>

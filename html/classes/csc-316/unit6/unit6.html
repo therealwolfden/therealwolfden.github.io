@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Recursive Algorithm Analysis</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -128,44 +131,124 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 6 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Recursive Algorithm Analysis</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Analyzing Algorithms -->
+          <h3><em>Analyzing Algorithms</em></h3>
+          <span class="tab"></span><strong><em>Analyzing Algorithms</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>When stating the runtime of an algorithm we state a function T(n) to represent the number of times an essential
+            operation is performed.</li>
+            <li>For recursive algorithms the T(n) will also be recursive.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+
+          <span class="tab"></span><strong><em>Analyzing Recursive Algorithms</em></strong>
+          <ul>
+            <li>To find the recursive T(n), follow the following 4 steps.</li>
+            <ol>
+              <li>Identify the base case(s) and recursive case(s).</li>
+              <li>Count operations to state a recursive T(n) function.</li>
+              <li>Fill-in a tree/levels table.</li>
+              <li>Derive a closed-form solution.</li>
+            </ol>
+          </ul>
           <br>
+
+          <span class="tab"></span><strong><em>Identify the base case(s) and recursive case(s):</em></strong>
+          <ul>
+            <li>Base case(s)</li>
+            <ul>
+              <li>Values of the input for which no recursive calls are made.</li>
+              <li>There must always be a base case otherwise the algorithm would run indefinetly.</li>
+            </ul>
+            <li>Recursive Calls</li>
+            <ul>
+              <li>Calls to the current method.</li>
+              <li>Each recursive call should be defined in such a way that progress can be made towards the base case.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Count operations to state a recursive T(n) function:</em></strong>
+          <ul>
+            <li>Questions to guide analysis...</li>
+            <ol>
+              <li>What is the input size at the base case? Represented as <em>d</em>.</li>
+              <li>How many times does the specified operation occur at the base case? Represented as <em>g(n)</em>.</li>
+              <li>How many recursive calls are executed in one pass of the algorithm? Represented as <em>a</em>.</li>
+              <li>How does the input size change with each recursive call? Represented as <em>b</em>.</li>
+              <li>How many times does the specified operation occur in the recursive case? Represented as <em>f(n)</em>.</li>
+            </ol>
+            <li>T(n) = g(n) if d, aT(b) + f(n) if not d</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Fill-in a tree/levels table.</em></strong>
+          <ul>
+            <li>Take the T(n) described in step two and plug the values into the template table below.</li>
+          </ul>
+          <table>
+            <!-- Headers -->
+            <tr>
+              <th>Level</th>
+              <th># Instances</th>
+              <th>Instance Size</th>
+              <th>Cost Per Instance</th>
+              <th>Total Cost</th>
+            </tr>
+            <!-- Row 1 -->
+            <tr>
+              <td>0</td>
+              <td>a</td>
+              <td>b</td>
+              <td>f(n)</td>
+              <td># instances * cost per instance</td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+              <td>1</td>
+              <td>a</td>
+              <td>b</td>
+              <td>f(n)</td>
+              <td># instances * cost per instance</td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+              <td>2</td>
+              <td>a</td>
+              <td>b</td>
+              <td>f(n)</td>
+              <td># instances * cost per instance</td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+              <td>i</td>
+              <td>a</td>
+              <td>b</td>
+              <td>f(n)</td>
+              <td># instances * cost per instance</td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+              <td>k</td>
+              <td>a</td>
+              <td>d</td>
+              <td>g(n)</td>
+              <td># instances * cost per instance</td>
+            </tr>
+          </table>
+          <br>
+
+          <span class="tab"></span><strong><em>Derive a closed-form solution.</em></strong>
+          <ul>
+            <li>T(n) = (<em>base case cost</em>) + Σ<sub>i=0</sub><sup>k-1</sup>(<em>recursive case cost</em>)</li>
+            <li>The base case cost comes from the total cost at level i.</li>
+            <li>The recursive case cost comes from the total cost at level k.</li>
+          </ul>
 
         </div>
       </div>

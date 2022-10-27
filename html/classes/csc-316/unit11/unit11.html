@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>AVL Trees</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -128,43 +131,87 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 11 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>AVL Trees</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Trinode Restructuring -->
+          <h3><em>Trinode Restructuring</em></h3>
+          <span class="tab"></span><strong><em>Trinode Restructuring:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Consider node x, its parent y, and its grandparent z.</li>
+            <li>Restructure the subtree rooted at z to reduce the height.</li>
+            <li>Steps:</li>
+            <ol>
+              <li>Label the three nodes with a, b, c as they appear inorder from left to right.</li>
+              <li>Rotate b to become the new root of the subtree with a as the left child and c as the right child.</li>
+            </ol>
+            <li>If x and y are both left children or both right children only one rotation is required.</li>
+            <li>If x and y are different types of children two rotations are required.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <!-- AVL Trees -->
+          <h3><em>AVL Trees</em></h3>
+          <span class="tab"></span><strong><em>AVL Trees</em></strong> are any binary search tree that satisfies the following height-balance property.
+          <ul>
+            <li>For every internal node, the heights of the children of the node differ by at most 1.</li>
+            <li>To fix where this property is violated we perform a trinode restructuring on the child with the higher height.</li>
+            <li>Both put and remove will cause this property to be violated.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>put(k, v):</em></strong>
+          <ul>
+            <li>Use the standard insert operation for a traditional binary search tree.</li>
+            <li>Perform trinode restructuring on the parent of the newly added node. Trace violations up to the root.</li>
+            <li>If a node is not balanced...</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Let z be the node that is unbalanced.</li>
+              <li>Let y be the child of z with greater height.</li>
+              <li>Let x be the child of y such that...</li>
+              <ul>
+                <li>If the two children have different heights, let x be the child with greater height.</li>
+                <li>If the two children have the same heights, let x be the child with the same orientation as y (left or right child).</li>
+              </ul>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>remove(k):</em></strong>
+          <ul>
+            <li>Use the standard remove operation for a traditional binary search tree.</li>
+            <li>Perform trinode restructuring on the parent of recently deleted node. Trace violations up to the root.</li>
+            <li>If a node is not balanced...</li>
+            <ul>
+              <li>Let z be the node that is unbalanced.</li>
+              <li>Let y be the child of z with greater height.</li>
+              <li>Let x be the child of y such that...</li>
+              <ul>
+                <li>If the two children have different heights, let x be the child with greater height.</li>
+                <li>If the two children have the same heights, let x be the child with the same orientation as y (left or right child).</li>
+              </ul>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Performance -->
+          <h3><em>Performance of AVL Trees</em></h3>
+          <span class="tab"></span><strong><em>Height:</em></strong>
+          <ul>
+            <li>The height of an AVL tree is O(log<sub>2</sub>(n)).</li>
+            <li>The maximum number of nodes in an AVL tree is equal to 2<sup>h+1</sup> - 1.</li>
+            <li>The minimum number of nodes in an AVL tree is equal to 1 + n(h-1) + n(h-2).</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Operations:</em></strong>
+          <ul>
+            <li>Searching is in O(log(n)) time.</li>
+            <li>get(k) is in O(log(n)) time.</li>
+            <li>put(k, v) is in O(log(n)) time.</li>
+            <li>remove(k) is in O(log(n)) time.</li>
+          </ul>
           <br>
 
         </div>

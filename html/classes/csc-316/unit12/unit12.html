@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -128,43 +131,60 @@
       <div class="body">
         <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 12 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Splay Trees</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Splay Trees -->
+          <h3><em>Splay Trees</em></h3>
+          <span class="tab"></span><strong><em>Splay Tree:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Implement a special splay operation.</li>
+            <li>Every operation causes the tree to reorganize itself.</li>
+            <ul>
+              <li>Remove performs the splay operation on the parent of the node that was removed.</li>
+              <li>All other operations perform the splay operation on the node that was added/accessed.</li>
+            </ul>
+            <li>The target moves to the root of the tree without breaking the binary search tree property.</li>
+            <li>Basically just implements a move-to-front heuristic.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+
+          <span class="tab"></span><strong><em>splay(p):</em></strong>
+          <ul>
+            <li>Input a position <em>p</em> to splay.</li>
+            <li>Uses rotations to move position p to the root of the tree.</li>
+            <li>Three cases:</li>
+            <ol>
+              <li>If p is the root, stop.</li>
+              <li>If p's parent u is the root, perform one rotation (zig).</li>
+              <li>If p has parent u and grandparent w</li>
+              <ul>
+                <li>If p and u are both left/right children, perform two rotations in the same direction, around w first, the around u (zig-zig).</li>
+                <li>If one of p, <em>u</em> is a left child, the other is a right child, perform two rotations in opposite direction, around u first,
+                  then around w (zig-zag).</li>
+              </ul>
+            </ol>
+          </ul>
+          <br>
+
+          <!-- Performance -->
+          <h3><em>Performance of Splay Trees</em></h3>
+          <span class="tab"></span><strong><em>Height:</em></strong>
+          <ul>
+            <li>The height of an AVL tree is constantly changing with each new operation.</li>
+            <li>The best possible height is log(n).</li>
+            <li>The worst possible height is n.</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Operations:</em></strong>
+          <ul>
+            <li>get(k) has an armortized cost of O(log(n)) time.</li>
+            <li>put(k, v) has an armortized cost of O(log(n)) time.</li>
+            <li>remove(k) has an armortized cost of O(log(n)) time.</li>
+            <li>For any sequence <em>m</em> operations starting from an empty tree the armortized cost is O(mlog(n)) time.</li>
+          </ul>
           <br>
 
         </div>

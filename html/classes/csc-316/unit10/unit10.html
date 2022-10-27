@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -146,17 +149,35 @@
             </ul>
             <li>Leaves are typically sentinel (null) nodes.
           </ul>
+          <br>
 
           <span class="tab"></span><strong><em>search(tree, key, position)</em></strong>
           <ul>
             <li>The worst case runtime of search in a binary search tree depends on the height of the tree.</li>
           </ul>
+          <div class="question-box">
+            <strong>Algorithm search(T, k, p)</strong><br>
+            <span class="tab"><strong>Input</strong> a binary search tree, T<br>
+            <span class="tab"></span> a target key, k<br>
+            <span class="tab"></span> a position, p<br>
+            <strong>Output</strong> the last position visited when searching for p<br>
+            if T.isLeaf(p) then<br>
+            <span class="tab"></span>return p<br>
+            result &larr; compare(k, p.getElement().getKey())<br>
+            if result = 0 then<br>
+            <span class="tab"></span>return p<br>
+            if result < 0 then<br>
+            <span class="tab"></span>return search(T, k, T.left(p))<br>
+            return search(T, k, T.right(p))</span><br>
+          </div>
+          <br>
 
           <span class="tab"></span><strong><em>get(key)</em></strong>
           <ul>
             <li>Uses the search method to find the key's position and then returns the value at the searched position.</li>
             <li>The worst case runtime of get in a binary search tree depends on the height of the tree.</li>
           </ul>
+          <br>
 
           <span class="tab"></span><strong><em>put(key, value)</em></strong>
           <ul>
@@ -169,6 +190,7 @@
               </ul>
             <li>The worst case runtime of put in a binary search tree depends on the height of the tree.</li>
           </ul>
+          <br>
 
           <span class="tab"></span><strong><em>remove(key)</em></strong>
           <ul>
@@ -187,6 +209,7 @@
               </ul>
             </ul>
           </ul>
+          <br>
 
           <span class="tab"></span><strong><em>Runtimes</em></strong>
           <ul>
@@ -220,6 +243,7 @@
               <li>Each of these rotations reduces the height by 1.</li>
             </ul>
           </ul>
+          <br>
 
           <span class="tab"></span><strong><em>Types of Balenced Trees</em></strong>
           <ul>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang=“en-US”>
     <head>
         <meta charset="UTF-8" />
         <base href="https://therealwolfden.github.io/">
@@ -119,6 +119,9 @@
           <!-- Tables -->
           <a href="/html/classes/csc-316/tables/tables.html"><em>Tables</em></a>
 
+          <!-- Pseudocode -->
+          <a href="/html/classes/csc-316/pseudocode/pseudocode.html"><em>Pseudocode</em></a>
+
           <!-- Grade Calculator -->
           <a href="/html/classes/csc-316/grade-calculator/grade-calculator.html"><em>Grade Calculator</em></a>
         </div>
@@ -126,45 +129,157 @@
       <br>
 
       <div class="body">
-        <em></em>
 
-        <!-- Section 1 -->
+        <!-- Section 4 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>List and Positional List ADTs</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Abstract Data Types -->
+          <h3><em>Abstract Data Types</em></h3>
+          <span class="tab"></span><strong><em>Abstract Data Types (ADTs)</em></strong> model behaviors from the point of view of a user of the data.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Outlines the possible operations of a data type.</li>
+            <li>Does not describe how operations are implemented, only their functionality.</li>
+            <li>No rule for what operations must be supported.</li>
+            <li>First described by Barbara Liskov.</li>
+            <li>ADT behaviors should be used when documenting algorithms or for pseudocode.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <!-- Data Structures -->
+          <h3><em>Data Structures</em></h3>
+          <span class="tab"></span><strong><em>Data Structures</em></strong> are concrete implementations of ADTs
+          <ul>
+            <li>Implement operations defined in the ADT.</li>
+            <li>Different types of Data Structures have their own benefits for use with an ADT.</li>
+            <li>List Data Structure</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>Array-based List</li>
+              <ul>
+                <li>Contiguous memory representation.</li>
+                <li>Adjacency in the array means adjacency in the list.</li>
+              </ul>
+              <li>Linked List</li>
+              <ul>
+                <li>Linked memory representation.</li>
+                <li>Elements can be scattered arbitrarily in memory.</li>
+                <li>List elements store references to neighbor(s).</li>
+              </ul>
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ul>
+          <br>
+
+          <!-- Array-based List -->
+          <h3><em>Array-based List</em></h3>
+          <span class="tab"></span><strong><em>Array-based List:</em></strong>
+          <ul>
+            <li>Benefits</li>
+            <ul>
+              <li>Access to each element in constant O(1) time.</li>
+            </ul>
+            <li>Problems</li>
+            <ul>
+              <li>Array size is fixed and thus can not dynamically resize causing wasted memory.</li>
+              <ul>
+                <li>Array must grow when the elements in the list exceed the length of the array.</li>
+              </ul>
+              <li>Inserting/removing from the middle causes massive data movement with O(n) time.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Armortized Analysis -->
+          <h3><em>Armortized Analysis</em></h3>
+          <span class="tab"></span><strong><em>Armortized Cost:</em></strong>
+          <ul>
+            <li>Gradually reduce the cost of an operation over a sequence of operations.</li>
+            <li>Basically the idea that some expensive operations may allow for future operations to be much cheaper in terms of memory/runtime.</li>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Armortized Analysis:</em></strong>
+          <ul>
+            <li>The armortized analysis is stated in terms of the pay off. An armortized cost of O(1) says that over a series of operations the cost
+              is O(1) and can not be applied on an individual use of the operation.</li>
+            <li>An armortized of cost O(1) is assigned to adding a value to the end of an array-based list. Therefore the total running time of
+            adding n values to the end of an array-based list is O(n)</li>
+          </ul>
+          <br>
+
+          <!-- Linked List -->
+          <h3><em>Linked List</em></h3>
+          <span class="tab"></span><strong><em>Linked List:</em></strong>
+          <ul>
+            <li>Benefits</li>
+            <ul>
+              <li>Insertions/deletion do not involve moving or shifting.</li>
+              <li>Dynamic allocation of memory on a as-needed basis.</li>
+            </ul>
+            <li>Problems</li>
+            <ul>
+              <li>No random access meaning accessing data in the middle of the list is in O(n) time.</li>
+            </ul>
+          </ul>
+          <br>
+          <span class="tab"></span><strong><em>Singly Linked List:</em></strong>
+          <ul>
+            <li>Consists of Listnodes that store data and point to the next node within the list.</li>
+            <li>A <strong>head</strong> pointer leads to the front of the list.</li>
+            <li>Some implementations have a <strong>tail</strong> pointer that points to the back of the list.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Circular Linked List:</em></strong>
+          <ul>
+            <li>The head pointer still points to the start of the list.</li>
+            <li>The tail pointer now points to the head of the list instead of an empty/null node.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Doubly Linked List:</em></strong>
+          <ul>
+            <li>Consists of Listnodes that store data and point to the next and previous nodes within the list.</li>
+            <li>Allows for easy insertions and deletions at the cost of extra memory usage.</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Sentinel Node:</em></strong>
+          <ul>
+            <li>No data stored within the node (null).</li>
+            <li>The next points to the <em>true</em> beginning of the list.</li>
+            <li>Allows for less special cases and a more uniform code.</li>
+          </ul>
+          <br>
+
+          <!-- Positional List -->
+          <h3><em>Positional List ADT</em></h3>
+          <span class="tab"></span><strong><em>Positional List:</em></strong>
+          <ul>
+            <li>Special abstraction of the list ADT that manipulates data using the location/position.</li>
+            <li>Behaviors are position-based rather than index based.</li>
+            <li>For a comprehensive list of operations see Table D.</li>
+            <ul>
+              <li>Access to each element in constant O(1) time.</li>
+            </ul>
+            <li>Problems</li>
+            <ul>
+              <li>Array size is fixed and thus can not dynamically resize causing wasted memory.</li>
+              <ul>
+                <li>Array must grow when the elements in the list exceed the length of the array.</li>
+              </ul>
+              <li>Inserting/removing from the middle causes massive data movement with O(n) time.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Iterators -->
+          <h3><em>Iterators</em></h3>
+          <span class="tab"></span><strong><em>Iterators</em></strong> provide a common, efficient way to traverse many types of data structures.
+          <ul>
+            <li>Think of an iterator as "between" two elements and points to the element after it.</li>
+            <li>Iterators can remove the next element as well as well iterate or go step by step through the data set.</li>
+            <li>In pseudocode iterators can be implyed by using a "for-each" style loop.</li>
+          </ul>
           <br>
 
         </div>
