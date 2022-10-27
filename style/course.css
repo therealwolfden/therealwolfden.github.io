@@ -273,5 +273,5 @@ div.denom {
 }
 
 div.bound {
-    line-height: .8ex * 2;
+    bottom: -10px;
 }
