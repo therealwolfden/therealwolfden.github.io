@@ -264,12 +264,12 @@ div.fract {
 div.numer {
     border-bottom:1px solid;
     text-align:center;
-    font-size: 0.8em;
+    font-size: 0.95em;
 }
 
 div.denom {
     text-align:center;
-    font-size: 0.8em;
+    font-size: 0.95em;
 }
 
 div.bound {
