@@ -1313,6 +1313,351 @@
           </center>
         </div>
         <br>
+
+        <!-- Set ADT -->
+        <div class="sect-header" onclick="showContent('table-p')">
+        <em><strong>Table P: </strong>Set ADT Operations</em>
+        </div>
+        <div class="sect-box" id="table-p" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required Set ADT operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- add -->
+              <tr>
+                <td><strong>add(e)</strong></td>
+                <td>Adds the element <em>e</em> to the set (if e is not already present in the set)</td>
+              </tr>
+              <!-- remove -->
+              <tr>
+                <td><strong>remove(e)</strong></td>
+                <td>Removes and returns the element <em>e</em> from the set (if e is present in the set)</td>
+              </tr>
+              <!-- contains -->
+              <tr>
+                <td><strong>contains(e)</strong></td>
+                <td>Returns true if the set contains the element <em>e</em>; otherwise, returns false</td>
+              </tr>
+              <!-- addAll -->
+              <tr>
+                <td><strong>addAll(T)</strong></td>
+                <td>Updates the current set to also include all elements contained in the set <em>T</em> (also called “union”)</td>
+              </tr>
+              <!-- retainAll -->
+              <tr>
+                <td><strong>retainAll(T)</strong></td>
+                <td>Updates the current set to keep only those elements that are also elements in the set <em>T</em> (also called “intersection”)</td>
+              </tr>
+              <!-- removeAll -->
+              <tr>
+                <td><strong>removeAll(T)</strong></td>
+                <td>Updates the current set to remove any of the elements that are contained in the set <em>T</em> (also called “subtraction”)</td>
+              </tr>
+              <!-- size -->
+              <tr>
+                <td><strong>size()</strong></td>
+                <td>Returns the number of elements in the set</td>
+              </tr>
+              <!-- isEmpty -->
+              <tr>
+                <td><strong>isEmpty()</strong></td>
+                <td>Returns true if the set contains no elements</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Disjoint Set ADT -->
+        <div class="sect-header" onclick="showContent('table-q')">
+        <em><strong>Table Q: </strong>Disjoint Set Operations</em>
+        </div>
+        <div class="sect-box" id="table-q" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required Disjoint Set operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- makeSet -->
+              <tr>
+                <td><strong>makeSet(e)</strong></td>
+                <td>Creates a disjoint set that contains the element <em>e</em>, then returns the position that identifies the set</td>
+              </tr>
+              <!-- union -->
+              <tr>
+                <td><strong>union(s, t)</strong></td>
+                <td>Merges the disjoint sets that contain positions <em>s</em> and <em>t</em></td>
+              </tr>
+              <!-- find -->
+              <tr>
+                <td><strong>find(e)</strong></td>
+                <td>Returns the position of the identifier for the disjoint set that contains the element <em>e</em></td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Graph ADT -->
+        <div class="sect-header" onclick="showContent('table-r')">
+        <em><strong>Table R: </strong>Graph Operations</em>
+        </div>
+        <div class="sect-box" id="table-r" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>A table that contains all required Graph operations and their functionality.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+              <!-- isDirected -->
+              <tr>
+                <td><strong>isDirected()</strong></td>
+                <td>Returns true if the graph is a directed graph, otherwise returns false</td>
+              </tr>
+              <!-- numVertices -->
+              <tr>
+                <td><strong>numVertices()</strong></td>
+                <td>Returns the number of vertices in the graph</td>
+              </tr>
+              <!-- vertices -->
+              <tr>
+                <td><strong>vertices()</strong></td>
+                <td>Returns an iteration of all vertices in the graph</td>
+              </tr>
+              <!-- numEdges -->
+              <tr>
+                <td><strong>numEdges()</strong></td>
+                <td>Returns the number of edges in the graph</td>
+              </tr>
+              <!-- edges -->
+              <tr>
+                <td><strong>edges()</strong></td>
+                <td>Returns an iteration of all edges in the graph</td>
+              </tr>
+              <!-- getEdge -->
+              <tr>
+                <td><strong>getEdge(u, v)</strong></td>
+                <td>Returns the edge that connects vertex <em>u</em> and vertex <em>v</em>; if no edge connects the two vertices, return null.
+                  For undirected graphs, getEdge(u,v) = getEdge(v,u)</td>
+              </tr>
+              <!-- endVertices -->
+              <tr>
+                <td><strong>endVertices(e)</strong></td>
+                <td>Returns the two endpoint vertices of edge <em>v</em>. For a directed graph, the first vertex is the source vertex and the second is
+                  the destination vertex</td>
+              </tr>
+              <!-- opposite -->
+              <tr>
+                <td><strong>opposite(v, e)</strong></td>
+                <td>Returns the other vertex of the edge, given an edge <em>e</em> incident to vertex <em>v</em></td>
+              </tr>
+              <!-- outDegree -->
+              <tr>
+                <td><strong>outDegree(v)</strong></td>
+                <td>Returns the number of outgoing edges from <em>v</em></td>
+              </tr>
+              <!-- inDegree -->
+              <tr>
+                <td><strong>inDegree(v)</strong></td>
+                <td>Returns the number of incoming edges to <em>v</em>. For undirected graphs, outDegree(v) = inDegree(v)</td>
+              </tr>
+              <!-- outgoingEdges -->
+              <tr>
+                <td><strong>outgoingEdges(v)</strong></td>
+                <td>Returns an iteration of all outgoing edges from vertex <em>v</em></td>
+              </tr>
+              <!-- incomingEdges -->
+              <tr>
+                <td><strong>incomingEdges(v)</strong></td>
+                <td>Returns an iteration of all incoming edges to vertex <em>v</em>. For undirected graphs, ougoingEdges(v) = incomingEdges(v)</td>
+              </tr>
+              <!-- insertVertex -->
+              <tr>
+                <td><strong>insertVertex(x)</strong></td>
+                <td>Creates and returns a new Vertex storing element <em>x</em></td>
+              </tr>
+              <!-- insertEdge -->
+              <tr>
+                <td><strong>insertEdge(u, v, x)</strong></td>
+                <td>Creates and returns a new Edge from vertex <em>u</em> to vertex <em>v</em> and stores element <em>x</em></td>
+              </tr>
+              <!-- removeVertex -->
+              <tr>
+                <td><strong>removeVertex(v)</strong></td>
+                <td>Removes vertex <em>v</em> and all its incident edges from the graph</td>
+              </tr>
+              <!-- removeEdge -->
+              <tr>
+                <td><strong>removeEdge(e)</strong></td>
+                <td>Removes edge <em>e</em> from the graph</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
+
+        <!-- Graph ADT -->
+        <div class="sect-header" onclick="showContent('table-s')">
+        <em><strong>Table S: </strong>Graph Efficiency</em>
+        </div>
+        <div class="sect-box" id="table-s" style="display: none;">
+          <center>
+            <!-- A table template -->
+            <em>Table containing the armortized/worst-case runtime costs of Graph ADT operations using various types of Data Structures. The following
+            assumes the size of the list is maintained as a field. The most optimal for each operation is highlighted in green.</em>
+            <hr>
+            <br>
+            <table>
+              <!-- Headers -->
+              <tr>
+                <th>Operation</th>
+                <th>Edge List</th>
+                <th>Adjacency List</th>
+                <th>Adjacency Map</th>
+                <th>Adjacency Matrix</th>
+              </tr>
+              <!-- isDirected -->
+              <tr>
+                <td><strong>isDirected()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- numVertices -->
+              <tr>
+                <td><strong>numVertices()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- vertices -->
+              <tr>
+                <td><strong>vertices()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- numEdges -->
+              <tr>
+                <td><strong>numEdges()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- edges -->
+              <tr>
+                <td><strong>edges()</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- getEdge -->
+              <tr>
+                <td><strong>getEdge(u, v)</strong></td>
+                <td>O(m)</td>
+                <td>O(min(deg(u),deg(v)))</td>
+                <td style="background-color: #bbffa8;">O(1) expected</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- opposite -->
+              <tr>
+                <td><strong>opposite(v, e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- outDegree -->
+              <tr>
+                <td><strong>outDegree(v)</strong></td>
+                <td>O(m)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- inDegree -->
+              <tr>
+                <td><strong>inDegree(v)</strong></td>
+                <td>O(m)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- outgoingEdges -->
+              <tr>
+                <td><strong>outgoingEdges(v)</strong></td>
+                <td>O(m)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- incomingEdges -->
+              <tr>
+                <td><strong>incomingEdges(v)</strong></td>
+                <td>O(m)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n)</td>
+              </tr>
+              <!-- insertVertex -->
+              <tr>
+                <td><strong>insertVertex(x)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td>O(n<sup>2</sup>)</td>
+              </tr>
+              <!-- insertEdge -->
+              <tr>
+                <td><strong>insertEdge(u, v, x)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1) expected</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+              <!-- removeVertex -->
+              <tr>
+                <td><strong>removeVertex(v)</strong></td>
+                <td>O(m)</td>
+                <td style="background-color: #bbffa8;">O(deg(v))</td>
+                <td style="background-color: #bbffa8;">O(deg(v))</td>
+                <td>O(n<sup>2</sup>)</td>
+              </tr>
+              <!-- removeEdge -->
+              <tr>
+                <td><strong>removeEdge(e)</strong></td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+                <td style="background-color: #bbffa8;">O(1) expected</td>
+                <td style="background-color: #bbffa8;">O(1)</td>
+              </tr>
+            </table>
+          </center>
+        </div>
+        <br>
       </div>
     </body>
 

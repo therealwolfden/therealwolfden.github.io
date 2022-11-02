@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Graph Abstract Data Type</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -130,43 +130,138 @@
 
       <div class="body">
 
-        <!-- Section 1 -->
+        <!-- Section 19 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Graph Abstract Data Type</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Graphs -->
+          <h3><em>Graphs</em></h3>
+          <span class="tab"></span><strong><em>Graphs:</em></strong>
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Representation of relationships between objects.</li>
+            <li>Consider it as a collection of vertices and edges.</li>
           </ul>
-          <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
           <br>
-          <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+
+          <span class="tab"></span><strong><em>Undirected Graphs:</em></strong>
+          <ul>
+            <li>Symmetric relationships.</li>
+            <li>Edges are represented by an unordered pair of vertices.</li>
+            <li>Relationships are described by {V<sub>1</sub>, V<sub>2</sub>}</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Directed Graphs:</em></strong>
+          <ul>
+            <li>Asymmetric relationships.</li>
+            <li>Edges are represented by an ordered pair of vertices.</li>
+            <li>Relationships are described by (V<sub>1</sub>, V<sub>2</sub>)</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Terminology:</em></strong>
+          <ul>
+            <li><strong>Endpoints:</strong> two vertices joined by an edge.</li>
+            <li><strong>Origin Endpoint (Directed):</strong> vertex from which the edge leaves.</li>
+            <li><strong>Destination Endpoint (Directed):</strong> the vertex in which the edge enters.</li>
+            <li><strong>Adjacent Vertices:</strong> two vertices that are endpoints of the same edge.</li>
+            <li><strong>Incident Edges:</strong> an edge in which the vertex is a part of.</li>
+            <li><strong>Outgoing Edges (Directed):</strong> edges in which the vertex is the origin endpoint.</li>
+            <li><strong>Incoming Edges (Directed):</strong> edges in which the vertex is the destination endpoint.</li>
+            <li><strong>Degree:</strong> the number of incident edges of a vertex.</li>
+            <li><strong>In-degree:</strong> the number of outgoing edges of a vertex.</li>
+            <li><strong>Out-degree:</strong> the number of incoming edges of a vertex.</li>
+            <li><strong>Parallel Edges:</strong> two edges that have the same endpoint vertices (direction must match for directed graphs).</li>
+            <li><strong>Self-Loop:</strong> an edge whose endpoints are the same vertex.</li>
+            <li><strong>Simple Graph:</strong> a graph that does not contain self-loops or parallel edges.</li>
+            <li><strong>Path:</strong> a sequence of vertices that contains edges between each adjacent vertex.</li>
+            <li><strong>Cycle:</strong> a path in which the first vertex is also the last vertex.</li>
+            <li><strong>Reachable:</strong> a vertex is reachable if a path can be formed from the current vertex to it.</li>
+            <li><strong>Subgraph:</strong> a graph whose vertices and edges are subsets of vertices in a larger graph.</li>
+            <li><strong>Spanning Subgraph:</strong> a subgraph containing all vertices of its larger graph.</li>
+            <li><strong>Connected:</strong> for any two vertices a path can be found between the two vertices.</li>
+            <li><strong>Weakly Connected:</strong> a graph in which an undirected path exists between any two vertices.</li>
+            <li><strong>Strongly Connected:</strong> a graph in which a directed path exists between any two vertices.</li>
+            <li><strong>Connected Component:</strong> a maximally connected subgraph of a larger graph.</li>
+            <li><strong>Complete Graph:</strong> a graph in which an edge exists between every distinct vertex.</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>For an undirected graph where <em>n</em> is the number of vertices and <em>m</em> is the number of edges, m =
+                <sub><div class="fract"><div class="numer">n(n-1)</div><div class="denom">2</div></div></sub>.</li>
+              <li>For a directed graph where <em>n</em> is the number of vertices and <em>m</em> is the number of edges, m = n(n-1).
             </ul>
-          </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Properties:</em></strong>
+          <ul>
+            <li>Given a simple undirected graph...</li>
+            <ul>
+              <li>Σdegree(v) = 2m</li>
+              <li>If the graph is connected, m ≥ n - 1</li>
+              <li>m is O(n<sup>2</sup>).</li>
+            </ul>
+            <li>Given a simple directed graph...</li>
+            <ul>
+              <li>Σindegree(v) = Σoutdegree(v) = 2m</li>
+              <li>If the graph is weakly connected, m ≥ n - 1</li>
+              <li>m is O(n<sup>2</sup>).</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Graph ADT -->
+          <h3><em>Graph ADT</em></h3>
+          <span class="tab"></span><strong><em>Graph ADT:</em></strong>
+          <ul>
+            <li>For a comprehensive list of all graph methods see Table R.</li>
+            <li>We can model a directed graph and an undirected graph in the same ADT.</li>
+            <li>Can be modeled with any of the following data structures:</li>
+            <ul>
+              <li>Edge List Structure</li>
+              <li>Adjacency List</li>
+              <li>Adjacency Map</li>
+              <li>Adjacency Matrix</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Graph ADT Data Structures -->
+          <h3><em>Graph ADT Data Structures</em></h3>
+          <span class="tab"></span><strong><em>Edge List Structure:</em></strong>
+          <ul>
+            <li>Maintains an unordered list of vertices and a unordered list of edges.</li>
+            <li>Vertices and edges are location-aware.</li>
+            <li>Vertices have no references to edges.</li>
+            <li>Simple but not space efficient, O(n + m).</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Adjacency List:</em></strong>
+          <ul>
+            <li>Each vertex maintains a incidence collection.</li>
+            <li>Each vertex contains the data, the outgoing edges, and the incoming edges.</li>
+            <li>Instead of iterating through a global list of edges, we can iterate through the vertex's list of incident edges.</li>
+            <li>Simple but not space efficient, O(n + m).</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Adjacency Map:</em></strong>
+          <ul>
+            <li>Each vertex maintains a incidence collection.</li>
+            <li>Each vertex contains the data, the outgoing edges and the incoming edges both of which are stores in hash maps.</li>
+            <li>Let the opposite endpoint serve as the map key and the edge as the value.</li>
+            <li>Simple but not space efficient, O(n + m).</li>
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Adjacency Matrix:</em></strong>
+          <ul>
+            <li>List of edges represented as a 2D array.</li>
+            <li>Row/column represent the origin/destination endpoints.</li>
+            <li>The index of the row/column represents the corresponding vertex. Column 1 and row 1 both represent the same vertex.</li>
+            <li>Buckets store the pointer to the edge object or null if no edge exists.</li>
+          </ul>
           <br>
 
         </div>

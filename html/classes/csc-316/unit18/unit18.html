@@ -6,7 +6,7 @@
         <link href="/style/wolf-den.css" rel="stylesheet" type="text/css" />
         <link href="/style/course.css" rel="stylesheet" type="text/css" />
         <link rel="icon" href="/assets/page-icon.jpg" type="image/icon type">
-        <title></title>
+        <title>Set and Disjoint Set ADTs</title>
         <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>
@@ -130,43 +130,162 @@
 
       <div class="body">
 
-        <!-- Section 1 -->
+        <!-- Section 18 -->
         <div class="sect-box">
-          <h2><center>UNIT TOPIC</center></h2>
+          <h2><center>Set and Disjoint Set ADTs</center></h2>
           <hr>
 
-          <!--  -->
-          <h3><em>SUB TOPIC</em></h3>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
-          <br><br>
-          <span class="tab"></span><strong><em>KEY POINT HERE</em></strong> DESCRIPTION HERE
+          <!-- Sets -->
+          <h3><em>Sets</em></h3>
+          <span class="tab"></span><strong><em>Sets</em></strong> are an unordered collection of elements that do not contain duplicates.
           <ul>
-            <li>BULLETED POINTS HERE</li>
-            <li><sup>Numer</sup>&frasl;<sub>Denom</sub></li>
+            <li>Supports efficient "membership tests" such as contains.</li>
+            <li>Elements are like keys in a map but without an associated value.</li>
+            <li>An intersection (S<sub>1</sub>&cap;S<sub>2</sub>) of sets is the values that are contained within both sets.</li>
+            <li>A union (S<sub>1</sub>&#8746;S<sub>2</sub>) of sets is the combination of two sets with matches only being listed once.</li>
+            <li>A subtraction (S<sub>1</sub>-S<sub>2</sub>) of sets is the removal of matching values from S<sub>1</sub>.</li>
+            <li>See Table P for a comprehensive guide to the methods a Set must implement. Briefly, a set should have...</li>
+            <ul>
+              <li>add(e)</li>
+              <li>remove(e)</li>
+              <li>contains(e)</li>
+              <li>addAll(T)</li>
+              <li>retainAll(T)</li>
+              <li>removeAll(T)</li>
+              <li>size()</li>
+              <li>isEmpty()</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Disjoint Sets -->
+          <h3><em>Disjoint Sets</em></h3>
+          <span class="tab"></span><strong><em>Disjoint Sets</em></strong> are a fixed set <em>U</em> of items.
+          <ul>
+            <li>No insertions, deletions, or subtractions.</li>
+            <li>Set <em>U</em> is divided into disjoint sets S<sub>1</sub>,...,S<sub>k</sub></li>
+            <li>An intersection (S<sub>1</sub>&cap;S<sub>2</sub>) of sets is the values that are contained within both sets.</li>
+            <li>S<sub>i</sub>&cap;S<sub>j</sub> = ∅ for i ≠ j</li>
+            <li>S<sub>1</sub>&#8746;S<sub>2</sub>&#8746;...&#8746;S<sub>k</sub>= U</li>
+            <li>See Table Q for a comprehensive guide to the methods a Disjoint Set must implement. Briefly, a disjoint set should have...</li>
+            <ul>
+              <li>makeSet(e)</li>
+              <li>union(s, t)</li>
+              <li>find(e)</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Up-Tree Data Structure -->
+          <h3><em>Up-Tree Data Structure</em></h3>
+          <span class="tab"></span><strong><em>Up-Tree:</em></strong>
+          <ul>
+            <li>Tree structure with pointers pointing up the tree (children points to parents).</li>
+            <li><strong>Forest</strong> of up-trees is a group of disjoint sets.</li>
+            <li>No bound on number of children a node may have.</li>
+            <li>Terminology</li>
+            <ul>
+              <li><strong>Tree Node:</strong> one item in set <em>U</em>.</li>
+              <li><strong>Up-tree:</strong> a set <em>S<sub>i</sub></em>.</li>
+              <li><strong>Forest of Up-trees:</strong>universal set <em>U</em>.</li>
+              <li><strong>Root Nodes:</strong>identify sets (instead of using S<sub>i</sub>).</li>
+              <li><strong>Sets S<sub>i</sub> are Disjoint:</strong> each item <em>x</em> belongs to exaclty one up-tree.</li>
+            </ul>
+          </ul>
+          <br>
+
+          <!-- Up-Tree Behaviors -->
+          <h3><em>Up-Tree Behaviors</em></h3>
+          <span class="tab"></span><strong><em>makeSet(x):</em></strong>
+          <ul>
+            <li>Create a new node.</li>
+            <li>Initialize its parent field to itself to indicate the node is the root.</li>
+            <li>Initialize its count field to 1.</li>
           </ul>
           <div class="question-box">
-            This a sample question with a multiple choice answer. <button onclick="showAnswer('SampA', this.id, 'C1')" id="SampQ">Show answer</button>
-            <ul>
-              <li><div class="answer-choice" id="A1" onclick="selectAns(this.id, 'B1', 'C1')">Answer Choice A (Incorrect)</div></li>
-              <li><div class="answer-choice" id="B1" onclick="selectAns(this.id, 'A1', 'C1')">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C1" onclick="selectAns(this.id, 'B1', 'A1')">Answer Choice C (Correct)</div></li>
-            </ul>
-          </div>
-          <div id="SampA" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
+            <strong>Algorithm makeSet(x)</strong><br>
+            <span class="tab"></span><strong>Input</strong> an element x<br>
+            <span class="tab"></span><strong>Output</strong> the root node of a new set<br>
+            <span class="tab"></span>return newNode(x)<br>
           </div>
           <br>
+
+          <span class="tab"></span><strong><em>find(p):</em></strong>
+          <ul>
+            <li>Follow parent pointers until the node is reached.</li>
+          </ul>
           <div class="question-box">
-            This a sample question with a multiple select answer option. <button onclick="showAnswer('SampA2', this.id, 'C2', 'A2')" id="SampQ2">Show answer</button>
+            <strong>Algorithm find(p)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a node p<br>
+            <span class="tab"></span><strong>Output</strong> the root node of the set containing p<br>
+            <span class="tab"></span>while parent (p) ≠ p do<br>
+            <span class="tab"></span><span class="tab"></span>p &larr; parent(p)<br>
+            <span class="tab"></span>return p<br>
+          </div>
+          <br>
+
+          <span class="tab"></span><strong><em>union(S, T):</em></strong>
+          <ul>
+            <li>Makes the root of one set point to the root of the other.</li>
+            <li>Always make the root of the tree representing the smallest set point to the root of the largest set (balanced).</li>
+          </ul>
+          <div class="question-box">
+            <strong>Algorithm union(S, T)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a root node S<br>
+            <span class="tab"></span><span class="tab"></span>a root node T<br>
+            <span class="tab"></span><strong>Output</strong> the root node of the combined set<br>
+            <span class="tab"></span>if count(S) > count(T) then<br>
+            <span class="tab"><span class="tab">count(S) &larr; count(S) + count(T)<br>
+            parent(T) &larr; S<br>
+            return S</span></span><br>
+            <span class="tab"></span>else<br>
+            <span class="tab"><span class="tab">count(T) &larr; count(S) + count(T)<br>
+            parent(S) &larr; T<br>
+            return T</span></span><br>
+          </div>
+          <br>
+
+          <!-- Up-Tree Performance -->
+          <h3><em>Up-Tree Performance</em></h3>
+          <span class="tab"></span><strong><em>Performance:</em></strong>
+          <ul>
+            <li>makeSet(x) is O(1).</li>
+            <li>union(S, T) is O(1).</li>
+            <li>find(p) is O(h).</li>
             <ul>
-              <li><div class="answer-choice" id="A2" onclick="selectMultAns(this.id)">Answer Choice A (Correct)</div></li>
-              <li><div class="answer-choice" id="B2" onclick="selectMultAns(this.id)">Answer Choice B (Incorrect)</div></li>
-              <li><div class="answer-choice" id="C2" onclick="selectMultAns(this.id)">Answer Choice C (Correct)</div></li>
+              <li>O(n) is the worst-case.</li>
+              <li>O(log(n)) when using a balanced union method as discussed.</li>
             </ul>
+            <li>Height <em>h</em>for a balanced tree is h ≤ log(n) or n ≥ 2<sup>h</sup>.
+          </ul>
+          <br>
+
+          <span class="tab"></span><strong><em>Path Compression:</em></strong>
+          <ul>
+            <li>After performing find, make all nodes along the path to the root children of the root.</li>
+            <li>Increases the cost of the current operation.</li>
+            <li>Decreases the cost of subsequent operations.</li>
+          </ul>
+          <div class="question-box">
+            <strong>Algorithm PCFind(p)</strong><br>
+            <span class="tab"></span><strong>Input</strong> a node p to find<br>
+            <span class="tab"></span><strong>Output</strong> the root node of the set containing p<br>
+            <span class="tab"></span>if p ≠ parent(p)<br>
+            <span class="tab"></span><span class="tab"></span>parent(p) &larr; PCFind(parent(p))<br>
+            <span class="tab"></span>return parent(p)<br>
           </div>
-          <div id="SampA2" class="answer-box" style="display: none;">
-            Description of correct answer and explanation here
-          </div>
+          <br>
+
+          <!-- Up-Tree Implementation -->
+          <h3><em>Up-Tree Implementation</em></h3>
+          <span class="tab"></span><strong><em>Implementation:</em></strong>
+          <ul>
+            <li>Return pointers to sets, how do we access individual nodes?</li>
+            <ul>
+              <li>Use an array implementation so that each element points to an integer index.</li>
+              <li>Use an auxillary map (Map&#60;E, UpTreeNode&#60;E>>)</li>
+            </ul>
+          </ul>
           <br>
 
         </div>

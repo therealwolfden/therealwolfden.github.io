@@ -443,7 +443,7 @@
             <br>
           <div class="question-box">
             <strong>Algorithm preOrder(T, p)</strong><br>
-            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"><strong>Input</strong> a tree, T<br>
             <span class="tab"></span> a position, p<br>
             if p is null then<br>
             <span class="tab"></span>return<br>
@@ -465,7 +465,7 @@
             <br>
           <div class="question-box">
             <strong>Algorithm postOrder(T, p)</strong><br>
-            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"><strong>Input</strong> a tree, T<br>
             <span class="tab"></span> a position, p<br>
             if p is null then<br>
             <span class="tab"></span>return<br>
@@ -487,7 +487,7 @@
             <br>
           <div class="question-box">
             <strong>Algorithm levelOrder(T, p)</strong><br>
-            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"><strong>Input</strong> a tree, T<br>
             <span class="tab"></span> a position, p<br>
             Q &larr; initially empty queue of nodes<br>
             if p is null then<br>
@@ -513,7 +513,7 @@
             <br>
           <div class="question-box">
             <strong>Algorithm inOrder(T, p)</strong><br>
-            <span class="tab">Input</strong> a tree, T<br>
+            <span class="tab"><strong>Input</strong> a tree, T<br>
             <span class="tab"></span> a position, p<br>
             if p is null then<br>
             <span class="tab"></span>return<br>
@@ -692,6 +692,90 @@
             <span class="tab"></span>else<br>
             <span class="tab"></span><span class="tab"></span>downHeap(L, i)<br>
           </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for makeSet -->
+        <div class="sect-header" onclick="showContent('pseudo-makeSet')">
+        <em><strong>makeSet(x)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-makeSet" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that creates a set using an element.</em></center>
+            <hr>
+            <br>
+            <div class="question-box">
+              <strong>Algorithm makeSet(x)</strong><br>
+              <span class="tab"></span><strong>Input</strong> an element x<br>
+              <span class="tab"></span><strong>Output</strong> the root node of a new set<br>
+              <span class="tab"></span>return newNode(x)<br>
+            </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for find -->
+        <div class="sect-header" onclick="showContent('pseudo-find')">
+        <em><strong>find(p)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-find" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that returns the root of a set containing the position.</em></center>
+            <hr>
+            <br>
+            <div class="question-box">
+              <strong>Algorithm find(p)</strong><br>
+              <span class="tab"></span><strong>Input</strong> a node p<br>
+              <span class="tab"></span><strong>Output</strong> the root node of the set containing p<br>
+              <span class="tab"></span>while parent (p) ≠ p do<br>
+              <span class="tab"></span><span class="tab"></span>p &larr; parent(p)<br>
+              <span class="tab"></span>return p<br>
+            </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for union -->
+        <div class="sect-header" onclick="showContent('pseudo-union')">
+        <em><strong>union(S, T)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-union" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that returns the root of a set containing the balanced union of two sets.</em></center>
+            <hr>
+            <br>
+            <div class="question-box">
+              <strong>Algorithm union(S, T)</strong><br>
+              <span class="tab"></span><strong>Input</strong> a root node S<br>
+              <span class="tab"></span><span class="tab"></span>a root node T<br>
+              <span class="tab"></span><strong>Output</strong> the root node of the combined set<br>
+              <span class="tab"></span>if count(S) > count(T) then<br>
+              <span class="tab"><span class="tab">count(S) &larr; count(S) + count(T)<br>
+              parent(T) &larr; S<br>
+              return S</span></span><br>
+              <span class="tab"></span>else<br>
+              <span class="tab"><span class="tab">count(T) &larr; count(S) + count(T)<br>
+              parent(S) &larr; T<br>
+              return T</span></span><br>
+            </div>
+        </div>
+        <br>
+
+        <!-- Pseudocode for pcFind -->
+        <div class="sect-header" onclick="showContent('pseudo-PCFind')">
+        <em><strong>Path Compression find(x)</strong></em>
+        </div>
+        <div class="sect-box" id="pseudo-PCFind" style="display: none;">
+          <center>
+            <em>Pseudocode for an algorithm that returns the root of a set containing the position and compresses the up-tree.</em></center>
+            <hr>
+            <br>
+            <div class="question-box">
+              <strong>Algorithm PCFind(p)</strong><br>
+              <span class="tab"></span><strong>Input</strong> a node p to find<br>
+              <span class="tab"></span><strong>Output</strong> the root node of the set containing p<br>
+              <span class="tab"></span>if p ≠ parent(p)<br>
+              <span class="tab"></span><span class="tab"></span>parent(p) &larr; PCFind(parent(p))<br>
+              <span class="tab"></span>return parent(p)<br>
+            </div>
         </div>
         <br>
       </div>
